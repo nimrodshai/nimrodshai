@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>var DEMO_BASE="../../../";</script>
+<script>(function(){
+  var MAP=[[/^\/checkout\/api\/equipment\/([0-9a-f]+)/,'api/equipment-$1.json'],[/^\/reservations\/api\/availability\/([0-9a-f]+)/,'api/availability-$1.json'],[/^\/clients\/api\/search/,'api/clients-search.json'],[/^\/reservations\/api\/events/,'api/reservations-events.json']];
+  function note(){var t=document.getElementById('demo-toast');if(!t){t=document.createElement('div');t.id='demo-toast';t.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1f2937;color:#fff;padding:10px 16px;border-radius:10px;font:500 14px system-ui;z-index:99999;box-shadow:0 8px 24px #0004;transition:opacity .3s';document.body.appendChild(t);}t.textContent='This is a demo with sample data, so changes are not saved.';t.style.opacity=1;clearTimeout(t._h);t._h=setTimeout(function(){t.style.opacity=0},2600);}
+  window.demoNote=note;
+  var _f=window.fetch;
+  window.fetch=function(u,o){var s=String(u);var m=(o&&o.method||'GET').toUpperCase();
+    if(m!=='GET'){note();return Promise.resolve(new Response(JSON.stringify({error:'Demo mode: changes are not saved.'}),{status:400,headers:{'Content-Type':'application/json'}}));}
+    for(var i=0;i<MAP.length;i++){if(MAP[i][0].test(s.split('?')[0]))return _f(DEMO_BASE+s.split('?')[0].replace(MAP[i][0],MAP[i][1]));}
+    return _f(u,o);};
+  document.addEventListener('submit',function(e){var f=e.target;if((f.method||'get').toLowerCase()!=='get'||f.getAttribute('action')==='#'){e.preventDefault();note();}else{e.preventDefault();note();}},true);
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-demo-off]');if(a){e.preventDefault();note();}},true);
+  document.addEventListener('DOMContentLoaded',function(){var b=document.createElement('div');b.style.cssText='position:fixed;bottom:14px;right:14px;background:#fef3c7;color:#92400e;border:1px solid #fcd34d;padding:4px 10px;border-radius:999px;font:600 12px system-ui;z-index:99998';b.textContent='Demo · sample data';document.body.appendChild(b);});
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code - Sigma Cine 24-70 T2.9</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --sidebar-width: 250px;
+            --status-active-bg: #198754;
+            --status-active-text: #ffffff;
+            --status-overdue-bg: #dc3545;
+            --status-overdue-text: #ffffff;
+            --status-returned-bg: #6c757d;
+            --status-returned-text: #ffffff;
+            --status-checked-out-bg: #ffc107;
+            --status-checked-out-text: #212529;
+        }
+        body {
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: var(--sidebar-width);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            background: #212529;
+            padding-top: 1rem;
+            z-index: 1000;
+        }
+        .sidebar .nav-link {
+            color: rgba(255,255,255,0.8);
+            padding: 0.75rem 1rem;
+            border-radius: 0.25rem;
+            margin: 0.25rem 0.5rem;
+        }
+        .sidebar .nav-link:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+        .sidebar .nav-link.active {
+            color: #fff;
+            background: #0d6efd;
+        }
+        .sidebar .nav-link i {
+            margin-right: 0.5rem;
+            width: 1.25rem;
+            text-align: center;
+        }
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 1.5rem;
+        }
+        .brand {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1rem;
+        }
+        .brand i {
+            color: #0d6efd;
+        }
+        .user-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.2);
+        }
+        .user-info .dropdown-toggle {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .user-info .dropdown-toggle::after {
+            margin-left: auto;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .sidebar.show {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .mobile-header {
+                display: flex !important;
+            }
+        }
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: #212529;
+            z-index: 999;
+            padding: 0 1rem;
+            align-items: center;
+        }
+        .mobile-header .btn-toggle {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .mobile-header .brand-mobile {
+            color: #fff;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                padding-top: 70px;
+            }
+        }
+        .status-badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+        }
+        .badge-status-active,
+        .badge-status-available {
+            background-color: var(--status-active-bg);
+            color: var(--status-active-text);
+        }
+        .badge-status-overdue,
+        .badge-status-late {
+            background-color: var(--status-overdue-bg);
+            color: var(--status-overdue-text);
+        }
+        .badge-status-returned {
+            background-color: var(--status-returned-bg);
+            color: var(--status-returned-text);
+        }
+        .badge-status-checked-out {
+            background-color: var(--status-checked-out-bg);
+            color: var(--status-checked-out-text);
+        }
+        .card-stat {
+            border-left: 4px solid;
+        }
+        .card-stat.available { border-left-color: #28a745; }
+        .card-stat.checked-out { border-left-color: #ffc107; }
+        .card-stat.overdue { border-left-color: #dc3545; }
+        .qr-code {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <button class="btn btn-link btn-toggle" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="brand-mobile"><i class="bi bi-box-seam"></i> Aytemz</span>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="brand">
+            <i class="bi bi-box-seam"></i> Aytemz
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link " href="../../../">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../../../equipment/">
+                    <i class="bi bi-box"></i> Equipment
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../../../checkout/">
+                    <i class="bi bi-arrow-left-right"></i> Checkouts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../../../reservations/">
+                    <i class="bi bi-calendar-check"></i> Reservations
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link " href="../../../checkout/scan/">
+                    <i class="bi bi-qr-code-scan"></i> Scan
+                </a>
+            </li>
+            
+            
+            <li class="nav-item">
+                <a class="nav-link " href="../../../reports/">
+                    <i class="bi bi-graph-up"></i> Reports
+                </a>
+            </li>
+            
+            
+            
+            <li class="nav-item mt-3">
+                <a class="nav-link " href="#" data-demo-off="1">
+                    <i class="bi bi-star"></i> Subscription
+                </a>
+            </li>
+            
+        </ul>
+
+        
+        <div class="user-info">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Dana Rosen</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#" data-demo-off="1"><i class="bi bi-person"></i> Profile</a></li>
+                    
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#" data-demo-off="1"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:999;"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+<div class="row">
+    <div class="col-md-6 mx-auto text-center">
+        <div class="card">
+            <div class="card-body p-5">
+                <h4 class="mb-4">Sigma Cine 24-70 T2.9</h4>
+                
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAV4AAAFeAQAAAADlUEq3AAAB/klEQVR4nO2bUWrDMBBEd2VDPu0b5CjK0Z2j9AAB+TMQsUUrKV6oCaa0qURnPkKtPsrCMF6torLQYUV3nCUCbAXYCrAVYCvAVoCtAFsB3oGvXFQeZ/2IdXVuseZjcv8FniTpQUTrmFf4QkS6KsvbyjgkwLtwLFG7nu9MPkQWCSWcX+EjAvxX8Dom306iGfzRv/xCgL8Nj3uL7CWyXOdbmzU7wHsODulwJqaOGNIm5kbsQyTy0l7NDvCOg+vW7eKormkGy+rUVM0O8FcHbdSG8rMPJE3W7ABblXlhetTHtAP1YRDyOlw8EZFHIzU7wFZ14hskD4XJS50MZZkk2bgJDrYIU3EnDOmDSL3Ux5xBTWOd9xup2QG2egaMjG9kXqpwsJM+KPUFqjbmZpgimdb0t3Cw+T4oW96KoakPJhvRB3vJICVp3tAHe5wmRINYXpu1D+ZwIoNdnKqxDzOL/zgJ0XoSPY5hmm6cT9raqdkBtjLznqqEru5f7FCIDLYIU/WN7JlMimR9s+qGFA728x39NX3N6+XOfKnnNG8s45AA72VQty5mE1OPtzcEGewIlmXSqxb6MAhuOvV3y8LrFZmzJu/OuOnUBTzkk201L19TWyiyzhXvLOOIAL/ciy7bdxNqaD7oRh9sFmb875IRYCvAVoCtAFsBtgJsBdjq9/ainzzMtQXoNnRkAAAAAElFTkSuQmCC" alt="QR Code" style="max-width: 300px;" class="mb-4">
+                
+                <p class="text-muted">Lenses</p>
+                
+                <p class="text-muted">S/N: SC-1061</p>
+                
+                <button onclick="window.print()" class="btn btn-primary mt-3">
+                    <i class="bi bi-printer"></i> Print
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('show');
+            overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar.classList.contains('show')) {
+                sidebar.classList.remove('show');
+                overlay.style.display = 'none';
+            }
+        }
+
+        // Close sidebar on scroll
+        window.addEventListener('scroll', closeSidebar);
+
+        // Close sidebar on touch move (for mobile)
+        document.addEventListener('touchmove', closeSidebar);
+    </script>
+    
+</body>
+</html>

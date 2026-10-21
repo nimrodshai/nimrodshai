@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>var DEMO_BASE="../../";</script>
+<script>(function(){
+  var MAP=[[/^\/checkout\/api\/equipment\/([0-9a-f]+)/,'api/equipment-$1.json'],[/^\/reservations\/api\/availability\/([0-9a-f]+)/,'api/availability-$1.json'],[/^\/clients\/api\/search/,'api/clients-search.json'],[/^\/reservations\/api\/events/,'api/reservations-events.json']];
+  function note(){var t=document.getElementById('demo-toast');if(!t){t=document.createElement('div');t.id='demo-toast';t.style.cssText='position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1f2937;color:#fff;padding:10px 16px;border-radius:10px;font:500 14px system-ui;z-index:99999;box-shadow:0 8px 24px #0004;transition:opacity .3s';document.body.appendChild(t);}t.textContent='This is a demo with sample data, so changes are not saved.';t.style.opacity=1;clearTimeout(t._h);t._h=setTimeout(function(){t.style.opacity=0},2600);}
+  window.demoNote=note;
+  var _f=window.fetch;
+  window.fetch=function(u,o){var s=String(u);var m=(o&&o.method||'GET').toUpperCase();
+    if(m!=='GET'){note();return Promise.resolve(new Response(JSON.stringify({error:'Demo mode: changes are not saved.'}),{status:400,headers:{'Content-Type':'application/json'}}));}
+    for(var i=0;i<MAP.length;i++){if(MAP[i][0].test(s.split('?')[0]))return _f(DEMO_BASE+s.split('?')[0].replace(MAP[i][0],MAP[i][1]));}
+    return _f(u,o);};
+  document.addEventListener('submit',function(e){var f=e.target;if((f.method||'get').toLowerCase()!=='get'||f.getAttribute('action')==='#'){e.preventDefault();note();}else{e.preventDefault();note();}},true);
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-demo-off]');if(a){e.preventDefault();note();}},true);
+  document.addEventListener('DOMContentLoaded',function(){var b=document.createElement('div');b.style.cssText='position:fixed;bottom:14px;right:14px;background:#fef3c7;color:#92400e;border:1px solid #fcd34d;padding:4px 10px;border-radius:999px;font:600 12px system-ui;z-index:99998';b.textContent='Demo · sample data';document.body.appendChild(b);});
+})();
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Reservation - Aytemz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --sidebar-width: 250px;
+            --status-active-bg: #198754;
+            --status-active-text: #ffffff;
+            --status-overdue-bg: #dc3545;
+            --status-overdue-text: #ffffff;
+            --status-returned-bg: #6c757d;
+            --status-returned-text: #ffffff;
+            --status-checked-out-bg: #ffc107;
+            --status-checked-out-text: #212529;
+        }
+        body {
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: var(--sidebar-width);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            background: #212529;
+            padding-top: 1rem;
+            z-index: 1000;
+        }
+        .sidebar .nav-link {
+            color: rgba(255,255,255,0.8);
+            padding: 0.75rem 1rem;
+            border-radius: 0.25rem;
+            margin: 0.25rem 0.5rem;
+        }
+        .sidebar .nav-link:hover {
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+        .sidebar .nav-link.active {
+            color: #fff;
+            background: #0d6efd;
+        }
+        .sidebar .nav-link i {
+            margin-right: 0.5rem;
+            width: 1.25rem;
+            text-align: center;
+        }
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 1.5rem;
+        }
+        .brand {
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1rem;
+        }
+        .brand i {
+            color: #0d6efd;
+        }
+        .user-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.2);
+        }
+        .user-info .dropdown-toggle {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .user-info .dropdown-toggle::after {
+            margin-left: auto;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .sidebar.show {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .mobile-header {
+                display: flex !important;
+            }
+        }
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 56px;
+            background: #212529;
+            z-index: 999;
+            padding: 0 1rem;
+            align-items: center;
+        }
+        .mobile-header .btn-toggle {
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        .mobile-header .brand-mobile {
+            color: #fff;
+            font-weight: 600;
+            margin-left: 1rem;
+        }
+        @media (max-width: 768px) {
+            .main-content {
+                padding-top: 70px;
+            }
+        }
+        .status-badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+        }
+        .badge-status-active,
+        .badge-status-available {
+            background-color: var(--status-active-bg);
+            color: var(--status-active-text);
+        }
+        .badge-status-overdue,
+        .badge-status-late {
+            background-color: var(--status-overdue-bg);
+            color: var(--status-overdue-text);
+        }
+        .badge-status-returned {
+            background-color: var(--status-returned-bg);
+            color: var(--status-returned-text);
+        }
+        .badge-status-checked-out {
+            background-color: var(--status-checked-out-bg);
+            color: var(--status-checked-out-text);
+        }
+        .card-stat {
+            border-left: 4px solid;
+        }
+        .card-stat.available { border-left-color: #28a745; }
+        .card-stat.checked-out { border-left-color: #ffc107; }
+        .card-stat.overdue { border-left-color: #dc3545; }
+        .qr-code {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <button class="btn btn-link btn-toggle" onclick="toggleSidebar()">
+            <i class="bi bi-list"></i>
+        </button>
+        <span class="brand-mobile"><i class="bi bi-box-seam"></i> Aytemz</span>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="brand">
+            <i class="bi bi-box-seam"></i> Aytemz
+        </div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link " href="../../">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../../equipment/">
+                    <i class="bi bi-box"></i> Equipment
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../../checkout/">
+                    <i class="bi bi-arrow-left-right"></i> Checkouts
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../../reservations/">
+                    <i class="bi bi-calendar-check"></i> Reservations
+                </a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link " href="../../checkout/scan/">
+                    <i class="bi bi-qr-code-scan"></i> Scan
+                </a>
+            </li>
+            
+            
+            <li class="nav-item">
+                <a class="nav-link " href="../../reports/">
+                    <i class="bi bi-graph-up"></i> Reports
+                </a>
+            </li>
+            
+            
+            
+            <li class="nav-item mt-3">
+                <a class="nav-link " href="#" data-demo-off="1">
+                    <i class="bi bi-star"></i> Subscription
+                </a>
+            </li>
+            
+        </ul>
+
+        
+        <div class="user-info">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Dana Rosen</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#" data-demo-off="1"><i class="bi bi-person"></i> Profile</a></li>
+                    
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#" data-demo-off="1"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- Overlay for mobile -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.5); z-index:999;"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+<style>
+    .searchable-dropdown {
+        position: relative;
+    }
+    .dropdown-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        max-height: 250px;
+        overflow-y: auto;
+        background: white;
+        border: 1px solid #dee2e6;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        display: none;
+    }
+    .dropdown-list.show {
+        display: block;
+    }
+    .dropdown-item {
+        padding: 10px 15px;
+        cursor: pointer;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+    .dropdown-item:hover, .dropdown-item.active {
+        background: #f8f9fa;
+    }
+    .dropdown-item strong {
+        display: block;
+    }
+    .dropdown-item small {
+        color: #6c757d;
+    }
+    .selected-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.95rem;
+    }
+    .selected-badge .btn-close {
+        filter: brightness(0) invert(1);
+        opacity: 0.8;
+    }
+    .selected-badge .btn-close:hover {
+        opacity: 1;
+    }
+    .search-input {
+        border-radius: 8px;
+    }
+    .search-input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">New Reservation</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" action="../../reservations/new/" id="reservationForm">
+                    <!-- Equipment Selector -->
+                    <div class="mb-3">
+                        <label class="form-label">Equipment *</label>
+                        <div class="searchable-dropdown" id="equipmentDropdown">
+                            <input type="text"
+                                   class="form-control search-input"
+                                   id="equipmentSearch"
+                                   placeholder="Search equipment by name or category..."
+                                   autocomplete="off">
+                            <input type="hidden" name="equipment_id" id="equipment_id" required>
+                            <div class="dropdown-list" id="equipmentResults"></div>
+                        </div>
+                        <div id="selectedEquipment" class="mt-2" style="display: none;">
+                            <span class="selected-badge">
+                                <i class="bi bi-box-seam"></i>
+                                <span id="selectedEquipmentName"></span>
+                                <button type="button" class="btn-close btn-close-white btn-sm" onclick="clearEquipment()" aria-label="Clear"></button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3" id="quantityGroup" style="display: none;">
+                        <label for="quantity" class="form-label">Quantity *</label>
+                        <input type="number" class="form-control" id="quantity" name="quantity" min="1" step="1" value="1" required>
+                        <small class="text-muted" id="quantityHelp"></small>
+                        <div class="small mt-1" id="availabilityMessage"></div>
+                    </div>
+
+                    <!-- Client Selector -->
+                    <div class="mb-3">
+                        <label class="form-label">Reserve For (Client) *</label>
+                        <div class="searchable-dropdown" id="clientDropdown">
+                            <div class="input-group">
+                                <input type="text"
+                                       class="form-control search-input"
+                                       id="clientSearch"
+                                       placeholder="Search clients by name, email, or phone..."
+                                       autocomplete="off">
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#newClientModal">
+                                    <i class="bi bi-plus-lg"></i> New
+                                </button>
+                            </div>
+                            <input type="hidden" name="client_id" id="client_id" required>
+                            <div class="dropdown-list" id="clientResults"></div>
+                        </div>
+                        <div id="selectedClient" class="mt-2" style="display: none;">
+                            <span class="selected-badge">
+                                <i class="bi bi-person"></i>
+                                <span id="selectedClientName"></span>
+                                <button type="button" class="btn-close btn-close-white btn-sm" onclick="clearClient()" aria-label="Clear"></button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="start_date" class="form-label">Start Date *</label>
+                            <input type="datetime-local" class="form-control" id="start_date" name="start_date" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="end_date" class="form-label">End Date *</label>
+                            <input type="datetime-local" class="form-control" id="end_date" name="end_date" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="project" class="form-label">Project</label>
+                        <input type="text" class="form-control" id="project" name="project" placeholder="Optional project name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notes" class="form-label">Notes</label>
+                        <textarea class="form-control" id="notes" name="notes" rows="2"></textarea>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Create Reservation</button>
+                        <a href="../../reservations/" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- New Client Modal -->
+<div class="modal fade" id="newClientModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Client</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="newClientError" class="alert alert-danger" style="display: none;"></div>
+                <div class="mb-3">
+                    <label for="newFirstName" class="form-label">First Name *</label>
+                    <input type="text" class="form-control" id="newFirstName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="newLastName" class="form-label">Last Name *</label>
+                    <input type="text" class="form-control" id="newLastName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="newEmail" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="newEmail" placeholder="client@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="newPhone" class="form-label">Phone</label>
+                    <input type="tel" class="form-control" id="newPhone" placeholder="+1234567890">
+                </div>
+                <small class="text-muted">Either email or phone is required</small>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="createClient()">Add Client</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Equipment data from server
+const equipmentList = [
+    
+    { id: '6ad86c49aaaa84dbca53c354', name: 'Sony FX6 Cinema Camera', category: 'Cameras', status: 'available', amount: 3, available: 2 },
+    
+    { id: '6ad86c49aaaa84dbca53c355', name: 'ARRI Alexa Mini LF', category: 'Cameras', status: 'available', amount: 1, available: 1 },
+    
+    { id: '6ad86c49aaaa84dbca53c356', name: 'Canon EOS C70', category: 'Cameras', status: 'available', amount: 2, available: 2 },
+    
+    { id: '6ad86c49aaaa84dbca53c357', name: 'Sigma Cine 24-70 T2.9', category: 'Lenses', status: 'available', amount: 2, available: 1 },
+    
+    { id: '6ad86c49aaaa84dbca53c358', name: 'Zeiss CP.3 Prime Set', category: 'Lenses', status: 'available', amount: 1, available: 1 },
+    
+    { id: '6ad86c49aaaa84dbca53c359', name: 'Canon CN-E 70-200', category: 'Lenses', status: 'available', amount: 1, available: 1 },
+    
+    { id: '6ad86c49aaaa84dbca53c35a', name: 'Aputure LS 600d Pro', category: 'Lighting', status: 'available', amount: 4, available: 2 },
+    
+    { id: '6ad86c49aaaa84dbca53c35b', name: 'Nanlite PavoTube II 30X', category: 'Lighting', status: 'available', amount: 8, available: 4 },
+    
+    { id: '6ad86c49aaaa84dbca53c35c', name: 'Astera Titan Tube Kit', category: 'Lighting', status: 'available', amount: 1, available: 1 },
+    
+    { id: '6ad86c49aaaa84dbca53c35d', name: 'Sennheiser MKH 416', category: 'Audio', status: 'available', amount: 4, available: 2 },
+    
+    { id: '6ad86c49aaaa84dbca53c35e', name: 'Sound Devices MixPre-6 II', category: 'Audio', status: 'available', amount: 2, available: 1 },
+    
+    { id: '6ad86c49aaaa84dbca53c35f', name: 'Sennheiser EW-DP Wireless Kit', category: 'Audio', status: 'available', amount: 3, available: 3 },
+    
+    { id: '6ad86c49aaaa84dbca53c360', name: 'DJI RS 4 Pro Gimbal', category: 'Grip', status: 'available', amount: 2, available: 2 },
+    
+    { id: '6ad86c49aaaa84dbca53c361', name: 'C-Stand 40&#34;', category: 'Grip', status: 'available', amount: 12, available: 11 },
+    
+    { id: '6ad86c49aaaa84dbca53c362', name: 'Atomos Ninja V+', category: 'Monitors', status: 'available', amount: 3, available: 1 },
+    
+    { id: '6ad86c49aaaa84dbca53c363', name: 'SmallHD Cine 7', category: 'Monitors', status: 'available', amount: 2, available: 2 },
+    
+];
+
+// Pre-select equipment if provided
+const preselectedEquipmentId = '';
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Set default dates
+    const now = new Date();
+    now.setMinutes(0);
+    now.setSeconds(0);
+    document.getElementById('start_date').value = now.toISOString().slice(0, 16);
+
+    const end = new Date(now);
+    end.setDate(end.getDate() + 1);
+    document.getElementById('end_date').value = end.toISOString().slice(0, 16);
+
+    // Pre-select equipment if provided
+    if (preselectedEquipmentId) {
+        const eq = equipmentList.find(e => e.id === preselectedEquipmentId);
+        if (eq) {
+            selectEquipment(eq.id, eq.name, eq.category, eq.status, eq.available, eq.amount);
+        }
+    }
+
+    // Load all clients on page load for instant display
+    loadAllClients();
+});
+
+// ============ EQUIPMENT SEARCH ============
+const equipmentSearch = document.getElementById('equipmentSearch');
+const equipmentResults = document.getElementById('equipmentResults');
+
+equipmentSearch.addEventListener('focus', function() {
+    showEquipmentResults('');
+});
+
+equipmentSearch.addEventListener('input', function() {
+    showEquipmentResults(this.value.trim().toLowerCase());
+});
+
+function showEquipmentResults(query) {
+    const filtered = equipmentList.filter(eq =>
+        !query ||
+        eq.name.toLowerCase().includes(query) ||
+        eq.category.toLowerCase().includes(query)
+    );
+
+    if (filtered.length === 0) {
+        equipmentResults.innerHTML = '<div class="dropdown-item text-muted">No equipment found</div>';
+    } else {
+        equipmentResults.innerHTML = filtered.map(eq => `
+            <div class="dropdown-item" onclick="selectEquipment('${eq.id}', '${eq.name.replace(/'/g, "\\'")}', '${eq.category.replace(/'/g, "\\'")}', '${eq.status}', ${eq.available}, ${eq.amount})">
+                <strong>${eq.name}</strong>
+                <small>${eq.category} - ${eq.available} of ${eq.amount} available now</small>
+            </div>
+        `).join('');
+    }
+    equipmentResults.classList.add('show');
+}
+
+function selectEquipment(id, name, category, status, available, amount) {
+    document.getElementById('equipment_id').value = id;
+    document.getElementById('selectedEquipmentName').textContent = `${name} (${category}) - ${available} available now`;
+    document.getElementById('selectedEquipment').style.display = 'block';
+    document.getElementById('equipmentDropdown').style.display = 'none';
+    document.getElementById('quantityGroup').style.display = 'block';
+    document.getElementById('quantity').max = Math.max(available, 1);
+    document.getElementById('quantity').dataset.maxAvailable = String(available);
+    document.getElementById('quantity').value = '1';
+    document.getElementById('quantityHelp').textContent = `${available} of ${amount} units available now`;
+    updateAvailability();
+    equipmentResults.classList.remove('show');
+}
+
+function clearEquipment() {
+    document.getElementById('equipment_id').value = '';
+    document.getElementById('selectedEquipment').style.display = 'none';
+    document.getElementById('equipmentDropdown').style.display = 'block';
+    document.getElementById('quantityGroup').style.display = 'none';
+    document.getElementById('quantity').removeAttribute('max');
+    delete document.getElementById('quantity').dataset.maxAvailable;
+    document.getElementById('quantity').value = '1';
+    document.getElementById('quantityHelp').textContent = '';
+    document.getElementById('availabilityMessage').textContent = '';
+    document.getElementById('availabilityMessage').className = 'small mt-1';
+    equipmentSearch.value = '';
+    equipmentSearch.focus();
+}
+
+async function updateAvailability() {
+    const equipmentId = document.getElementById('equipment_id').value;
+    const start = document.getElementById('start_date').value;
+    const end = document.getElementById('end_date').value;
+    const quantityInput = document.getElementById('quantity');
+    const requested = Number(quantityInput.value || 1);
+    const availabilityMessage = document.getElementById('availabilityMessage');
+    const quantityHelp = document.getElementById('quantityHelp');
+
+    if (!equipmentId || !start || !end) {
+        availabilityMessage.textContent = '';
+        availabilityMessage.className = 'small mt-1';
+        return;
+    }
+
+    try {
+        const params = new URLSearchParams({
+            start,
+            end,
+            quantity: String(Math.max(requested, 1)),
+        });
+        const response = await fetch(`/reservations/api/availability/${equipmentId}?${params.toString()}`);
+        const data = await response.json();
+
+        if (!response.ok || data.error) {
+            availabilityMessage.textContent = data.error || 'Could not check availability';
+            availabilityMessage.className = 'small mt-1 text-danger';
+            return;
+        }
+
+        quantityInput.max = Math.max(data.available_amount, 1);
+        quantityInput.dataset.maxAvailable = String(data.available_amount);
+        quantityHelp.textContent = `${data.available_amount} of ${data.total_amount} units available for this time window`;
+
+        if (data.available_amount <= 0) {
+            availabilityMessage.textContent = 'No units available for this time window';
+            availabilityMessage.className = 'small mt-1 text-danger';
+            return;
+        }
+
+        if (requested > data.available_amount) {
+            availabilityMessage.textContent = `Only ${data.available_amount} units available for this time window`;
+            availabilityMessage.className = 'small mt-1 text-warning';
+            return;
+        }
+
+        availabilityMessage.textContent = `${data.available_amount} units available for this time window`;
+        availabilityMessage.className = 'small mt-1 text-success';
+    } catch (err) {
+        availabilityMessage.textContent = 'Could not check availability';
+        availabilityMessage.className = 'small mt-1 text-danger';
+    }
+}
+
+// ============ CLIENT SEARCH ============
+let allClients = [];
+const clientSearch = document.getElementById('clientSearch');
+const clientResults = document.getElementById('clientResults');
+
+async function loadAllClients() {
+    try {
+        const response = await fetch('/clients/api/search?q=');
+        allClients = await response.json();
+    } catch (e) {
+        allClients = [];
+    }
+}
+
+clientSearch.addEventListener('focus', function() {
+    showClientResults('');
+});
+
+clientSearch.addEventListener('input', function() {
+    showClientResults(this.value.trim().toLowerCase());
+});
+
+function showClientResults(query) {
+    const filtered = allClients.filter(c =>
+        !query ||
+        c.first_name.toLowerCase().includes(query) ||
+        c.last_name.toLowerCase().includes(query) ||
+        (c.email && c.email.toLowerCase().includes(query)) ||
+        (c.phone && c.phone.includes(query))
+    );
+
+    if (filtered.length === 0) {
+        clientResults.innerHTML = '<div class="dropdown-item text-muted">No clients found. Click "New" to add one.</div>';
+    } else {
+        clientResults.innerHTML = filtered.map(c => `
+            <div class="dropdown-item" onclick="selectClient('${c.id}', '${c.display.replace(/'/g, "\\'")}')">
+                <strong>${c.first_name} ${c.last_name}</strong>
+                ${c.email ? `<small>${c.email}</small>` : ''}
+                ${c.phone ? `<small>${c.phone}</small>` : ''}
+            </div>
+        `).join('');
+    }
+    clientResults.classList.add('show');
+}
+
+function selectClient(id, display) {
+    document.getElementById('client_id').value = id;
+    document.getElementById('selectedClientName').textContent = display;
+    document.getElementById('selectedClient').style.display = 'block';
+    document.getElementById('clientDropdown').style.display = 'none';
+    clientResults.classList.remove('show');
+}
+
+function clearClient() {
+    document.getElementById('client_id').value = '';
+    document.getElementById('selectedClient').style.display = 'none';
+    document.getElementById('clientDropdown').style.display = 'block';
+    clientSearch.value = '';
+    clientSearch.focus();
+}
+
+// ============ HIDE DROPDOWNS ON OUTSIDE CLICK ============
+document.addEventListener('click', function(e) {
+    if (!document.getElementById('equipmentDropdown').contains(e.target)) {
+        equipmentResults.classList.remove('show');
+    }
+    if (!document.getElementById('clientDropdown').contains(e.target)) {
+        clientResults.classList.remove('show');
+    }
+});
+document.getElementById('start_date').addEventListener('change', updateAvailability);
+document.getElementById('end_date').addEventListener('change', updateAvailability);
+document.getElementById('quantity').addEventListener('input', updateAvailability);
+
+// ============ CREATE CLIENT ============
+async function createClient() {
+    const firstName = document.getElementById('newFirstName').value.trim();
+    const lastName = document.getElementById('newLastName').value.trim();
+    const email = document.getElementById('newEmail').value.trim();
+    const phone = document.getElementById('newPhone').value.trim();
+    const errorDiv = document.getElementById('newClientError');
+
+    errorDiv.style.display = 'none';
+
+    if (!firstName || !lastName) {
+        errorDiv.textContent = 'First name and last name are required';
+        errorDiv.style.display = 'block';
+        return;
+    }
+
+    if (!email && !phone) {
+        errorDiv.textContent = 'Either email or phone is required';
+        errorDiv.style.display = 'block';
+        return;
+    }
+
+    try {
+        const response = await fetch('/clients/api/create', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ first_name: firstName, last_name: lastName, email, phone })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            errorDiv.textContent = data.error || 'Failed to create client';
+            errorDiv.style.display = 'block';
+            return;
+        }
+
+        // Add to local list and select
+        allClients.unshift(data);
+        selectClient(data.id, data.display);
+
+        // Close modal and reset form
+        bootstrap.Modal.getInstance(document.getElementById('newClientModal')).hide();
+        document.getElementById('newFirstName').value = '';
+        document.getElementById('newLastName').value = '';
+        document.getElementById('newEmail').value = '';
+        document.getElementById('newPhone').value = '';
+    } catch (err) {
+        errorDiv.textContent = 'Failed to create client';
+        errorDiv.style.display = 'block';
+    }
+}
+
+// ============ FORM VALIDATION ============
+document.getElementById('reservationForm').addEventListener('submit', function(e) {
+    if (!document.getElementById('equipment_id').value) {
+        e.preventDefault();
+        alert('Please select equipment');
+        equipmentSearch.focus();
+        return;
+    }
+    if (!document.getElementById('client_id').value) {
+        e.preventDefault();
+        alert('Please select or add a client');
+        clientSearch.focus();
+        return;
+    }
+
+    const quantityInput = document.getElementById('quantity');
+    const quantity = Number(quantityInput.value);
+    const maxQuantity = Number(quantityInput.max || '0');
+    const maxAvailable = Number(quantityInput.dataset.maxAvailable || maxQuantity || 0);
+    if (maxAvailable < 1) {
+        e.preventDefault();
+        alert('No units are available for the selected dates');
+        quantityInput.focus();
+        return;
+    }
+    if (!quantity || quantity < 1 || quantity > maxAvailable) {
+        e.preventDefault();
+        const upperBound = maxAvailable || 1;
+        alert(`Quantity must be between 1 and ${upperBound}`);
+        quantityInput.focus();
+    }
+});
+</script>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('show');
+            overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+        }
+
+        function closeSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            if (sidebar.classList.contains('show')) {
+                sidebar.classList.remove('show');
+                overlay.style.display = 'none';
+            }
+        }
+
+        // Close sidebar on scroll
+        window.addEventListener('scroll', closeSidebar);
+
+        // Close sidebar on touch move (for mobile)
+        document.addEventListener('touchmove', closeSidebar);
+    </script>
+    
+</body>
+</html>

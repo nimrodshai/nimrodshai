@@ -1,0 +1,7 @@
+.DS_Store
+.netlify/
+
+# No longer linked from the site
+demos/toddler/
+demos/boommadad/
+assets/shots/toddler.jpg
