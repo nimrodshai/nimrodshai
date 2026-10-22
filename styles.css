@@ -103,7 +103,8 @@ button { font: inherit; }
 .marquee { padding: 48px 0 120px; }
 .marquee-tilt { direction: ltr; transform: rotate(-4deg); margin: 0 -40px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); }
 .marquee-track { display: flex; gap: 20px; width: max-content; animation: marquee 70s linear infinite; }
-.marquee-tilt:hover .marquee-track { animation-play-state: paused; }
+.marquee-tilt { cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.marquee-tilt.dragging { cursor: grabbing; }
 .marquee-track img { width: 560px; height: auto; aspect-ratio: 56 / 45; object-fit: cover; object-position: top; border-radius: 18px; box-shadow: 0 0 0 1px var(--line), 0 30px 60px -30px rgba(0, 0, 0, 0.8); }
 
 /* About */

@@ -106,7 +106,7 @@
 
     // The marquee repeats the shots twice so the -50% loop is seamless.
     document.getElementById("marquee").innerHTML = C.projects.concat(C.projects).map((p) =>
-      `<img src="${shot(p)}" width="1200" height="750" alt="">`
+      `<img src="${shot(p)}" width="1200" height="750" alt="" draggable="false">`
     ).join("");
 
     document.getElementById("moreList").innerHTML = C.more.map((m) => {
@@ -140,4 +140,70 @@
   });
 
   render();
+
+  // The tilted strip drifts on its own. Drag it, swipe it or flick it sideways on a trackpad
+  // and it takes the speed you give it, then eases back to its usual drift.
+  (function marquee() {
+    const tilt = document.querySelector(".marquee-tilt");
+    const track = document.getElementById("marquee");
+    const reduce = matchMedia("(prefers-reduced-motion: reduce)");
+    const small = matchMedia("(max-width: 640px)");
+    const clamp = (n) => Math.max(-6000, Math.min(6000, n));
+    let x = 0, v = 0, last = performance.now(), period = 0, drag = null;
+
+    // The shots are repeated twice, so one loop is the distance to the first repeated shot.
+    function measure() {
+      const n = track.children.length / 2;
+      period = n ? track.children[n].offsetLeft - track.children[0].offsetLeft : 0;
+    }
+    const cruise = () => reduce.matches ? 0 : -period / (small.matches ? 50 : 70);
+
+    function frame(now) {
+      const dt = Math.min((now - last) / 1000, 0.1);
+      last = now;
+      if (!period) measure();
+      if (!drag) {
+        const c = cruise();
+        v = c + (v - c) * Math.exp(-dt / 0.8);
+        x += v * dt;
+      }
+      if (period) { x %= period; if (x > 0) x -= period; }
+      track.style.transform = `translate3d(${x}px, 0, 0)`;
+      requestAnimationFrame(frame);
+    }
+    track.style.animation = "none";
+    addEventListener("resize", () => { period = 0; });
+    requestAnimationFrame(frame);
+
+    tilt.addEventListener("pointerdown", (e) => {
+      if (e.button !== 0) return;
+      drag = { id: e.pointerId, px: e.clientX, t: e.timeStamp, v: 0 };
+      try { tilt.setPointerCapture(e.pointerId); } catch (err) {}
+      tilt.classList.add("dragging");
+    });
+    tilt.addEventListener("pointermove", (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      const dx = e.clientX - drag.px, dt = (e.timeStamp - drag.t) / 1000;
+      x += dx;
+      if (dt > 0) drag.v = drag.v * 0.3 + (dx / dt) * 0.7;
+      drag.px = e.clientX;
+      drag.t = e.timeStamp;
+    });
+    const release = (e) => {
+      if (!drag || e.pointerId !== drag.id) return;
+      // Holding still before letting go means no fling.
+      v = e.type === "pointerup" && e.timeStamp - drag.t < 100 ? clamp(drag.v) : 0;
+      drag = null;
+      tilt.classList.remove("dragging");
+    };
+    tilt.addEventListener("pointerup", release);
+    tilt.addEventListener("pointercancel", release);
+
+    // Sideways trackpad swipes steer it; vertical wheel still scrolls the page.
+    tilt.addEventListener("wheel", (e) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      v = clamp(-e.deltaX * (e.deltaMode ? 16 : 1) * 60);
+    }, { passive: false });
+  })();
 })();
