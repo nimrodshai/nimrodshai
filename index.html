@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nimrod Shai | AI Products, Apps & Websites</title>
-<meta name="description" content="I build AI products, apps and websites end to end, from the first idea to something people love using. See what I've built and get in touch about your project.">
-<meta property="og:title" content="Nimrod Shai | AI Products, Apps & Websites">
-<meta property="og:description" content="AI products, apps and websites, built end to end. See what I've built and get in touch about your project.">
+<title>Nimrod Shai | Websites, Systems & Tools for Small Businesses</title>
+<meta name="description" content="Websites, ordering systems, WhatsApp bots and automations for small businesses, and tools for people with an idea. Tell me what you need in your own words and I'll build it.">
+<meta property="og:title" content="Nimrod Shai | Websites, Systems & Tools for Small Businesses">
+<meta property="og:description" content="Websites, ordering systems, WhatsApp bots and automations for small businesses and people with an idea.">
 <meta property="og:image" content="https://nimrod-shai.me/assets/og-logo.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Rubik:wght@400;500;600;700&family=Frank+Ruhl+Libre:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=24">
+<link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
@@ -30,7 +30,8 @@
   <div class="wrap topbar-inner">
     <a class="brand" href="#top"><img class="brand-logo" src="assets/logo-header.png" width="435" height="150" alt=""><span class="brand-name" data-i18n="name">Nimrod Shai</span></a>
     <nav class="nav" aria-label="Main">
-      <a href="#projects" data-i18n="navProjects">Projects</a>
+      <a class="nav-services" href="#services" data-i18n="navServices">What I build</a>
+      <a href="#projects" data-i18n="navProjects">Work</a>
       <a href="#contact" data-i18n="navContact">Contact</a>
       <button class="btn btn-ghost btn-pill" id="langToggle" type="button" aria-label="Switch language">
         <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg>
@@ -50,14 +51,14 @@
         <div class="avatar"><img src="assets/portrait.jpg?v=14" width="720" height="720" alt="" data-i18n-alt="portraitAlt"></div>
         <span class="hero-name" data-i18n="name">Nimrod Shai</span>
       </div>
-      <h1 class="rise rise-2"><span data-i18n="heroA">I build</span> <span class="hero-words" id="heroWords"></span><em data-i18n="heroB">end to end.</em></h1>
+      <h1 class="rise rise-2"><span data-i18n="heroA">Need</span> <span class="hero-words" id="heroWords"></span><em data-i18n="heroB">You're in the right place.</em></h1>
       <div class="hero-foot rise rise-3">
-        <p class="hero-sub" data-i18n="heroC">From the first conversation about the problem to the version real people use.</p>
+        <p class="hero-sub" data-i18n="heroC">For small businesses and people with an idea.</p>
         <div class="cta-row">
-          <a class="btn btn-lg btn-accent" href="#projects"><span data-i18n="ctaProjects">See the projects</span>
+          <a class="btn btn-lg btn-accent" href="#contact"><span data-i18n="ctaContact">Tell me what you need</span>
             <svg class="arrow flip" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
           </a>
-          <a class="btn btn-lg btn-ghost" href="#contact" data-i18n="ctaContact">Get in touch</a>
+          <a class="btn btn-lg btn-ghost" href="#projects" data-i18n="ctaProjects">See what I've built</a>
         </div>
       </div>
     </div>
@@ -67,30 +68,63 @@
     </div>
   </section>
 
-  <section class="wrap about" id="about" aria-label="About">
-    <div class="stats" id="stats"></div>
-    <div class="about-grid" id="aboutList"></div>
+  <section class="wrap block" id="for" aria-labelledby="forTitle">
+    <div class="section-head">
+      <h2 id="forTitle"><span data-i18n="forTitle">Who I build for</span><span class="dot" aria-hidden="true">.</span></h2>
+      <p data-i18n="forSub"></p>
+    </div>
+    <div class="audience-grid" id="audienceList"></div>
+  </section>
+
+  <section class="wrap block" id="services" aria-labelledby="servicesTitle">
+    <div class="section-head">
+      <h2 id="servicesTitle"><span data-i18n="servicesTitle">What I can build for you</span><span class="dot" aria-hidden="true">.</span></h2>
+      <p data-i18n="servicesSub"></p>
+    </div>
+    <div class="service-grid" id="serviceList"></div>
+  </section>
+
+  <section class="wrap block" id="how" aria-labelledby="stepsTitle">
+    <div class="section-head">
+      <h2 id="stepsTitle"><span data-i18n="stepsTitle">How it works</span><span class="dot" aria-hidden="true">.</span></h2>
+    </div>
+    <ol class="steps" id="stepList"></ol>
   </section>
 
   <section class="wrap projects" id="projects" aria-labelledby="projectsTitle">
     <div class="section-head">
-      <h2 id="projectsTitle"><span data-i18n="projectsTitle">Projects</span><span class="dot" aria-hidden="true">.</span></h2>
-      <p data-i18n="projectsSub">Products I designed, built and launched myself, most of them powered by AI.</p>
+      <h2 id="projectsTitle"><span data-i18n="projectsTitle">Work</span><span class="dot" aria-hidden="true">.</span></h2>
+      <p data-i18n="projectsSub"></p>
     </div>
     <div id="projectList" class="project-list"></div>
 
     <div class="more">
-      <h3 class="more-title" data-i18n="moreTitle">More tools and experiments</h3>
+      <h3 class="more-title" data-i18n="moreTitle">Small experiments</h3>
       <div id="moreList" class="more-grid"></div>
     </div>
+  </section>
+
+  <section class="wrap about" id="about" aria-labelledby="aboutTitle">
+    <div class="section-head">
+      <h2 id="aboutTitle"><span data-i18n="aboutTitle">Who you'll work with</span><span class="dot" aria-hidden="true">.</span></h2>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="about-grid" id="aboutList"></div>
+  </section>
+
+  <section class="wrap block faq" id="faq" aria-labelledby="faqTitle">
+    <div class="section-head">
+      <h2 id="faqTitle"><span data-i18n="faqTitle">Questions</span><span class="dot" aria-hidden="true">.</span></h2>
+    </div>
+    <div class="faq-list" id="faqList"></div>
   </section>
 
   <section class="contact" id="contact" aria-labelledby="contactTitle">
     <div class="contact-card">
       <div class="contact-dots" aria-hidden="true"></div>
-      <h2 id="contactTitle" data-i18n="contactTitle">Let's build something</h2>
+      <h2 id="contactTitle" data-i18n="contactTitle">Let's talk</h2>
       <div class="contact-foot">
-        <p data-i18n="contactSub">I take on freelance projects: AI products and features, applications and websites, and getting a prototype all the way to production. Tell me what you're building and let's talk.</p>
+        <p data-i18n="contactSub"></p>
         <div class="contact-links">
           <a class="btn btn-ink" id="waLink" href="#" target="_blank" rel="noopener">
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg>
@@ -112,7 +146,7 @@
   <span data-i18n="footerNote">Built with Claude Code.</span>
 </footer>
 
-<script src="content.js?v=22"></script>
-<script src="app.js?v=21"></script>
+<script src="content.js?v=25"></script>
+<script src="app.js?v=23"></script>
 </body>
 </html>

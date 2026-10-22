@@ -1,9 +1,11 @@
 (function () {
   const C = window.CONTENT;
 
-  let lang = "en";
-  try { lang = localStorage.getItem("ns-lang") || "en"; } catch (e) {}
-  if (new URLSearchParams(location.search).get("lang") === "he") lang = "he";
+  // Most visitors come from Hebrew ads, so Hebrew is the default unless the browser says otherwise.
+  let lang = /^he|^iw/i.test(navigator.language || "") ? "he" : "en";
+  try { lang = localStorage.getItem("ns-lang") || lang; } catch (e) {}
+  const qLang = new URLSearchParams(location.search).get("lang");
+  if (qLang === "he" || qLang === "en") lang = qLang;
 
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const arrow = (size) => `<svg class="arrow flip" aria-hidden="true" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>`;
@@ -31,10 +33,10 @@
           <h3>${esc(d.name)}</h3>
           <p class="tagline">${esc(d.tagline)}</p>
           <p class="desc">${esc(d.desc)}</p>
-          <ul class="chips">${p.tags.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
           <div class="behind" id="behind-${p.id}" inert>
             <div class="behind-inner">
               <ul>${d.behind.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
+              <ul class="chips">${p.tags.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
             </div>
           </div>
           <div class="project-actions">
@@ -64,19 +66,35 @@
     const html = document.documentElement;
     html.lang = lang;
     html.dir = lang === "he" ? "rtl" : "ltr";
-    document.title = lang === "he" ? "נמרוד שי | מוצרי AI, אפליקציות ואתרים" : "Nimrod Shai | AI Products, Apps & Websites";
+    document.title = t.title;
 
     document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t[el.dataset.i18n]; });
     document.querySelectorAll("[data-i18n-alt]").forEach((el) => { el.alt = t[el.dataset.i18nAlt]; });
     document.getElementById("langLabel").textContent = t.langLabel;
-    document.getElementById("about").setAttribute("aria-label", t.aboutLabel);
+
+    document.getElementById("audienceList").innerHTML = t.audiences.map((a) =>
+      `<div class="audience-card"><h3>${esc(a.title)}</h3><p>${esc(a.body)}</p><ul class="examples">${a.examples.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`
+    ).join("");
+
+    document.getElementById("serviceList").innerHTML = t.services.map((x, i) =>
+      `<div class="service-card"><span class="about-n">${pad(i + 1)}</span><h3>${esc(x.title)}</h3><p>${esc(x.body)}</p></div>`
+    ).join("");
+
+    document.getElementById("stepList").innerHTML = t.steps.map((x, i) =>
+      `<li class="step"><span class="step-n">${i + 1}</span><h3>${esc(x.title)}</h3><p>${esc(x.body)}</p></li>`
+    ).join("");
+
+    document.getElementById("faqList").innerHTML = t.faq.map((x, i) =>
+      `<div class="faq-item"><h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-${i}">${esc(x.q)}${chev}</button></h3>
+        <div class="faq-a" id="faq-${i}" inert><div class="faq-a-inner"><p>${esc(x.a)}</p></div></div></div>`
+    ).join("");
 
     document.getElementById("stats").innerHTML = t.stats.map((s) =>
       `<div class="stat"><span class="stat-big">${esc(s.big)}</span><span class="stat-label">${esc(s.label)}</span></div>`
     ).join("");
 
     document.getElementById("aboutList").innerHTML = t.heroBody.map((para, i) =>
-      `<div class="about-item"><span class="about-n">${pad(i + 1)}</span><h2>${esc(t.aboutTitles[i])}</h2><p>${esc(para)}</p></div>`
+      `<div class="about-item"><span class="about-n">${pad(i + 1)}</span><h3>${esc(t.aboutTitles[i])}</h3><p>${esc(para)}</p></div>`
     ).join("");
 
     document.getElementById("waLink").href = `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(t.waText)}`;
@@ -98,14 +116,21 @@
     }).join("");
   }
 
-  document.getElementById("projectList").addEventListener("click", (e) => {
-    const btn = e.target.closest(".behind-toggle");
-    if (!btn) return;
+  // Project "How it's built" panels and FAQ answers expand the same way.
+  function toggle(btn) {
     const open = btn.getAttribute("aria-expanded") !== "true";
     const panel = document.getElementById(btn.getAttribute("aria-controls"));
     btn.setAttribute("aria-expanded", String(open));
     panel.classList.toggle("open", open);
     panel.inert = !open;
+  }
+  document.getElementById("projectList").addEventListener("click", (e) => {
+    const btn = e.target.closest(".behind-toggle");
+    if (btn) toggle(btn);
+  });
+  document.getElementById("faqList").addEventListener("click", (e) => {
+    const btn = e.target.closest(".faq-q");
+    if (btn) toggle(btn);
   });
 
   document.getElementById("langToggle").addEventListener("click", () => {
