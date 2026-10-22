@@ -79,6 +79,11 @@
       try {
         savedLang = localStorage.getItem('yallaChessLanguage');
       } catch(e) {}
+      // An explicit ?lang= (e.g. from the portfolio link) wins over saved and detected language
+      try {
+        var urlLang = new URLSearchParams(location.search).get('lang');
+        if (urlLang === 'he' || urlLang === 'en') savedLang = urlLang;
+      } catch(e) {}
       if (savedLang === 'he' || savedLang === 'en') {
         if (savedLang === 'he') {
           document.documentElement.setAttribute('lang', 'he');

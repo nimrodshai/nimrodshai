@@ -121,6 +121,7 @@ window.CONTENT = {
       id: "yallachess",
       label: "Yalla Chess · home page",
       url: "demos/yallachess/",
+      langShots: true,
       tags: ["Node.js", "SQLite", "Twilio Verify", "Resend", "Docker", "GitHub Actions"],
       en: {
         kicker: "Client product", status: "Built for a chess school",

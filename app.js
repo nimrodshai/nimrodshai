@@ -8,7 +8,10 @@
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const arrow = (size) => `<svg class="arrow flip" aria-hidden="true" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>`;
   const chev = `<svg class="chev" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
-  const shot = (id) => `assets/shots/${id}.jpg?v=4`;
+  // Projects with langShots have one screenshot per language (id-en.jpg, id-he.jpg).
+  const shot = (p) => `assets/shots/${p.langShots ? `${p.id}-${lang}` : p.id}.jpg?v=5`;
+  // Local demos open in the same language as the portfolio.
+  const demoUrl = (url) => url.startsWith("http") ? url : `${url}?lang=${lang}`;
   const pad = (n) => String(n).padStart(2, "0");
 
   function renderProjects(t) {
@@ -17,7 +20,7 @@
       return `
       <article class="project" id="p-${p.id}">
         <figure class="project-visual">
-          <img src="${shot(p.id)}" width="1200" height="750" loading="lazy" alt="${esc(t.shotAlt.replace("{name}", d.name))}">
+          <img src="${shot(p)}" width="1200" height="750" loading="lazy" alt="${esc(t.shotAlt.replace("{name}", d.name))}">
         </figure>
         <div class="project-info">
           <div class="meta">
@@ -35,7 +38,7 @@
             </div>
           </div>
           <div class="project-actions">
-            <a class="btn btn-light" href="${p.url}" target="_blank" rel="noopener">${p.url.startsWith("http") ? t.visit : t.demo} ${arrow(15)}</a>
+            <a class="btn btn-light" href="${demoUrl(p.url)}" target="_blank" rel="noopener">${p.url.startsWith("http") ? t.visit : t.demo} ${arrow(15)}</a>
             <button type="button" class="btn btn-ghost behind-toggle" aria-expanded="false" aria-controls="behind-${p.id}"><span class="label-full">${t.behind}</span><span class="label-short">${t.behindShort}</span>${chev}</button>
           </div>
         </div>
@@ -67,18 +70,17 @@
 
     document.getElementById("projectList").innerHTML = renderProjects(t);
 
+    // The marquee repeats the shots twice so the -50% loop is seamless.
+    document.getElementById("marquee").innerHTML = C.projects.concat(C.projects).map((p) =>
+      `<img src="${shot(p)}" width="1200" height="750" alt="">`
+    ).join("");
+
     document.getElementById("moreList").innerHTML = C.more.map((m) => {
       const href = m.url;
       const inner = `<span class="more-tag">${esc(m.tag)}</span><h4>${esc(m.name)}${href ? " " + arrow(16) : ""}</h4><p>${esc(m[lang])}</p>`;
       return href ? `<a class="more-card" href="${href}" target="_blank" rel="noopener">${inner}</a>` : `<div class="more-card">${inner}</div>`;
     }).join("");
   }
-
-  // The marquee repeats the shots twice so the -50% loop is seamless.
-  const ids = C.projects.map((p) => p.id);
-  document.getElementById("marquee").innerHTML = ids.concat(ids).map((id) =>
-    `<img src="${shot(id)}" width="1200" height="750" alt="">`
-  ).join("");
 
   document.getElementById("projectList").addEventListener("click", (e) => {
     const btn = e.target.closest(".behind-toggle");
