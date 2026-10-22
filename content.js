@@ -10,8 +10,15 @@ window.CONTENT = {
       navProjects: "Projects",
       navContact: "Contact",
       langLabel: "עברית",
-      heroTitle: "Hi, I'm Nimrod",
-      heroLead: "I build AI products end to end, from the first conversation about the problem to the version real people use.",
+      heroA: "I build AI products",
+      heroB: "end to end.",
+      heroC: "From the first conversation about the problem to the version real people use.",
+      aboutLabel: "About",
+      aboutTitles: ["13 years of mobile apps", "AI at the center", "Building with AI every day"],
+      stats: [
+        { big: "13 Years", label: "building and shipping products" },
+        { big: "2 Years", label: "with AI at the center of my work" }
+      ],
       heroBody: [
         "For thirteen years I built mobile apps for companies like LivePerson, Lemonade and Mixtiles, from customer chat and insurance to AI-made photo books. Along the way I learned that good code is only half the job; the other half is an experience that feels simple and natural.",
         "For the past two years AI has been at the center of my work. I turn AI ideas into products that work in the real world, and since March 2026 I've been helping businesses with AI while launching products of my own: a WhatsApp assistant for families, data tools, generative music and more.",
@@ -23,6 +30,7 @@ window.CONTENT = {
       projectsTitle: "Projects",
       projectsSub: "Products I designed, built and launched myself, most of them powered by AI.",
       behind: "Behind the project",
+      behindShort: "Behind it",
       shotAlt: "Screenshot of {name}",
       visit: "Visit site",
       demo: "Open demo",
@@ -42,8 +50,15 @@ window.CONTENT = {
       navProjects: "פרויקטים",
       navContact: "יצירת קשר",
       langLabel: "English",
-      heroTitle: "היי, אני נמרוד",
-      heroLead: "אני בונה מוצרי AI מקצה לקצה, מהשיחה הראשונה על הבעיה ועד לגרסה שאנשים אמיתיים משתמשים בה.",
+      heroA: "אני בונה מוצרי AI",
+      heroB: "מקצה לקצה.",
+      heroC: "מהשיחה הראשונה על הבעיה ועד לגרסה שאנשים אמיתיים משתמשים בה.",
+      aboutLabel: "אודות",
+      aboutTitles: ["13 שנים של אפליקציות", "AI במרכז העבודה", "בונה עם AI כל יום"],
+      stats: [
+        { big: "13 שנים", label: "של בניית מוצרים והשקתם" },
+        { big: "2 שנים", label: "עם AI במרכז העבודה שלי" }
+      ],
       heroBody: [
         "במשך שלוש עשרה שנים בניתי אפליקציות מובייל לחברות כמו LivePerson, Lemonade ו־Mixtiles, מצ׳אט עם לקוחות וביטוח ועד אלבומי תמונות שנוצרים ב־AI. בדרך למדתי שקוד טוב הוא רק חצי מהעבודה; החצי השני הוא חוויה שמרגישה פשוטה וטבעית.",
         "בשנתיים האחרונות AI נמצא במרכז העבודה שלי. אני הופך רעיונות מבוססי AI למוצרים שעובדים בעולם האמיתי, ומאז מרץ 2026 אני עוזר לעסקים עם AI ובמקביל משיק מוצרים משלי: עוזר וואטסאפ למשפחות, כלי דאטה, מוזיקה גנרטיבית ועוד.",
@@ -55,6 +70,7 @@ window.CONTENT = {
       projectsTitle: "פרויקטים",
       projectsSub: "מוצרים שאפיינתי, בניתי והשקתי בעצמי, רובם מבוססי AI.",
       behind: "מאחורי הפרויקט",
+      behindShort: "מאחורי הקלעים",
       shotAlt: "צילום מסך של {name}",
       visit: "לאתר",
       demo: "לדמו",
