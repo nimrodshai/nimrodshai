@@ -46,6 +46,19 @@
     }).join("");
   }
 
+  // The hero cycles through heroWords; only the current word is exposed to screen readers.
+  let wordIndex = 0;
+  function showWord() {
+    const words = document.getElementById("heroWords").children;
+    const cur = wordIndex % words.length;
+    const prev = (cur - 1 + words.length) % words.length;
+    Array.from(words).forEach((el, i) => {
+      el.className = i === cur ? "is-cur" : i === prev ? "is-prev" : "";
+      el.setAttribute("aria-hidden", String(i !== cur));
+    });
+  }
+  setInterval(() => { wordIndex++; showWord(); }, 2400);
+
   function render() {
     const t = C.ui[lang];
     const html = document.documentElement;
@@ -67,6 +80,9 @@
     ).join("");
 
     document.getElementById("waLink").href = `https://wa.me/${C.whatsapp}?text=${encodeURIComponent(t.waText)}`;
+
+    document.getElementById("heroWords").innerHTML = t.heroWords.map((w) => `<span>${esc(w)}</span>`).join("");
+    showWord();
 
     document.getElementById("projectList").innerHTML = renderProjects(t);
 

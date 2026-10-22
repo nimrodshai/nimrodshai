@@ -82,7 +82,12 @@ button { font: inherit; }
 .avatar { flex: none; width: 84px; height: 84px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px rgba(255, 255, 255, 0.18); }
 .avatar img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); }
 .hero-name { font-weight: 600; font-size: 50px; line-height: 1.1; letter-spacing: -0.03em; }
-.hero h1 { font-weight: 600; font-size: clamp(52px, 9.6vw, 148px); line-height: 0.92; letter-spacing: -0.055em; max-width: 1200px; }
+.hero h1 { font-weight: 600; font-size: clamp(30px, 8vw, 118px); line-height: 0.95; letter-spacing: -0.055em; max-width: 1200px; }
+/* Rotating word: every word shares one grid cell; the current one is shown, the previous one leaves upward. */
+.hero-words { display: inline-grid; justify-items: start; }
+.hero-words > span { grid-area: 1 / 1; white-space: nowrap; opacity: 0; transform: translateY(0.7em); filter: blur(10px); transition: transform .8s cubic-bezier(.65, 0, .35, 1), opacity .8s cubic-bezier(.65, 0, .35, 1), filter .8s cubic-bezier(.65, 0, .35, 1); }
+.hero-words > .is-cur { opacity: 1; transform: none; filter: none; }
+.hero-words > .is-prev { transform: translateY(-0.7em); }
 .hero h1 em { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.02em; color: var(--accent); }
 .hero-foot { display: flex; flex-wrap: wrap; gap: 32px 64px; align-items: flex-end; justify-content: space-between; }
 .hero-sub { max-width: 560px; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.5; color: var(--muted); }
@@ -206,7 +211,7 @@ button { font: inherit; }
   .hero-id { flex-wrap: nowrap; gap: 14px; }
   .avatar { width: 64px; height: 64px; }
   .hero-name { font-size: 30px; letter-spacing: -0.035em; }
-  .hero h1 { font-size: clamp(44px, 14vw, 54px); line-height: 0.95; }
+  .hero h1 { font-size: 32px; line-height: 1; }
   .hero-foot { flex-direction: column; align-items: stretch; gap: 28px; }
   .hero-sub { font-size: 18px; }
   .cta-row { flex-direction: column; gap: 10px; }
@@ -269,5 +274,6 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .hero-glow, .rise, .marquee-track { animation: none; }
+  .hero-words > span { transition: none; }
   .btn, .btn svg, .project, .project-visual img, .behind, .behind-toggle .chev, .more-card { transition: none; }
 }
