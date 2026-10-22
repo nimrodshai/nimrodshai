@@ -128,7 +128,7 @@ button { font: inherit; }
 .project { display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center; padding: 28px; border-radius: 36px; background: var(--card); transition: box-shadow .6s ease, background-color .6s ease; }
 .project:nth-child(even) { flex-direction: row-reverse; }
 .project-visual { flex: 999 1 520px; min-width: 0; margin: 0; border-radius: 22px; overflow: hidden; background: var(--raised); }
-.project-visual img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; transition: transform 1s var(--ease); }
+.project-visual img { width: 100%; height: auto; aspect-ratio: 10 / 7; object-fit: cover; object-position: top; transition: transform 1s var(--ease); }
 @media (hover: hover) {
   .project:hover { background: var(--card-hover); box-shadow: 0 0 0 1px rgba(255, 255, 255, .10), 0 60px 120px -60px var(--accent-glow); }
   .project:hover .project-visual img { transform: scale(1.04) rotate(-.6deg); }
