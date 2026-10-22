@@ -1,7 +1,7 @@
 // All page copy lives here, in English and Hebrew.
 window.CONTENT = {
-  // WhatsApp number in international format, digits only (e.g. 9725XXXXXXXX).
-  whatsapp: "WHATSAPP_NUMBER",
+  // WhatsApp username (or a number in international format, digits only); used as wa.me/<value>.
+  whatsapp: "nimrodshai",
 
   ui: {
     en: {
