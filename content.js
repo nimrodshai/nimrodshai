@@ -441,36 +441,6 @@ window.CONTENT = {
       }
     },
     {
-      id: "boommadad",
-      label: "boommadad.com",
-      url: "https://boommadad.com/",
-      tags: ["Python", "Telegram Bot API", "GitHub Actions", "Cloudflare Workers", "Netlify"],
-      en: {
-        kicker: "Personal project", status: "Live site",
-        name: "Boom Madad",
-        tagline: "An Excel analysis workflow, automated through Telegram.",
-        desc: "I turned my father's spreadsheet-based investment analysis into a Telegram bot. He requests an analysis in a message and receives a PDF report. The project shows how I automate a recurring calculation and report that someone used to prepare by hand.",
-        behind: [
-          "I translated the spreadsheet's historical analysis into Python and added PDF report generation.",
-          "The analysis runs on GitHub-hosted runners, without requiring a home computer to stay online.",
-          "I connected Telegram requests to the reporting workflow through a Cloudflare Worker.",
-          "I built a Hebrew landing page to explain the project and its methodology."
-        ]
-      },
-      he: {
-        kicker: "פרויקט אישי", status: "אתר פעיל",
-        name: "בום מדד",
-        tagline: "ניתוח נתונים מאקסל, בתהליך אוטומטי דרך טלגרם.",
-        desc: "הפכתי תהליך ניתוח השקעות שאבא שלי ניהל באקסל לבוט בטלגרם. הוא מבקש ניתוח בהודעה ומקבל דוח PDF. הפרויקט מדגים אוטומציה של חישוב ודוח תקופתי שבעבר דרשו הכנה ידנית.",
-        behind: [
-          "העברתי את ניתוח הנתונים ההיסטוריים מהגיליון ל־Python והוספתי הפקת דוחות PDF.",
-          "הניתוח רץ על שרתים של GitHub, ללא צורך להשאיר מחשב ביתי מחובר.",
-          "חיברתי את הבקשות מטלגרם לתהליך הפקת הדוחות באמצעות Cloudflare Worker.",
-          "בניתי דף נחיתה בעברית שמסביר את הפרויקט ואת שיטת הניתוח."
-        ]
-      }
-    },
-    {
       id: "freedom",
       label: "isfreedombetter.com",
       url: "https://isfreedombetter.com",
