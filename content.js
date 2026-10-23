@@ -59,7 +59,7 @@ window.CONTENT = {
       ],
 
       projectsTitle: "Selected projects",
-      projectsSub: "Explore a client project alongside my own products and experiments. Each example shows the purpose, main features, and whether you can visit a live site or try a demo.",
+      projectsSub: "Explore a client project, sample websites for different kinds of businesses, and my own products and experiments. Each example shows the purpose, main features, and whether you can visit a live site or try a demo.",
       behind: "How it's built",
       behindShort: "How it's built",
       shotAlt: "Screenshot of {name}",
@@ -154,7 +154,7 @@ window.CONTENT = {
       ],
 
       projectsTitle: "פרויקטים נבחרים",
-      projectsSub: "פרויקט ללקוח לצד מוצרים וניסויים עצמאיים שלי. בכל דוגמה תוכלו להכיר את המטרה ואת היכולות המרכזיות, ולפתוח אתר פעיל או להתנסות בהדגמה.",
+      projectsSub: "פרויקט ללקוח, אתרים לדוגמה לסוגים שונים של עסקים, ומוצרים וניסויים עצמאיים שלי. בכל דוגמה תוכלו להכיר את המטרה ואת היכולות המרכזיות, ולפתוח אתר פעיל או להתנסות בהדגמה.",
       behind: "איך זה בנוי",
       behindShort: "איך זה בנוי",
       shotAlt: "צילום מסך של {name}",
@@ -196,7 +196,7 @@ window.CONTENT = {
     }
   },
 
-  // Ordered for small-business visitors: client work first, personal projects last.
+  // Ordered for small-business visitors: client work first, then sample business websites, personal projects last.
   projects: [
     {
       id: "yallachess",
@@ -226,6 +226,157 @@ window.CONTENT = {
           "המשפחות מזדהות באמצעות Twilio Verify, והמערכת שולחת הודעות שירות במייל באמצעות Resend.",
           "הממשק תומך בעברית ובאנגלית, כולל תצוגה מימין לשמאל.",
           "הכנתי את המערכת לפריסה ב־Render באמצעות Docker והגדרתי בדיקות אוטומטיות ב־GitHub Actions."
+        ]
+      }
+    },
+    {
+      id: "olive-and-ember",
+      label: "Olive & Ember sample website",
+      url: "demos/olive-and-ember/",
+      tags: ["HTML", "CSS", "JavaScript", "Responsive design", "Accessibility", "AI-generated photography"],
+      en: {
+        kicker: "Restaurant", status: "Sample website",
+        name: "Olive & Ember",
+        tagline: "A restaurant website with a menu and table reservations.",
+        desc: "I designed a sample website for a fictional wood-fire restaurant in Jaffa. Guests can browse the seasonal menu, view the gallery, and request a table through a reservation form. The site also shows the current opening status and private event options.",
+        behind: [
+          "The menu is organised in tabs for starters, mains, desserts, and wine, with keyboard support.",
+          "The reservation form checks the date, time, party size, and an Israeli phone number, then shows a confirmation with a booking reference.",
+          "The page calculates whether the restaurant is open from the opening hours in Israel time.",
+          "I used generated photography and a dark, editorial design, with reduced animation for visitors who prefer less motion."
+        ]
+      },
+      he: {
+        kicker: "מסעדה", status: "אתר לדוגמה",
+        name: "Olive & Ember",
+        tagline: "אתר למסעדה עם תפריט והזמנת שולחן.",
+        desc: "עיצבתי אתר לדוגמה למסעדת טאבון בדיונית ביפו. האורחים יכולים לעיין בתפריט העונתי, לצפות בגלריה ולבקש שולחן בטופס הזמנה. האתר מציג גם אם המסעדה פתוחה כרגע ואפשרויות לאירועים פרטיים.",
+        behind: [
+          "התפריט מחולק ללשוניות של ראשונות, עיקריות, קינוחים ויין, עם תמיכה בניווט במקלדת.",
+          "טופס ההזמנה בודק תאריך, שעה, מספר סועדים ומספר טלפון ישראלי, ומציג אישור עם מספר הזמנה.",
+          "האתר מחשב לפי שעות הפעילות ושעון ישראל אם המסעדה פתוחה כרגע.",
+          "שילבתי צילומים שנוצרו במיוחד ועיצוב כהה בסגנון מגזין, עם פחות אנימציה למבקרים שמעדיפים זאת."
+        ]
+      }
+    },
+    {
+      id: "lumen-physio",
+      label: "Lumen Physiotherapy sample website",
+      url: "demos/lumen-physio/",
+      langShots: true,
+      tags: ["HTML", "CSS", "JavaScript", "Hebrew & English", "RTL layout", "Accessibility"],
+      en: {
+        kicker: "Clinic", status: "Sample website",
+        name: "Lumen Physiotherapy",
+        tagline: "A bilingual clinic website with online booking.",
+        desc: "I designed a sample website for a fictional physiotherapy clinic in Haifa. Patients can read about treatments and the team, then book an appointment in three steps. The whole site switches between English and Hebrew, including the right-to-left layout.",
+        behind: [
+          "The booking widget lets patients choose a treatment, pick a date and an available time, and enter their contact details.",
+          "The calendar skips Saturdays and past times, and offers shorter hours on Fridays.",
+          "The language switch changes all text and mirrors the layout, and remembers the visitor's choice.",
+          "I added an accessible FAQ, a testimonials carousel, and the health funds the clinic works with."
+        ]
+      },
+      he: {
+        kicker: "קליניקה", status: "אתר לדוגמה",
+        name: "לומן פיזיותרפיה",
+        tagline: "אתר דו־לשוני לקליניקה עם קביעת תורים.",
+        desc: "עיצבתי אתר לדוגמה לקליניקת פיזיותרפיה בדיונית בחיפה. המטופלים יכולים להכיר את הטיפולים ואת הצוות, ולקבוע תור בשלושה שלבים. האתר כולו עובר בין עברית לאנגלית, כולל תצוגה מימין לשמאל.",
+        behind: [
+          "בווידג'ט קביעת התורים בוחרים טיפול, תאריך ושעה פנויה, וממלאים פרטי קשר.",
+          "לוח השנה מדלג על שבתות ועל שעות שעברו, ומציע שעות מקוצרות בימי שישי.",
+          "מעבר השפה מחליף את כל הטקסטים, הופך את כיוון התצוגה וזוכר את הבחירה של המבקר.",
+          "הוספתי שאלות נפוצות נגישות, קרוסלת המלצות ואת קופות החולים שהקליניקה עובדת איתן."
+        ]
+      }
+    },
+    {
+      id: "pulse-studio",
+      label: "PULSE sample website",
+      url: "demos/pulse-studio/",
+      tags: ["HTML", "CSS", "JavaScript", "Interactive schedule", "Animation", "Accessibility"],
+      en: {
+        kicker: "Fitness studio", status: "Sample website",
+        name: "PULSE",
+        tagline: "A fitness studio website with a class schedule and memberships.",
+        desc: "I designed a sample website for a fictional boutique fitness studio in Tel Aviv. Visitors can filter the weekly class schedule, see how many spots are left, and reserve a place. They can also compare membership plans and sign up for a free trial class.",
+        behind: [
+          "The schedule follows the Israeli week, with filters by class type and intensity.",
+          "Reserving a class updates the remaining spots, and visitors can cancel with the same button.",
+          "The pricing section switches between monthly and annual billing, and the trial form checks each field before sign-up.",
+          "I used a bold, high-contrast design with animated counters and reduced motion for visitors who prefer it."
+        ]
+      },
+      he: {
+        kicker: "סטודיו לכושר", status: "אתר לדוגמה",
+        name: "PULSE",
+        tagline: "אתר לסטודיו כושר עם מערכת שעות ומנויים.",
+        desc: "עיצבתי אתר לדוגמה לסטודיו בוטיק בדיוני לכושר בתל אביב. המבקרים יכולים לסנן את מערכת השיעורים השבועית, לראות כמה מקומות נשארו ולשריין מקום. אפשר גם להשוות מסלולי מנוי ולהירשם לשיעור ניסיון חינם.",
+        behind: [
+          "מערכת השעות בנויה לפי השבוע הישראלי, עם סינון לפי סוג השיעור ורמת העצימות.",
+          "שריון מקום מעדכן את מספר המקומות הפנויים, ואפשר לבטל באותו כפתור.",
+          "אזור המחירים עובר בין חיוב חודשי לשנתי, וטופס שיעור הניסיון בודק כל שדה לפני ההרשמה.",
+          "בחרתי עיצוב נועז עם ניגודיות גבוהה ומונים מונפשים, ופחות אנימציה למבקרים שמעדיפים זאת."
+        ]
+      }
+    },
+    {
+      id: "crumb-bakery",
+      label: "Crumb & Co. sample website",
+      url: "demos/crumb-bakery/",
+      tags: ["HTML", "CSS", "JavaScript", "Online ordering", "Local storage", "Accessibility"],
+      en: {
+        kicker: "Bakery", status: "Sample website",
+        name: "Crumb & Co.",
+        tagline: "A bakery website with online pre-orders for pickup.",
+        desc: "I designed a sample online shop for a fictional sourdough bakery in Jerusalem. Customers add bread and pastries to a basket, choose a pickup day and time, and receive an order number. The site also presents the bakery's process, baking classes, and opening hours.",
+        behind: [
+          "The basket keeps its items between visits and lets customers change quantities or remove items.",
+          "Pickup times follow the bakery's hours, with a reminder when challah is ordered for a day other than Friday.",
+          "Checkout checks the customer's name and phone number and shows an order summary.",
+          "I drew the product illustrations and combined them with generated photography in a warm, handcrafted design."
+        ]
+      },
+      he: {
+        kicker: "מאפייה", status: "אתר לדוגמה",
+        name: "Crumb & Co.",
+        tagline: "אתר למאפייה עם הזמנה מראש לאיסוף עצמי.",
+        desc: "עיצבתי חנות אונליין לדוגמה למאפיית מחמצת בדיונית בירושלים. הלקוחות מוסיפים לחמים ומאפים לסל, בוחרים יום ושעת איסוף ומקבלים מספר הזמנה. האתר מציג גם את תהליך האפייה, סדנאות ושעות פתיחה.",
+        behind: [
+          "הסל שומר את הפריטים בין ביקורים ומאפשר לשנות כמויות או להסיר פריטים.",
+          "שעות האיסוף מותאמות לשעות הפעילות, עם תזכורת כשמזמינים חלה ליום שאינו יום שישי.",
+          "בסיום ההזמנה נבדקים השם ומספר הטלפון, ומוצג סיכום ההזמנה.",
+          "ציירתי איורים למוצרים ושילבתי אותם עם צילומים שנוצרו במיוחד, בעיצוב חם בסגנון עבודת יד."
+        ]
+      }
+    },
+    {
+      id: "atelier-noa",
+      label: "Atelier Noa sample website",
+      url: "demos/atelier-noa/",
+      tags: ["HTML", "CSS", "JavaScript", "Portfolio gallery", "Lead qualification", "Accessibility"],
+      en: {
+        kicker: "Design studio", status: "Sample website",
+        name: "Atelier Noa",
+        tagline: "A portfolio website with a qualifying inquiry form.",
+        desc: "I designed a sample website for a fictional architecture and interior design studio in Tel Aviv. Visitors browse projects, compare a renovation before and after, and send a project inquiry. The inquiry form sorts each request by budget, timeline, and scope, so the studio can decide how to follow up.",
+        behind: [
+          "Visitors filter projects by category and open each one as a full-screen case study with project details.",
+          "A draggable before-and-after slider shows a renovation, and also works with the keyboard.",
+          "The four-step inquiry form checks each answer and suggests a next step, ready to connect to a CRM.",
+          "I used a minimal gallery design with generated architectural photography and smooth image reveals."
+        ]
+      },
+      he: {
+        kicker: "סטודיו לעיצוב", status: "אתר לדוגמה",
+        name: "Atelier Noa",
+        tagline: "אתר תיק עבודות עם טופס פנייה שמסנן לידים.",
+        desc: "עיצבתי אתר לדוגמה לסטודיו בדיוני לאדריכלות ועיצוב פנים בתל אביב. המבקרים מעיינים בפרויקטים, משווים לפני ואחרי של שיפוץ ושולחים פנייה. טופס הפנייה ממיין כל בקשה לפי תקציב, לוח זמנים והיקף, כדי שהסטודיו ידע איך להמשיך.",
+        behind: [
+          "המבקרים מסננים פרויקטים לפי קטגוריה ופותחים כל פרויקט במסך מלא עם פרטי הפרויקט.",
+          "סליידר לפני ואחרי מציג שיפוץ, ואפשר להזיז אותו גם במקלדת.",
+          "טופס הפנייה בארבעה שלבים בודק כל תשובה ומציע את הצעד הבא, ומוכן לחיבור למערכת CRM.",
+          "בחרתי עיצוב מינימליסטי בסגנון גלריה, עם צילומי אדריכלות שנוצרו במיוחד וחשיפה עדינה של התמונות."
         ]
       }
     },

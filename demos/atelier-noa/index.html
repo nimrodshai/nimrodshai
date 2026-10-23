@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier Noa — Architecture &amp; Interiors, Tel Aviv</title>
+  <meta name="description" content="Atelier Noa is an independent architecture and interior design studio in Tel Aviv, designing quiet homes and boutique hospitality in stone, oak and light.">
+  <meta name="theme-color" content="#F4F1EC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F4F1EC'/%3E%3Cpath d='M8 26V14a8 8 0 0 1 16 0v12' fill='none' stroke='%23B5603F' stroke-width='2.5'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="#top" aria-label="Atelier Noa, back to top">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 27V14a8 8 0 0 1 16 0v13"/></svg>
+        <span class="brand__name">Atelier Noa</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#work"><span class="nav__num">01</span>Work</a></li>
+          <li><a href="#transformation"><span class="nav__num">02</span>Renovation</a></li>
+          <li><a href="#studio"><span class="nav__num">03</span>Studio</a></li>
+          <li><a href="#services"><span class="nav__num">04</span>Services</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--pill nav__cta" href="#inquire">Start a project</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="visually-hidden">Menu</span>
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+      <nav aria-label="Mobile">
+        <ol class="mobile-menu__list">
+          <li><a href="#work"><span>01</span>Work</a></li>
+          <li><a href="#transformation"><span>02</span>Renovation</a></li>
+          <li><a href="#studio"><span>03</span>Studio</a></li>
+          <li><a href="#services"><span>04</span>Services</a></li>
+          <li><a href="#inquire"><span>05</span>Start a project</a></li>
+        </ol>
+      </nav>
+      <p class="mobile-menu__foot">Rothschild Blvd 64, Tel Aviv<br><a href="mailto:studio@ateliernoa.co.il">studio@ateliernoa.co.il</a></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__meta container">
+        <p class="eyebrow">Architecture &amp; Interiors — Tel Aviv, est. 2014</p>
+        <p class="eyebrow hero__coords" aria-hidden="true">32.0636° N, 34.7740° E</p>
+      </div>
+      <div class="container hero__grid">
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span>Quiet rooms,</span></span>
+          <span class="line"><span>shaped by <em>light</em></span></span>
+          <span class="line"><span>and <em>slow time.</em></span></span>
+        </h1>
+        <div class="hero__intro">
+          <p>An independent studio designing homes and boutique hotels along the Mediterranean — in stone, oak, lime and patience.</p>
+          <a class="link-arrow" href="#work">View selected work <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <figure class="hero__figure container">
+        <div class="hero__media" data-hero-media>
+          <img src="assets/hero.jpg" alt="A calm living room with a tall arched window, travertine floor and a low oatmeal sofa in late afternoon light" width="1800" height="1200" fetchpriority="high">
+        </div>
+        <figcaption class="caption">
+          <span>Bialik Street Apartment, Tel Aviv</span>
+          <span>2025</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 01 WORK -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">01</p>
+          <h2 class="section-title" id="work-title">Selected <em>work</em></h2>
+          <p class="section-lede">Twelve years, forty-one built projects. A small selection of homes, hotels and rooms we are still proud of.</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filter projects by category">
+          <button type="button" class="filter is-active" aria-pressed="true" data-filter="all">All <sup>6</sup></button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="residential">Residential <sup>2</sup></button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="hospitality">Hospitality <sup>2</sup></button>
+          <button type="button" class="filter" aria-pressed="false" data-filter="interiors">Interiors <sup>2</sup></button>
+        </div>
+        <p class="visually-hidden" aria-live="polite" data-filter-status></p>
+
+        <ul class="projects" data-projects>
+          <li class="project is-shown" data-category="residential" data-index="0">
+            <button type="button" class="project__btn" aria-haspopup="dialog">
+              <span class="project__media reveal-img"><img src="assets/hero.jpg" alt="" loading="lazy" width="1800" height="1200"></span>
+              <span class="project__info">
+                <span class="project__no">P—01</span>
+                <span class="project__name">Bialik Street Apartment</span>
+                <span class="project__cat">Residential · Tel Aviv · 2025</span>
+              </span>
+            </button>
+          </li>
+          <li class="project is-shown" data-category="hospitality" data-index="1">
+            <button type="button" class="project__btn" aria-haspopup="dialog">
+              <span class="project__media reveal-img"><img src="assets/hotel.jpg" alt="" loading="lazy" width="1800" height="1200"></span>
+              <span class="project__info">
+                <span class="project__no">P—02</span>
+                <span class="project__name">Hotel Kurkar</span>
+                <span class="project__cat">Hospitality · Jaffa · 2024</span>
+              </span>
+            </button>
+          </li>
+          <li class="project is-shown" data-category="residential" data-index="2">
+            <button type="button" class="project__btn" aria-haspopup="dialog">
+              <span class="project__media reveal-img"><img src="assets/kitchen.jpg" alt="" loading="lazy" width="1800" height="1200"></span>
+              <span class="project__info">
+                <span class="project__no">P—03</span>
+                <span class="project__name">Stone House, Zichron</span>
+                <span class="project__cat">Residential · Zichron Ya’akov · 2024</span>
+              </span>
+            </button>
+          </li>
+          <li class="project is-shown" data-category="interiors" data-index="3">
+            <button type="button" class="project__btn" aria-haspopup="dialog">
+              <span class="project__media reveal-img"><img src="assets/bath.jpg" alt="" loading="lazy" width="1200" height="1800"></span>
+              <span class="project__info">
+                <span class="project__no">P—04</span>
+                <span class="project__name">The Stone Bath</span>
+                <span class="project__cat">Interiors · Herzliya · 2025</span>
+              </span>
+            </button>
+          </li>
+          <li class="project is-shown" data-category="interiors" data-index="4">
+            <button type="button" class="project__btn" aria-haspopup="dialog">
+              <span class="project__media reveal-img"><img src="assets/after.jpg" alt="" loading="lazy" width="1800" height="1200"></span>
+              <span class="project__info">
+                <span class="project__no">P—05</span>
+                <span class="project__name">Florentin Flat</span>
+                <span class="project__cat">Interiors · Tel Aviv · 2023</span>
+              </span>
+            </button>
+          </li>
+          <li class="project is-shown" data-category="hospitality" data-index="5">
+            <button type="button" class="project__btn" aria-haspopup="dialog">
+              <span class="project__media project__media--alt reveal-img"><img src="assets/hotel.jpg" alt="" loading="lazy" width="1800" height="1200"></span>
+              <span class="project__info">
+                <span class="project__no">P—06</span>
+                <span class="project__name">Ein Hod Guesthouse</span>
+                <span class="project__cat">Hospitality · Carmel · 2022</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 02 BEFORE / AFTER -->
+    <section class="section transform" id="transformation" aria-labelledby="transform-title">
+      <div class="container transform__grid">
+        <header class="section-head section-head--stack">
+          <p class="section-num">02</p>
+          <h2 class="section-title" id="transform-title">Before, <em>and after</em></h2>
+          <p class="section-lede">A 1970s flat on Florentin's Vital Street: low light, tired terrazzo, a wall unit holding forty years of things. We kept the window, the proportions and the bones — and gave everything else back to the sun.</p>
+          <dl class="facts facts--inline">
+            <div><dt>Area</dt><dd>96 m²</dd></div>
+            <div><dt>Duration</dt><dd>7 months</dd></div>
+            <div><dt>Scope</dt><dd>Full renovation</dd></div>
+          </dl>
+        </header>
+
+        <figure class="compare" data-compare style="--pos: 50%">
+          <div class="compare__frame">
+            <img class="compare__img compare__img--after" src="assets/after.jpg" alt="After: the same room with limewashed walls, travertine floor, a linen sofa and built-in oak shelving" width="1800" height="1200" loading="lazy">
+            <div class="compare__before" aria-hidden="false">
+              <img class="compare__img" src="assets/before.jpg" alt="Before: a cluttered 1970s living room with stained walls, worn terrazzo and a dark wall unit" width="1800" height="1200" loading="lazy">
+            </div>
+            <span class="compare__tag compare__tag--before" aria-hidden="true">Before</span>
+            <span class="compare__tag compare__tag--after" aria-hidden="true">After</span>
+            <div class="compare__handle" aria-hidden="true"><span>‹ ›</span></div>
+            <label class="visually-hidden" for="compare-range">Reveal the before image — percent shown</label>
+            <input class="compare__range" id="compare-range" type="range" min="0" max="100" value="50" step="1" data-compare-range>
+          </div>
+          <figcaption class="caption"><span>Drag, or use arrow keys, to compare</span><span>Florentin Flat, 2023</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 03 STUDIO -->
+    <section class="section studio" id="studio" aria-labelledby="studio-title">
+      <div class="container studio__grid">
+        <header class="section-head section-head--stack studio__head">
+          <p class="section-num">03</p>
+          <h2 class="section-title" id="studio-title">The <em>studio</em></h2>
+        </header>
+        <figure class="studio__portrait" data-portrait>
+          <div class="studio__portrait-media reveal-img">
+            <img src="assets/founder.jpg" alt="Noa Ben-Ami, founder of Atelier Noa, in the studio beside a worktable of stone samples" width="1800" height="1800" loading="lazy">
+          </div>
+          <figcaption class="caption"><span>Noa Ben-Ami, founder &amp; principal</span><span>B.Arch, Bezalel</span></figcaption>
+        </figure>
+        <div class="studio__text">
+          <blockquote class="pull">
+            <p>“A good room does not ask to be looked at. It waits, and then — on a Tuesday in November, at four in the afternoon — it gives you something.”</p>
+          </blockquote>
+          <div class="studio__body">
+            <p>Atelier Noa is a studio of six: two architects, two interior designers, a project manager and a model maker who refuses to use the laser cutter. We take on a handful of projects each year so that every one of them gets the founder's own hand, from the first sketch to the final walk-through.</p>
+            <p>We work with what the Mediterranean already knows — thick walls, deep reveals, shade as a material — and with craftspeople we have known for a decade: stonemasons in the Galilee, a joinery in Kfar Saba, a lime plasterer from Akko.</p>
+          </div>
+          <dl class="stats">
+            <div><dt>Built projects</dt><dd>41</dd></div>
+            <div><dt>Projects per year</dt><dd>4–6</dd></div>
+            <div><dt>Repeat clients</dt><dd>38%</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 SERVICES -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-num">04</p>
+          <h2 class="section-title" id="services-title">What we <em>do</em></h2>
+          <p class="section-lede">Every commission begins with a site visit and a long conversation. From there, a clear scope and a fixed fee.</p>
+        </header>
+        <ol class="services__list">
+          <li class="service">
+            <button type="button" class="service__head" aria-expanded="false" aria-controls="svc-1" id="svc-1-btn">
+              <span class="service__num">4.1</span>
+              <span class="service__name">Architecture</span>
+              <span class="service__hint">New builds &amp; additions</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__body" id="svc-1" role="region" aria-labelledby="svc-1-btn">
+              <div class="service__inner">
+                <p>Private houses, additions and rooftop extensions, from feasibility and permits through construction documents and site supervision. We manage the engineers, so you don't have to.</p>
+                <ul><li>Feasibility &amp; zoning study</li><li>Concept &amp; permit design</li><li>Construction drawings</li><li>Site supervision</li></ul>
+              </div>
+            </div>
+          </li>
+          <li class="service">
+            <button type="button" class="service__head" aria-expanded="false" aria-controls="svc-2" id="svc-2-btn">
+              <span class="service__num">4.2</span>
+              <span class="service__name">Renovation</span>
+              <span class="service__hint">Bauhaus &amp; heritage flats</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__body" id="svc-2" role="region" aria-labelledby="svc-2-btn">
+              <div class="service__inner">
+                <p>Tel Aviv's 1930s–70s apartments are our home ground. We restore what is worth keeping — terrazzo, steel windows, ribbon balconies — and rethink the plan around how you actually live.</p>
+                <ul><li>Measured survey</li><li>Layout &amp; structural changes</li><li>Conservation liaison</li><li>Turnkey delivery</li></ul>
+              </div>
+            </div>
+          </li>
+          <li class="service">
+            <button type="button" class="service__head" aria-expanded="false" aria-controls="svc-3" id="svc-3-btn">
+              <span class="service__num">4.3</span>
+              <span class="service__name">Interiors</span>
+              <span class="service__hint">Kitchens, baths, joinery</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__body" id="svc-3" role="region" aria-labelledby="svc-3-btn">
+              <div class="service__inner">
+                <p>Material palettes, custom joinery, lighting design and the last ten percent — the furniture, linen and objects that make a space feel inhabited rather than finished.</p>
+                <ul><li>Material &amp; colour palettes</li><li>Bespoke joinery</li><li>Lighting design</li><li>Furniture &amp; styling</li></ul>
+              </div>
+            </div>
+          </li>
+          <li class="service">
+            <button type="button" class="service__head" aria-expanded="false" aria-controls="svc-4" id="svc-4-btn">
+              <span class="service__num">4.4</span>
+              <span class="service__name">Hospitality</span>
+              <span class="service__hint">Boutique hotels &amp; guesthouses</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__body" id="svc-4" role="region" aria-labelledby="svc-4-btn">
+              <div class="service__inner">
+                <p>Hotels of eight to forty keys, designed with operators from day one: guest flow, housekeeping logic and durable materials that age into character rather than out of it.</p>
+                <ul><li>Brand &amp; guest journey</li><li>Room typologies</li><li>FF&amp;E procurement</li><li>Opening support</li></ul>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRESS -->
+    <section class="section press" aria-labelledby="press-title">
+      <div class="container press__grid">
+        <h2 class="eyebrow press__title" id="press-title">Press &amp; recognition</h2>
+        <ul class="press__list">
+          <li><span class="press__year">2025</span><span class="press__item">Hotel Kurkar — <em>Shortlisted</em>, Dezeen Awards, Hotel Interior</span><span class="press__src">Dezeen</span></li>
+          <li><span class="press__year">2025</span><span class="press__item">“The quiet new language of Tel Aviv homes”</span><span class="press__src">Wallpaper*</span></li>
+          <li><span class="press__year">2024</span><span class="press__item">Stone House, Zichron — <em>Winner</em>, Residential Interior</span><span class="press__src">Israel Design Awards</span></li>
+          <li><span class="press__year">2024</span><span class="press__item">Studio profile: “Building with shade”</span><span class="press__src">Haaretz Gallery</span></li>
+          <li><span class="press__year">2023</span><span class="press__item">Ein Hod Guesthouse — Featured project</span><span class="press__src">Cereal Magazine</span></li>
+          <li><span class="press__year">2022</span><span class="press__item">Emerging Practice of the Year</span><span class="press__src">Israel Association of Architects</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 05 INQUIRY -->
+    <section class="section inquire" id="inquire" aria-labelledby="inquire-title">
+      <div class="container inquire__grid">
+        <header class="section-head section-head--stack inquire__head">
+          <p class="section-num">05</p>
+          <h2 class="section-title" id="inquire-title">Start a <em>project</em></h2>
+          <p class="section-lede">Four short steps, about two minutes. Your answers help us tell you honestly — and quickly — whether we are the right studio for your project.</p>
+          <ol class="progress" aria-label="Inquiry progress" data-progress>
+            <li class="is-current" aria-current="step"><span>01</span> Project</li>
+            <li><span>02</span> Budget &amp; timing</li>
+            <li><span>03</span> Site</li>
+            <li><span>04</span> Contact</li>
+          </ol>
+        </header>
+
+        <div class="inquiry" data-inquiry>
+          <div class="inquiry__bar" aria-hidden="true"><span data-progress-bar></span></div>
+          <p class="inquiry__count" aria-live="polite" data-step-label>Step 1 of 4</p>
+
+          <form class="inquiry__form" novalidate data-form>
+            <!-- Step 1 -->
+            <fieldset class="step is-active" data-step="1">
+              <legend class="step__title">What are you planning?</legend>
+              <div class="choices choices--2" data-required-group="type">
+                <label class="choice"><input type="radio" name="type" value="New home"><span class="choice__box"><span class="choice__label">New home</span><span class="choice__desc">A house or addition from the ground up</span></span></label>
+                <label class="choice"><input type="radio" name="type" value="Renovation"><span class="choice__box"><span class="choice__label">Renovation</span><span class="choice__desc">An existing apartment or house</span></span></label>
+                <label class="choice"><input type="radio" name="type" value="Interiors only"><span class="choice__box"><span class="choice__label">Interiors only</span><span class="choice__desc">Kitchen, bath, joinery, furnishing</span></span></label>
+                <label class="choice"><input type="radio" name="type" value="Hospitality"><span class="choice__box"><span class="choice__label">Hospitality</span><span class="choice__desc">Hotel, guesthouse or restaurant</span></span></label>
+              </div>
+              <p class="field-error" data-error="type" role="alert"></p>
+            </fieldset>
+
+            <!-- Step 2 -->
+            <fieldset class="step" data-step="2" hidden>
+              <legend class="step__title">Budget and timing</legend>
+              <p class="step__sub" id="budget-label">Estimated total budget, including construction</p>
+              <div class="choices choices--4" role="radiogroup" aria-labelledby="budget-label" data-required-group="budget">
+                <label class="choice choice--compact"><input type="radio" name="budget" value="Under ₪400k" data-tier="1"><span class="choice__box"><span class="choice__label">Under ₪400k</span></span></label>
+                <label class="choice choice--compact"><input type="radio" name="budget" value="₪400k – 1.2M" data-tier="2"><span class="choice__box"><span class="choice__label">₪400k – 1.2M</span></span></label>
+                <label class="choice choice--compact"><input type="radio" name="budget" value="₪1.2M – 3M" data-tier="3"><span class="choice__box"><span class="choice__label">₪1.2M – 3M</span></span></label>
+                <label class="choice choice--compact"><input type="radio" name="budget" value="Above ₪3M" data-tier="4"><span class="choice__box"><span class="choice__label">Above ₪3M</span></span></label>
+              </div>
+              <p class="field-error" data-error="budget" role="alert"></p>
+              <p class="step__sub" id="timeline-label">When would you like to begin?</p>
+              <div class="choices choices--4" role="radiogroup" aria-labelledby="timeline-label" data-required-group="timeline">
+                <label class="choice choice--compact"><input type="radio" name="timeline" value="Within 3 months" data-tier="3"><span class="choice__box"><span class="choice__label">Within 3 months</span></span></label>
+                <label class="choice choice--compact"><input type="radio" name="timeline" value="3 – 6 months" data-tier="3"><span class="choice__box"><span class="choice__label">3 – 6 months</span></span></label>
+                <label class="choice choice--compact"><input type="radio" name="timeline" value="6 – 12 months" data-tier="2"><span class="choice__box"><span class="choice__label">6 – 12 months</span></span></label>
+                <label class="choice choice--compact"><input type="radio" name="timeline" value="Just exploring" data-tier="1"><span class="choice__box"><span class="choice__label">Just exploring</span></span></label>
+              </div>
+              <p class="field-error" data-error="timeline" role="alert"></p>
+            </fieldset>
+
+            <!-- Step 3 -->
+            <fieldset class="step" data-step="3" hidden>
+              <legend class="step__title">Tell us about the site</legend>
+              <div class="fields">
+                <div class="field">
+                  <label for="f-size">Approximate size <span class="field__unit">(m²)</span></label>
+                  <input id="f-size" name="size" type="number" inputmode="numeric" min="10" max="20000" placeholder="e.g. 120" required aria-describedby="err-size">
+                  <p class="field-error" id="err-size" data-error="size"></p>
+                </div>
+                <div class="field">
+                  <label for="f-location">City or neighbourhood</label>
+                  <input id="f-location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Neve Tzedek, Tel Aviv" required aria-describedby="err-location">
+                  <p class="field-error" id="err-location" data-error="location"></p>
+                </div>
+                <div class="field field--full">
+                  <span class="field__label" id="own-label">Do you own the property yet?</span>
+                  <div class="segmented" role="radiogroup" aria-labelledby="own-label">
+                    <label><input type="radio" name="owned" value="Yes" checked><span>Yes</span></label>
+                    <label><input type="radio" name="owned" value="In purchase"><span>In purchase</span></label>
+                    <label><input type="radio" name="owned" value="Not yet"><span>Not yet</span></label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Step 4 -->
+            <fieldset class="step" data-step="4" hidden>
+              <legend class="step__title">How can we reach you?</legend>
+              <div class="fields">
+                <div class="field">
+                  <label for="f-name">Full name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+                  <p class="field-error" id="err-name" data-error="name"></p>
+                </div>
+                <div class="field">
+                  <label for="f-email">Email</label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+                  <p class="field-error" id="err-email" data-error="email"></p>
+                </div>
+                <div class="field">
+                  <label for="f-phone">Phone <span class="field__unit">(optional)</span></label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="err-phone">
+                  <p class="field-error" id="err-phone" data-error="phone"></p>
+                </div>
+                <div class="field">
+                  <label for="f-source">How did you find us? <span class="field__unit">(optional)</span></label>
+                  <select id="f-source" name="source">
+                    <option value="">Select…</option>
+                    <option>Instagram</option>
+                    <option>Press or magazine</option>
+                    <option>Friend or past client</option>
+                    <option>Search</option>
+                    <option>Stayed at one of our hotels</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="f-notes">Anything else we should know? <span class="field__unit">(optional)</span></label>
+                  <textarea id="f-notes" name="notes" rows="3" maxlength="600" placeholder="The light you love, the room you never use, the deadline you can't move…"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="inquiry__nav">
+              <button type="button" class="btn btn--ghost" data-prev hidden>← Back</button>
+              <button type="button" class="btn btn--solid" data-next>Continue <span aria-hidden="true">→</span></button>
+            </div>
+          </form>
+
+          <!-- Summary -->
+          <div class="summary" data-summary hidden tabindex="-1" aria-labelledby="summary-title">
+            <p class="eyebrow summary__eyebrow" data-summary-route></p>
+            <h3 class="summary__title" id="summary-title">Thank you, <em data-summary-name></em>.</h3>
+            <p class="summary__lede" data-summary-msg></p>
+            <dl class="summary__list" data-summary-list></dl>
+            <div class="summary__actions">
+              <button type="button" class="btn btn--ghost" data-restart>Start a new inquiry</button>
+            </div>
+            <p class="summary__note">This is a demonstration — nothing has been sent. In production, this brief is scored, routed to the right inbox and added to the studio's CRM automatically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__big">
+        <p class="footer__statement">Let's make something <em>quiet.</em></p>
+        <a class="footer__mail" href="mailto:studio@ateliernoa.co.il">studio@ateliernoa.co.il</a>
+      </div>
+      <div class="footer__col">
+        <h2 class="eyebrow">Studio</h2>
+        <address>Rothschild Blvd 64, 3rd floor<br>Tel Aviv-Yafo 6578501</address>
+        <p><a href="tel:+97235550142">+972 3 555 0142</a></p>
+      </div>
+      <div class="footer__col">
+        <h2 class="eyebrow">Visits</h2>
+        <p>Sun – Thu, 9:00 – 18:00<br>By appointment only</p>
+      </div>
+      <div class="footer__col">
+        <h2 class="eyebrow">Follow</h2>
+        <ul class="footer__links">
+          <li><a href="#" aria-label="Instagram (sample link)">Instagram</a></li>
+          <li><a href="#" aria-label="Pinterest (sample link)">Pinterest</a></li>
+          <li><a href="#" aria-label="LinkedIn (sample link)">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <p>© 2026 Atelier Noa Ltd. — Licensed architects, reg. no. 48211</p>
+      <p>Sample site by Nimrod Shai</p>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Project lightbox -->
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <div class="lightbox__media">
+      <img src="" alt="" data-lb-img>
+    </div>
+    <div class="lightbox__panel">
+      <div class="lightbox__top">
+        <p class="eyebrow" data-lb-count>01 / 06</p>
+        <button type="button" class="lightbox__close" data-lb-close aria-label="Close project">
+          <span aria-hidden="true">Close</span>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16"/></svg>
+        </button>
+      </div>
+      <div class="lightbox__content" data-lb-content>
+        <p class="eyebrow lightbox__cat" data-lb-cat></p>
+        <h2 class="lightbox__title" id="lb-title" data-lb-title></h2>
+        <p class="lightbox__lede" data-lb-lede></p>
+        <dl class="facts" data-lb-facts></dl>
+        <div class="lightbox__text" data-lb-text></div>
+      </div>
+      <div class="lightbox__nav">
+        <button type="button" class="btn btn--ghost" data-lb-prev><span aria-hidden="true">←</span> Previous</button>
+        <button type="button" class="btn btn--ghost" data-lb-next>Next <span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

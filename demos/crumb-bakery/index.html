@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crumb &amp; Co. — Sourdough &amp; Patisserie, Jerusalem</title>
+  <meta name="description" content="Wild-fermented sourdough, laminated pastries and Friday challah, baked every morning in Jerusalem's German Colony. Pre-order online and pick up warm.">
+  <meta name="theme-color" content="#FBF5EA">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23C4623A'/%3E%3Cellipse cx='32' cy='36' rx='18' ry='12' fill='%23F6E3B4'/%3E%3Cpath d='M18 33 Q32 22 46 32' stroke='%233B2418' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..800,0..100,0..1;1,9..144,300..800,0..100,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Doodle sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-wheat" viewBox="0 0 40 120">
+      <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 118 C19 92 21 56 20 20"/>
+        <path d="M20 19 C15 13 16 6 20 1 C24 6 25 13 20 19Z"/>
+        <g><path d="M20 34 C11 32 7 25 8 17 C15 19 19 25 20 34Z"/><path d="M20 34 C29 32 33 25 32 17 C25 19 21 25 20 34Z"/></g>
+        <g transform="translate(0 16)"><path d="M20 34 C11 32 7 25 8 17 C15 19 19 25 20 34Z"/><path d="M20 34 C29 32 33 25 32 17 C25 19 21 25 20 34Z"/></g>
+        <g transform="translate(0 32)"><path d="M20 34 C11 32 7 25 8 17 C15 19 19 25 20 34Z"/><path d="M20 34 C29 32 33 25 32 17 C25 19 21 25 20 34Z"/></g>
+        <path d="M20 84 C26 88 30 92 33 100"/>
+      </g>
+    </symbol>
+    <symbol id="i-steam" viewBox="0 0 24 64">
+      <path d="M12 62 C2 50 22 42 12 30 C2 18 22 12 13 2" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="0 0 32 32">
+      <path d="M16 2 C17 11 21 15 30 16 C21 17 17 21 16 30 C15 21 11 17 2 16 C11 15 15 11 16 2Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/>
+        <path d="M9 10V6.5a3 3 0 0 1 6 0V10"/>
+      </g>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.7l-5.4 2.9 1.1-6.1-4.5-4.3 6.1-.8L12 2.8Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#shop">Skip to the shop</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="logo" href="#top" aria-label="Crumb &amp; Co. — home">
+      <svg class="logo-mark" aria-hidden="true"><use href="#i-wheat"/></svg>
+      <span class="logo-word">Crumb <em>&amp;</em> Co.</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Main">
+      <ul>
+        <li><a href="#shop">Today's bake</a></li>
+        <li><a href="#process">Our process</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="menu-lines" aria-hidden="true"></span><span class="sr-only">Menu</span>
+      </button>
+      <button class="cart-button" type="button" id="cart-open" aria-haspopup="dialog" aria-controls="cart-drawer">
+        <svg aria-hidden="true"><use href="#i-bag"/></svg>
+        <span class="cart-button-label">Basket</span>
+        <span class="cart-count" id="cart-count" aria-hidden="true">0</span>
+        <span class="sr-only" id="cart-count-sr">, 0 items</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Sourdough &amp; patisserie · German Colony, Jerusalem</p>
+        <h1 id="hero-title" class="display">Bread worth <span class="swash">waking up</span> for.</h1>
+        <p class="lead">Wild-fermented for 36 hours, shaped by hand before sunrise and baked until the crust sings. Pre-order tonight, pick it up warm tomorrow.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#shop">Order for pickup <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#process">How we bake</a>
+        </div>
+        <ul class="hero-facts" aria-label="At a glance">
+          <li><strong>36 hrs</strong><span>slow ferment</span></li>
+          <li><strong>4</strong><span>flours, all stone-milled</span></li>
+          <li><strong>7:00</strong><span>first pickup</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-arch">
+          <img src="assets/hero.jpg" alt="Three crusty sourdough loaves cooling on an iron rack in warm morning light" width="1600" height="1066" fetchpriority="high">
+        </div>
+        <svg class="doodle doodle-steam s1" aria-hidden="true"><use href="#i-steam"/></svg>
+        <svg class="doodle doodle-steam s2" aria-hidden="true"><use href="#i-steam"/></svg>
+        <svg class="doodle doodle-wheat" aria-hidden="true"><use href="#i-wheat"/></svg>
+        <svg class="doodle doodle-sparkle" aria-hidden="true"><use href="#i-sparkle"/></svg>
+
+        <div class="oven-badge" aria-hidden="true">
+          <svg class="oven-ring" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="ring-path" d="M100 100 m-74 0 a74 74 0 1 1 148 0 a74 74 0 1 1 -148 0"/></defs>
+            <text><textPath href="#ring-path" startOffset="0">fresh out of the oven · fresh out of the oven · </textPath></text>
+          </svg>
+          <div class="oven-center">
+            <span class="oven-at">next batch at</span>
+            <span class="oven-time" id="oven-time">9:30</span>
+            <span class="oven-item" id="oven-item">country loaves</span>
+          </div>
+        </div>
+
+        <div class="sticker sticker-hero" aria-hidden="true">
+          <span>Est.</span><strong>2019</strong><span>hand-shaped</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Country sourdough</span><svg><use href="#i-sparkle"/></svg>
+      <span>Chocolate babka</span><svg><use href="#i-sparkle"/></svg>
+      <span>Butter croissants</span><svg><use href="#i-sparkle"/></svg>
+      <span>Friday challah</span><svg><use href="#i-sparkle"/></svg>
+      <span>Cardamom buns</span><svg><use href="#i-sparkle"/></svg>
+      <span>Fig &amp; plum tart</span><svg><use href="#i-sparkle"/></svg>
+      <span>Country sourdough</span><svg><use href="#i-sparkle"/></svg>
+      <span>Chocolate babka</span><svg><use href="#i-sparkle"/></svg>
+      <span>Butter croissants</span><svg><use href="#i-sparkle"/></svg>
+      <span>Friday challah</span><svg><use href="#i-sparkle"/></svg>
+      <span>Cardamom buns</span><svg><use href="#i-sparkle"/></svg>
+      <span>Fig &amp; plum tart</span><svg><use href="#i-sparkle"/></svg>
+    </div>
+  </div>
+  </div>
+
+  <!-- SHOP -->
+  <section class="section shop" id="shop" aria-labelledby="shop-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pre-order · pay at pickup</p>
+        <h2 id="shop-title" class="h2">Today's bake</h2>
+        <p class="section-sub">Small batches, gone by noon. Reserve yours and we'll wrap it in paper with your name on it.</p>
+      </div>
+
+      <div class="filters reveal" role="group" aria-label="Filter by category">
+        <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Everything</button>
+        <button class="chip" type="button" data-filter="breads" aria-pressed="false">Breads</button>
+        <button class="chip" type="button" data-filter="pastries" aria-pressed="false">Pastries</button>
+        <button class="chip" type="button" data-filter="sweets" aria-pressed="false">Sweets</button>
+      </div>
+
+      <ul class="product-grid" id="product-grid" aria-label="Products"></ul>
+      <p class="grid-note">Everything is baked to order in limited numbers. Allergens: all items contain gluten; most contain dairy, eggs or sesame — ask us anything.</p>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process" id="process" aria-labelledby="process-title">
+    <div class="container">
+      <div class="process-intro">
+        <div class="process-photo reveal">
+          <img src="assets/hands.jpg" alt="A baker's floured hands shaping a round of sourdough on a wooden bench" width="1024" height="1024" loading="lazy">
+          <div class="sticker sticker-process" aria-hidden="true"><span>made</span><strong>slow</strong><span>always</span></div>
+        </div>
+        <div class="section-head reveal">
+          <p class="eyebrow">Our process</p>
+          <h2 id="process-title" class="h2">Slow on purpose.</h2>
+          <p class="section-sub">Commercial yeast would get us there in three hours. We take two days — because time is the ingredient that turns flour and water into something that tastes of wheat, tang and caramel.</p>
+        </div>
+      </div>
+
+      <ol class="timeline">
+        <li class="step reveal">
+          <div class="step-art" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <g stroke="#3B2418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="34" y="22" width="52" height="12" rx="4" fill="#C4623A"/>
+                <path d="M38 34 h44 v58 a10 10 0 0 1 -10 10 h-24 a10 10 0 0 1 -10 -10 Z" fill="#FFFDF8"/>
+                <path d="M38 62 h44 v30 a10 10 0 0 1 -10 10 h-24 a10 10 0 0 1 -10 -10 Z" fill="#F6E3B4"/>
+                <path d="M38 52 h44" stroke="#C4623A" stroke-dasharray="4 5"/>
+              </g>
+              <g fill="#FFFDF8" stroke="#3B2418" stroke-width="2"><circle cx="50" cy="78" r="3.5"/><circle cx="66" cy="86" r="2.5"/><circle cx="70" cy="72" r="4"/><circle cx="56" cy="92" r="2"/></g>
+            </svg>
+          </div>
+          <span class="step-num">01</span>
+          <h3 class="h4">Feed the starter</h3>
+          <p>Our starter, “Shimshon,” has lived on the counter since 2019. He gets rye flour and spring water twice a day, and bubbles like he means it.</p>
+          <span class="step-time">Day 1 · 8pm</span>
+        </li>
+        <li class="step reveal">
+          <div class="step-art" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <g stroke="#3B2418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 62 h84 a42 34 0 0 1 -84 0 Z" fill="#C4623A"/>
+                <path d="M28 62 c4 -16 18 -22 32 -22 s28 6 32 22" fill="#F6E3B4"/>
+                <path d="M46 30 c6 -14 26 -16 34 -2" fill="none"/>
+                <path d="M74 22 l6 6 -8 3" fill="none"/>
+              </g>
+              <path d="M44 54 c6 -6 14 -6 18 0" fill="none" stroke="#3B2418" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+            </svg>
+          </div>
+          <span class="step-num">02</span>
+          <h3 class="h4">Stretch &amp; fold</h3>
+          <p>No machines. Every 40 minutes we lift and fold the dough by hand, building strength and those big, glossy, irregular holes.</p>
+          <span class="step-time">Day 2 · 6am–11am</span>
+        </li>
+        <li class="step reveal">
+          <div class="step-art" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <g stroke="#3B2418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="60" cy="74" rx="44" ry="26" fill="#E9C48F"/>
+                <path d="M26 66 c6 -22 62 -22 68 0" fill="#FFFDF8"/>
+                <ellipse cx="60" cy="74" rx="34" ry="18" fill="none" opacity=".45"/>
+                <ellipse cx="60" cy="74" rx="22" ry="11" fill="none" opacity=".45"/>
+              </g>
+              <g fill="none" stroke="#C4623A" stroke-width="2.5" stroke-linecap="round"><circle cx="92" cy="28" r="14" fill="#FFFDF8"/><path d="M92 20 v8 l5 4"/></g>
+            </svg>
+          </div>
+          <span class="step-num">03</span>
+          <h3 class="h4">Cold proof</h3>
+          <p>Shaped loaves rest overnight in linen-lined baskets at 4°C. The slow chill deepens the flavour and gives the crust its blistered freckles.</p>
+          <span class="step-time">Day 2 · overnight</span>
+        </li>
+        <li class="step reveal">
+          <div class="step-art" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <g stroke="#3B2418" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 104 V62 a46 46 0 0 1 92 0 V104 Z" fill="#C4623A"/>
+                <path d="M34 104 V72 a26 26 0 0 1 52 0 V104 Z" fill="#3B2418"/>
+                <ellipse cx="60" cy="94" rx="18" ry="8" fill="#E2A24F"/>
+                <path d="M48 92 q12 -8 24 0" fill="none" stroke="#F6E3B4" stroke-width="2.5"/>
+              </g>
+              <path d="M48 78 c-4 -6 4 -8 0 -14 M60 76 c-4 -6 4 -8 0 -14 M72 78 c-4 -6 4 -8 0 -14" fill="none" stroke="#F6E3B4" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="step-num">04</span>
+          <h3 class="h4">Bake hot &amp; dark</h3>
+          <p>Into a stone deck oven at 250°C with a burst of steam. We pull them late — a dark crust means flavour, and you can hear it crackle as it cools.</p>
+          <span class="step-time">Day 3 · 5am</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Kind words from the neighbourhood</p>
+        <h2 id="reviews-title" class="h2">Worth the early alarm.</h2>
+      </div>
+      <div class="review-grid">
+        <figure class="review reveal">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote><p>“The country loaf has ruined supermarket bread for my entire family. Pre-ordering means I never miss out — and the babka never makes it home intact.”</p></blockquote>
+          <figcaption><strong>Tamar R.</strong><span>Baka · regular since 2020</span></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote><p>“Croissants with actual shatter. We walk over every Friday for challah and somehow always leave with a box of the tahini cookies too.”</p></blockquote>
+          <figcaption><strong>Yoni &amp; Maya</strong><span>German Colony</span></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+          <blockquote><p>“I took the Sourdough 101 class expecting a hobby. I left with a starter, three loaves and a slightly unhealthy obsession. Noa is a brilliant teacher.”</p></blockquote>
+          <figcaption><strong>Daniel K.</strong><span>Rehavia · class of March</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASSES -->
+  <section class="section classes" id="classes" aria-labelledby="classes-title">
+    <div class="container">
+      <div class="class-card reveal">
+        <div class="class-media">
+          <img src="assets/pastries.jpg" alt="Sliced chocolate babka, flaky croissants and cinnamon buns on a marble counter" width="1024" height="1024" loading="lazy">
+          <div class="sticker sticker-class" aria-hidden="true"><span>only</span><strong>8</strong><span>seats</span></div>
+        </div>
+        <div class="class-body">
+          <p class="eyebrow eyebrow-light">Evening baking classes</p>
+          <h2 id="classes-title" class="h2">Get flour on your hands.</h2>
+          <p>Three hours at our bench with head baker Noa: mix, fold and shape alongside us, eat everything warm from the oven, and go home with a jar of our starter and your own loaf.</p>
+          <ul class="class-list">
+            <li><strong>Sourdough 101</strong><span>Tuesdays · 18:30 · ₪380</span></li>
+            <li><strong>Laminated dough &amp; croissants</strong><span>Wednesdays · 18:30 · ₪420</span></li>
+            <li><strong>Babka &amp; enriched doughs</strong><span>Thursdays · 18:30 · ₪380</span></li>
+          </ul>
+          <form class="class-form" id="class-form" novalidate>
+            <label for="class-select">Choose a class</label>
+            <div class="inline-field">
+              <select id="class-select" name="class">
+                <option>Sourdough 101 — Tue 3 Nov</option>
+                <option>Laminated dough — Wed 4 Nov</option>
+                <option>Babka &amp; enriched doughs — Thu 5 Nov</option>
+                <option>Sourdough 101 — Tue 10 Nov</option>
+              </select>
+              <button class="btn btn-butter" type="submit">Hold my seat</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="section visit" id="visit" aria-labelledby="visit-title">
+    <div class="container visit-grid">
+      <div class="visit-copy reveal">
+        <p class="eyebrow">Visit us</p>
+        <h2 id="visit-title" class="h2">Follow the smell of butter.</h2>
+        <address>
+          <strong>Crumb &amp; Co.</strong><br>
+          41 Emek Refaim Street<br>
+          German Colony, Jerusalem
+        </address>
+        <table class="hours">
+          <caption class="sr-only">Opening hours</caption>
+          <tbody>
+            <tr><th scope="row">Sunday – Thursday</th><td>7:00 – 19:00</td></tr>
+            <tr><th scope="row">Friday</th><td>6:30 – 14:30</td></tr>
+            <tr><th scope="row">Saturday</th><td>Resting, like our dough</td></tr>
+          </tbody>
+        </table>
+        <p class="visit-note">Pickup orders wait for you on the wooden shelf by the door, wrapped and labelled. Bike rack out front, dogs very welcome.</p>
+        <div class="visit-links">
+          <a class="btn btn-primary" href="#shop">Pre-order now</a>
+          <a class="text-link" href="tel:+97225550142">02-555-0142</a>
+        </div>
+      </div>
+      <div class="visit-photo reveal">
+        <img src="assets/interior.jpg" alt="Inside the bakery: limestone walls, shelves of loaves and a glass counter of pastries in morning light" width="1600" height="1066" loading="lazy">
+        <svg class="doodle doodle-wheat-2" aria-hidden="true"><use href="#i-wheat"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="section newsletter" aria-labelledby="news-title">
+    <div class="container">
+      <div class="news-card reveal">
+        <svg class="doodle news-steam" aria-hidden="true"><use href="#i-steam"/></svg>
+        <div class="news-copy">
+          <h2 id="news-title" class="h3">The Crumb Letter</h2>
+          <p>One short email on Thursdays: the weekend bake, the seasonal special, and the occasional secret loaf. No spam — we're too busy kneading.</p>
+        </div>
+        <form class="news-form" id="news-form" novalidate>
+          <label for="news-email" class="sr-only">Email address</label>
+          <input id="news-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="news-error">
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+          <p class="field-error" id="news-error" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="logo logo-footer" href="#top">
+        <svg class="logo-mark" aria-hidden="true"><use href="#i-wheat"/></svg>
+        <span class="logo-word">Crumb <em>&amp;</em> Co.</span>
+      </a>
+      <p class="footer-tag">Wild-yeast bread &amp; patisserie, baked before the city wakes.</p>
+    </div>
+    <nav aria-label="Footer">
+      <ul class="footer-links">
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <p class="footer-small">© <span id="year">2026</span> Crumb &amp; Co. · A fictional bakery<br><span class="credit">Sample site by Nimrod Shai</span></p>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+<aside class="drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" hidden>
+  <div class="drawer-head">
+    <h2 id="drawer-title" class="h3">Your basket</h2>
+    <button class="icon-btn" type="button" id="cart-close" aria-label="Close basket"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  </div>
+
+  <div class="drawer-body" id="drawer-cart">
+    <div class="cart-empty" id="cart-empty">
+      <svg viewBox="0 0 120 90" aria-hidden="true">
+        <ellipse cx="60" cy="58" rx="44" ry="24" fill="#F6E3B4" stroke="#3B2418" stroke-width="3"/>
+        <path d="M30 52 Q60 30 90 50" fill="none" stroke="#3B2418" stroke-width="3" stroke-linecap="round"/>
+        <path d="M46 22 c-6 -8 6 -10 0 -18 M62 22 c-6 -8 6 -10 0 -18" fill="none" stroke="#C4623A" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <p class="h4">Your basket is empty</p>
+      <p>The loaves are lonely. Pick something warm.</p>
+      <button class="btn btn-primary" type="button" id="cart-browse">Browse today's bake</button>
+    </div>
+
+    <ul class="cart-lines" id="cart-lines" aria-label="Items in your basket"></ul>
+
+    <form class="checkout" id="checkout-form" novalidate>
+      <fieldset>
+        <legend class="h4">Pickup</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="pickup-day">Day</label>
+            <select id="pickup-day" name="day"></select>
+          </div>
+          <div class="field">
+            <label for="pickup-time">Time</label>
+            <select id="pickup-time" name="time"></select>
+          </div>
+        </div>
+        <div class="notice" id="challah-notice" hidden>
+          <svg aria-hidden="true"><use href="#i-wheat"/></svg>
+          <div>
+            <p><strong>Challah is a Friday thing.</strong> We braid it only on Fridays — choose a Friday pickup, or remove it to collect on another day.</p>
+            <button type="button" class="text-link" id="switch-friday">Switch to Friday</button>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend class="h4">Your details</legend>
+        <div class="field">
+          <label for="c-name">Name for the bag</label>
+          <input id="c-name" name="name" autocomplete="name" required aria-describedby="c-name-err">
+          <p class="field-error" id="c-name-err"></p>
+        </div>
+        <div class="field">
+          <label for="c-phone">Phone</label>
+          <input id="c-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="050-000-0000" required aria-describedby="c-phone-err">
+          <p class="field-error" id="c-phone-err"></p>
+        </div>
+        <div class="field">
+          <label for="c-notes">Notes <span class="optional">(optional)</span></label>
+          <textarea id="c-notes" name="notes" rows="2" placeholder="Slice the loaf, birthday candle, extra-dark crust…"></textarea>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="drawer-foot" id="drawer-foot">
+    <div class="subtotal"><span>Subtotal</span><strong id="cart-subtotal">₪0</strong></div>
+    <p class="foot-note">Pay at pickup — card, cash or Bit.</p>
+    <button class="btn btn-primary btn-block" type="submit" form="checkout-form" id="checkout-btn">Place pickup order</button>
+  </div>
+
+  <div class="drawer-body confirm" id="drawer-confirm" hidden tabindex="-1">
+    <div class="confirm-art" aria-hidden="true">
+      <svg viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="46" fill="#F6E3B4" stroke="#3B2418" stroke-width="3"/>
+        <path d="M40 62 l14 14 28 -32" fill="none" stroke="#C4623A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <p class="eyebrow center">Order confirmed</p>
+    <h3 class="h3 center" id="confirm-title">Your bread is spoken for!</h3>
+    <p class="order-no">Order <strong id="order-number">CR-0000</strong></p>
+    <div class="confirm-card">
+      <p id="confirm-pickup"></p>
+      <ul id="confirm-lines"></ul>
+      <p class="confirm-notes" id="confirm-notes" hidden></p>
+      <p class="confirm-total"><span>Total, pay at pickup</span><strong id="confirm-total"></strong></p>
+    </div>
+    <p class="confirm-note">We'll text you when it's out of the oven. Running late? It'll keep warm on the shelf until closing.</p>
+    <button class="btn btn-ghost btn-block" type="button" id="confirm-done">Back to the bakery</button>
+  </div>
+</aside>
+
+<div class="sr-only" aria-live="polite" aria-atomic="true" id="cart-live"></div>
+<div class="toasts" id="toasts" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

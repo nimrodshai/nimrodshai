@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PULSE — Boutique Fitness Studio, Tel Aviv</title>
+  <meta name="description" content="PULSE is a boutique fitness studio in Tel Aviv. HIIT, indoor cycling, strength and mobility classes coached by people who actually care. Your first class is free.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A0A0A'/%3E%3Cpath d='M4 17h6l3-8 5 15 3-7h7' fill='none' stroke='%23D4FF3A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="logo" aria-label="PULSE home">
+        <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 17h7l3-8 5 15 3-7h10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>PULSE</span>
+      </a>
+      <nav class="nav__links" id="nav-menu" aria-label="Primary">
+        <a href="#classes">Classes</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#coaches">Coaches</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#trial" class="btn btn--accent btn--sm nav__cta" data-magnetic>First class free</a>
+      </nav>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Open menu</span>
+        <span class="nav__burger" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/hero.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+      </div>
+      <div class="hero__grain" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="eyebrow reveal"><span class="pulse-dot" aria-hidden="true"></span>Florentin, Tel Aviv <span class="nowrap">· Open 05:45–22:00</span></p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span class="line__inner">Train <span class="hero__title--outline">Louder</span></span></span>
+          <span class="line"><span class="line__inner">Than <em>Your</em></span></span>
+          <span class="line"><span class="line__inner">Excuses.</span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__lede reveal">Forty-five minutes. Lights low, bass high, a coach who knows your name. HIIT, Ride, Strength and Mobility — built for people who want to be pushed, not judged.</p>
+          <div class="hero__ctas reveal">
+            <a href="#trial" class="btn btn--accent btn--lg" data-magnetic>Claim free class <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a href="#schedule" class="btn btn--ghost btn--lg" data-magnetic>See the schedule</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="PULSE by the numbers">
+      <div class="container stats__grid">
+        <div class="stat reveal">
+          <p class="stat__num"><span data-count="2400">0</span><sup>+</sup></p>
+          <p class="stat__label">Members who show up</p>
+        </div>
+        <div class="stat reveal">
+          <p class="stat__num"><span data-count="72">0</span></p>
+          <p class="stat__label">Classes every week</p>
+        </div>
+        <div class="stat reveal">
+          <p class="stat__num"><span data-count="14">0</span></p>
+          <p class="stat__label">Certified coaches</p>
+        </div>
+        <div class="stat reveal">
+          <p class="stat__num"><span data-count="4.9" data-decimals="1">0</span><sup>★</sup></p>
+          <p class="stat__label">Avg. rating, 900+ reviews</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee marquee--accent">
+        <div class="marquee__track">
+          <span>HIIT</span><b>✱</b><span>Ride</span><b>✱</b><span>Strength</span><b>✱</b><span>Mobility</span><b>✱</b><span>Bootcamp</span><b>✱</b><span>Climb</span><b>✱</b><span>Core Burn</span><b>✱</b><span>Recover</span><b>✱</b>
+          <span>HIIT</span><b>✱</b><span>Ride</span><b>✱</b><span>Strength</span><b>✱</b><span>Mobility</span><b>✱</b><span>Bootcamp</span><b>✱</b><span>Climb</span><b>✱</b><span>Core Burn</span><b>✱</b><span>Recover</span><b>✱</b>
+        </div>
+      </div>
+      <div class="marquee marquee--dark marquee--reverse">
+        <div class="marquee__track">
+          <span>No mirrors</span><b>/</b><span>No egos</span><b>/</b><span>No excuses</span><b>/</b><span>Just reps</span><b>/</b><span>No mirrors</span><b>/</b><span>No egos</span><b>/</b><span>No excuses</span><b>/</b><span>Just reps</span><b>/</b>
+          <span>No mirrors</span><b>/</b><span>No egos</span><b>/</b><span>No excuses</span><b>/</b><span>Just reps</span><b>/</b><span>No mirrors</span><b>/</b><span>No egos</span><b>/</b><span>No excuses</span><b>/</b><span>Just reps</span><b>/</b>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ CLASSES ============ -->
+    <section class="section classes" id="classes" aria-labelledby="classes-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker reveal">01 — The Work</p>
+          <h2 class="display reveal" id="classes-title">Four ways<br>to <span class="accent">empty</span> the tank</h2>
+          <p class="section-head__copy reveal">Every class is capped at 22 people, coached on the floor (not from a stage), and programmed in 6-week blocks so you actually get stronger.</p>
+        </div>
+
+        <div class="class-grid">
+          <article class="class-card reveal" tabindex="0" data-type="hiit">
+            <div class="class-card__bg class-card__bg--hiit" aria-hidden="true"><img src="assets/hero.jpg" alt="" loading="lazy"></div>
+            <div class="class-card__top">
+              <span class="class-card__num">01</span>
+              <span class="tag">45 min</span>
+            </div>
+            <div class="class-card__body">
+              <h3 class="class-card__title">HIIT</h3>
+              <div class="class-card__reveal"><div class="class-card__reveal-inner">
+                <p>Intervals that hit like a drop. Sled pushes, ropes, rowers and burpees on a clock that doesn't negotiate. Burns for 24 hours after.</p>
+                <div class="meter" aria-label="Intensity 5 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+              </div></div>
+            </div>
+          </article>
+
+          <article class="class-card reveal" tabindex="0" data-type="ride">
+            <div class="class-card__bg" aria-hidden="true"><img src="assets/cycle.jpg" alt="" loading="lazy"></div>
+            <div class="class-card__top">
+              <span class="class-card__num">02</span>
+              <span class="tag">50 min</span>
+            </div>
+            <div class="class-card__body">
+              <h3 class="class-card__title">Ride</h3>
+              <div class="class-card__reveal"><div class="class-card__reveal-inner">
+                <p>Rhythm cycling in the dark. Climbs, sprints and a playlist built by a DJ, not an algorithm. Leaderboard optional, sweat mandatory.</p>
+                <div class="meter" aria-label="Intensity 4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+              </div></div>
+            </div>
+          </article>
+
+          <article class="class-card reveal" tabindex="0" data-type="strength">
+            <div class="class-card__bg" aria-hidden="true"><img src="assets/strength.jpg" alt="" loading="lazy"></div>
+            <div class="class-card__top">
+              <span class="class-card__num">03</span>
+              <span class="tag">55 min</span>
+            </div>
+            <div class="class-card__body">
+              <h3 class="class-card__title">Strength</h3>
+              <div class="class-card__reveal"><div class="class-card__reveal-inner">
+                <p>Barbells, kettlebells, real progressive overload. Coaches track your numbers so every block you lift a little heavier than last time.</p>
+                <div class="meter" aria-label="Intensity 4 of 5"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+              </div></div>
+            </div>
+          </article>
+
+          <article class="class-card reveal" tabindex="0" data-type="mobility">
+            <div class="class-card__bg class-card__bg--mobility" aria-hidden="true"></div>
+            <div class="class-card__top">
+              <span class="class-card__num">04</span>
+              <span class="tag">60 min</span>
+            </div>
+            <div class="class-card__body">
+              <h3 class="class-card__title">Mobility</h3>
+              <div class="class-card__reveal"><div class="class-card__reveal-inner">
+                <p>Yoga-rooted flow, deep stretch and breathwork. The class your hamstrings have been begging for — and the reason you'll still be training at 60.</p>
+                <div class="meter" aria-label="Intensity 2 of 5"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+              </div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCHEDULE ============ -->
+    <section class="section schedule" id="schedule" aria-labelledby="schedule-title">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="kicker reveal">02 — This Week</p>
+            <h2 class="display reveal" id="schedule-title">Pick a slot.<br><span class="accent">Show up.</span></h2>
+          </div>
+          <p class="section-head__copy reveal">Spots open 7 days ahead. Reserve, and if plans change, cancel up to 4 hours before class — no penalty.</p>
+        </div>
+
+        <div class="sched reveal">
+          <div class="sched__days" role="tablist" aria-label="Day of the week" id="day-tabs"></div>
+
+          <div class="sched__filters">
+            <div class="chip-group" role="group" aria-label="Filter by class type">
+              <span class="chip-group__label">Type</span>
+              <button type="button" class="chip" data-filter="type" data-value="all" aria-pressed="true">All</button>
+              <button type="button" class="chip" data-filter="type" data-value="hiit" aria-pressed="false">HIIT</button>
+              <button type="button" class="chip" data-filter="type" data-value="ride" aria-pressed="false">Ride</button>
+              <button type="button" class="chip" data-filter="type" data-value="strength" aria-pressed="false">Strength</button>
+              <button type="button" class="chip" data-filter="type" data-value="mobility" aria-pressed="false">Mobility</button>
+            </div>
+            <div class="chip-group" role="group" aria-label="Filter by intensity">
+              <span class="chip-group__label">Intensity</span>
+              <button type="button" class="chip" data-filter="level" data-value="all" aria-pressed="true">Any</button>
+              <button type="button" class="chip" data-filter="level" data-value="1" aria-pressed="false">Low</button>
+              <button type="button" class="chip" data-filter="level" data-value="2" aria-pressed="false">Mid</button>
+              <button type="button" class="chip" data-filter="level" data-value="3" aria-pressed="false">High</button>
+            </div>
+          </div>
+
+          <div class="sched__panel" role="tabpanel" id="sched-panel">
+            <ul class="sched__list" id="sched-list"></ul>
+            <p class="sched__empty" id="sched-empty" hidden>Nothing matches that combo today. Try another day — or loosen a filter.</p>
+          </div>
+          <p class="sr-only" aria-live="polite" id="sched-live"></p>
+          <p class="sched__summary" id="sched-summary" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="manifesto" aria-label="Our philosophy">
+      <div class="manifesto__media" aria-hidden="true"><img src="assets/cycle.jpg" alt="" loading="lazy"></div>
+      <div class="container manifesto__inner">
+        <p class="manifesto__text reveal">We don't sell <s>six-packs</s>. We sell the <span class="accent">6:00 AM</span> version of you who already won the day.</p>
+      </div>
+    </section>
+
+    <!-- ============ COACHES ============ -->
+    <section class="section coaches" id="coaches" aria-labelledby="coaches-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker reveal">03 — The Crew</p>
+          <h2 class="display reveal" id="coaches-title">Coaches, not<br><span class="accent">cheerleaders</span></h2>
+        </div>
+
+        <div class="coach-grid">
+          <article class="coach reveal">
+            <div class="coach__media"><img src="assets/coach.jpg" alt="Coach Noa Levi, arms crossed, in a dark studio" loading="lazy"></div>
+            <div class="coach__info">
+              <h3>Noa Levi</h3>
+              <p class="coach__role">Head Coach · HIIT &amp; Strength</p>
+              <p class="coach__bio">Ex-IDF fitness instructor. Will make you love sled day. Eventually.</p>
+            </div>
+          </article>
+          <article class="coach reveal">
+            <div class="coach__media coach__media--initials coach__media--a" aria-hidden="true"><span>AB</span></div>
+            <div class="coach__info">
+              <h3>Amit Ben-David</h3>
+              <p class="coach__role">Ride Lead</p>
+              <p class="coach__bio">Former track cyclist and part-time DJ. His Friday 07:00 is sold out for a reason.</p>
+            </div>
+          </article>
+          <article class="coach reveal">
+            <div class="coach__media coach__media--initials coach__media--b" aria-hidden="true"><span>MK</span></div>
+            <div class="coach__info">
+              <h3>Maya Katz</h3>
+              <p class="coach__role">Mobility &amp; Breath</p>
+              <p class="coach__bio">500-hr yoga teacher and physio student. Fixes the hips everyone else breaks.</p>
+            </div>
+          </article>
+          <article class="coach reveal">
+            <div class="coach__media coach__media--initials coach__media--c" aria-hidden="true"><span>YO</span></div>
+            <div class="coach__info">
+              <h3>Yoni Orr</h3>
+              <p class="coach__role">Strength &amp; Conditioning</p>
+              <p class="coach__bio">Powerlifter, 230 kg deadlift. Speaks fluent progressive overload.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="kicker reveal">04 — Memberships</p>
+          <h2 class="display reveal" id="pricing-title">Commit to <span class="accent">you</span></h2>
+          <div class="billing reveal">
+            <span class="billing__label" id="lbl-monthly">Monthly</span>
+            <button type="button" class="switch" id="billing-toggle" aria-pressed="false" aria-label="Annual billing (save 20%)">
+              <span class="switch__thumb" aria-hidden="true"></span>
+            </button>
+            <span class="billing__label" id="lbl-annual">Annual <span class="save-badge">−20%</span></span>
+          </div>
+        </div>
+
+        <div class="plans">
+          <article class="plan reveal">
+            <h3 class="plan__name">Starter</h3>
+            <p class="plan__desc">For building the habit.</p>
+            <p class="plan__price"><span class="cur">₪</span><span class="amount" data-monthly="390" data-annual="312">390</span><span class="per">/mo</span></p>
+            <p class="plan__note" data-monthly-note="Billed monthly · cancel anytime" data-annual-note="₪3,744 billed yearly">Billed monthly · cancel anytime</p>
+            <ul class="plan__list">
+              <li>8 classes / month</li>
+              <li>All class types</li>
+              <li>Book 7 days ahead</li>
+              <li>Towel &amp; locker</li>
+            </ul>
+            <a href="#trial" class="btn btn--ghost btn--block" data-plan="Starter">Start with Starter</a>
+          </article>
+
+          <article class="plan plan--featured reveal">
+            <p class="plan__badge">Most popular</p>
+            <h3 class="plan__name">Unlimited</h3>
+            <p class="plan__desc">For people who live here now.</p>
+            <p class="plan__price"><span class="cur">₪</span><span class="amount" data-monthly="590" data-annual="472">590</span><span class="per">/mo</span></p>
+            <p class="plan__note" data-monthly-note="Billed monthly · cancel anytime" data-annual-note="₪5,664 billed yearly">Billed monthly · cancel anytime</p>
+            <ul class="plan__list">
+              <li>Unlimited classes</li>
+              <li>Book 10 days ahead</li>
+              <li>1 guest pass / month</li>
+              <li>Quarterly InBody scan</li>
+              <li>Towel, locker &amp; shower kit</li>
+            </ul>
+            <a href="#trial" class="btn btn--accent btn--block" data-magnetic data-plan="Unlimited">Go Unlimited</a>
+          </article>
+
+          <article class="plan reveal">
+            <h3 class="plan__name">Pulse Pro</h3>
+            <p class="plan__desc">Unlimited, plus a coach in your corner.</p>
+            <p class="plan__price"><span class="cur">₪</span><span class="amount" data-monthly="890" data-annual="712">890</span><span class="per">/mo</span></p>
+            <p class="plan__note" data-monthly-note="Billed monthly · cancel anytime" data-annual-note="₪8,544 billed yearly">Billed monthly · cancel anytime</p>
+            <ul class="plan__list">
+              <li>Everything in Unlimited</li>
+              <li>2 personal training sessions</li>
+              <li>Custom 6-week program</li>
+              <li>Nutrition check-in</li>
+            </ul>
+            <a href="#trial" class="btn btn--ghost btn--block" data-plan="Pulse Pro">Go Pro</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRIAL ============ -->
+    <section class="section trial" id="trial" aria-labelledby="trial-title">
+      <div class="container trial__grid">
+        <div class="trial__copy">
+          <p class="kicker reveal">05 — Your move</p>
+          <h2 class="display display--xl reveal" id="trial-title">First<br>class<br><span class="accent">free.</span></h2>
+          <ul class="trial__perks reveal">
+            <li>No card required</li>
+            <li>Shoes, towel &amp; water on us</li>
+            <li>10-minute intro with a coach</li>
+          </ul>
+        </div>
+
+        <div class="trial__card reveal">
+          <form class="form" id="trial-form" novalidate>
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2" aria-describedby="e-name">
+              <p class="field__error" id="e-name" aria-live="polite"></p>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+                <p class="field__error" id="e-email" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="05X-XXX-XXXX" required aria-describedby="e-phone">
+                <p class="field__error" id="e-phone" aria-live="polite"></p>
+              </div>
+            </div>
+            <fieldset class="field">
+              <legend>I want to try</legend>
+              <div class="radio-pills">
+                <label><input type="radio" name="class" value="HIIT" checked><span>HIIT</span></label>
+                <label><input type="radio" name="class" value="Ride"><span>Ride</span></label>
+                <label><input type="radio" name="class" value="Strength"><span>Strength</span></label>
+                <label><input type="radio" name="class" value="Mobility"><span>Mobility</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="f-goal">Main goal <span class="optional">(optional)</span></label>
+              <select id="f-goal" name="goal">
+                <option value="">Choose one</option>
+                <option>Get stronger</option>
+                <option>Lose fat</option>
+                <option>Build a routine</option>
+                <option>Move without pain</option>
+                <option>Train for an event</option>
+              </select>
+            </div>
+            <div class="field field--check">
+              <input id="f-terms" name="terms" type="checkbox" required aria-describedby="e-terms">
+              <label for="f-terms">I'm cleared for physical activity and agree to the studio waiver.</label>
+              <p class="field__error" id="e-terms" aria-live="polite"></p>
+            </div>
+            <button type="submit" class="btn btn--accent btn--lg btn--block" data-magnetic>Book my free class <span class="btn__arrow" aria-hidden="true">→</span></button>
+            <p class="form__fine">We'll WhatsApp you within 2 hours to lock in a time. No spam, ever.</p>
+          </form>
+
+          <div class="success" id="trial-success" hidden tabindex="-1">
+            <div class="success__icon" aria-hidden="true">
+              <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg>
+            </div>
+            <h3 class="success__title">You're in, <span id="success-name">champ</span>.</h3>
+            <p class="success__text">Your free <strong id="success-class">HIIT</strong> class is on hold. Check your phone — a coach will message you shortly to pick a time. Bring water. Leave the excuses.</p>
+            <button type="button" class="btn btn--ghost" id="trial-reset">Book for a friend</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true">PULSE</div>
+    <div class="container footer__grid">
+      <div>
+        <a href="#top" class="logo logo--footer" aria-label="PULSE home">
+          <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 17h7l3-8 5 15 3-7h10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>PULSE</span>
+        </a>
+        <p class="footer__tag">Boutique fitness. Loud on purpose.</p>
+      </div>
+      <div>
+        <h3 class="footer__h">Visit</h3>
+        <p>Abarbanel St 32, Florentin<br>Tel Aviv-Yafo</p>
+      </div>
+      <div>
+        <h3 class="footer__h">Hours</h3>
+        <p>Sun–Thu 05:45–22:00<br>Fri 06:00–15:00 · Sat 08:00–13:00</p>
+      </div>
+      <div>
+        <h3 class="footer__h">Follow</h3>
+        <ul class="footer__social">
+          <li><a href="#top">Instagram</a></li>
+          <li><a href="#top">TikTok</a></li>
+          <li><a href="#top">Strava club</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <p>© 2026 PULSE Studio (fictional brand).</p>
+      <p>Sample site by Nimrod Shai</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

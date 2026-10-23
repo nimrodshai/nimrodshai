@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olive &amp; Ember — Wood-Fire Kitchen &amp; Wine Bar, Jaffa</title>
+  <meta name="description" content="Olive & Ember is a Mediterranean wood-fire kitchen and wine bar in an old stone house in Jaffa. Seasonal plates from a single oak-fired oven, Levantine wines, and long evenings.">
+  <meta name="theme-color" content="#14110f">
+  <meta property="og:title" content="Olive & Ember — Wood-Fire Kitchen & Wine Bar, Jaffa">
+  <meta property="og:description" content="Seasonal plates from a single oak-fired oven, Levantine wines, and long Jaffa evenings.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314110f'/%3E%3Cpath d='M32 12c6 9 12 14 12 24a12 12 0 0 1-24 0c0-6 3-9 6-12 0 5 2 8 5 9-2-7 0-14 1-21z' fill='%23e0672b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header / Nav ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Olive and Ember — back to top">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 3c3.2 4.6 6.4 7.4 6.4 12.6a6.4 6.4 0 0 1-12.8 0c0-3.2 1.6-4.8 3.2-6.4 0 2.7 1 4.2 2.6 4.8C14.4 10.3 15.4 6.6 16 3z" fill="currentColor"/>
+          <path d="M6 28c4-3.5 8-4.6 10-4.6S24 24.5 26 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand__name">Olive <em>&amp;</em> Ember</span>
+      </a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="#story">Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+
+      <a class="btn btn--ember btn--sm nav__cta" href="#reserve">Reserve</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="sr-only">Open menu</span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#story"><span class="mobile-menu__num">01</span>Story</a></li>
+        <li><a href="#menu"><span class="mobile-menu__num">02</span>Menu</a></li>
+        <li><a href="#gallery"><span class="mobile-menu__num">03</span>Gallery</a></li>
+        <li><a href="#events"><span class="mobile-menu__num">04</span>Private events</a></li>
+        <li><a href="#visit"><span class="mobile-menu__num">05</span>Hours &amp; location</a></li>
+      </ul>
+      <a class="btn btn--ember mobile-menu__cta" href="#reserve">Reserve a table</a>
+      <p class="mobile-menu__meta">7 HaTsorfim Lane, Old Jaffa<br><a href="tel:+97235550142">03-555-0142</a></p>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__img" src="assets/hero.jpg" alt="" width="1536" height="1024" fetchpriority="high">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="hero__embers" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <p class="eyebrow hero__eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Wood-fire kitchen &amp; wine bar · Jaffa</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line"><span>Fire, olive oil</span></span>
+          <span class="hero__line"><span>&amp; the long</span></span>
+          <span class="hero__line"><span><em>Jaffa evening.</em></span></span>
+        </h1>
+        <p class="hero__lede">One oak-fired oven, a 19th-century stone house, and a kitchen that cooks only what the coast and the hills give us this week.</p>
+        <div class="hero__actions">
+          <a class="btn btn--ember" href="#reserve">Reserve a table</a>
+          <a class="btn btn--ghost" href="#menu">See the menu <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="hero__foot container">
+        <p class="hero__status"><span class="status-dot" aria-hidden="true"></span><span data-open-status>Dinner from 18:00 tonight</span></p>
+        <a class="hero__scroll" href="#story"><span>Scroll</span><span class="hero__scroll-line" aria-hidden="true"></span></a>
+      </div>
+    </section>
+
+    <!-- ============ Marquee ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Wood-fired</span><i>✦</i><span>Seasonal</span><i>✦</i><span>Levantine wine</span><i>✦</i><span>Old Jaffa</span><i>✦</i><span>Open fire, open table</span><i>✦</i>
+        <span>Wood-fired</span><i>✦</i><span>Seasonal</span><i>✦</i><span>Levantine wine</span><i>✦</i><span>Old Jaffa</span><i>✦</i><span>Open fire, open table</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ Story ============ -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="container story__grid">
+        <figure class="story__figure reveal">
+          <img src="assets/interior.jpg" alt="The dining room at dusk: arched limestone ceilings, candlelit walnut tables and a wall of wine bottles glowing softly." width="1024" height="1536" loading="lazy">
+          <figcaption>The dining room, an hour before service.</figcaption>
+        </figure>
+
+        <div class="story__text">
+          <p class="eyebrow reveal"><span class="eyebrow__line" aria-hidden="true"></span>Our story</p>
+          <h2 class="section-title reveal" id="story-title">A stone house, a single fire, <em>and nothing to hide behind.</em></h2>
+          <div class="story__body reveal">
+            <p class="dropcap">We opened Olive &amp; Ember in 2019 inside a vaulted house two lanes up from the Jaffa port — a former soap workshop whose walls still hold the cool of the sea at night. We built the oven by hand that first winter, brick by brick, with a mason from Akko who refused to let us rush the curve of the dome.</p>
+            <p>Everything on the menu passes through that fire. Fish arrives from the port before noon. Vegetables come from two small farms in the Sharon and the Jezreel Valley. Olive oil is pressed for us each November in the Galilee. When something isn't at its best, it simply isn't on the menu.</p>
+          </div>
+
+          <dl class="stats reveal">
+            <div class="stats__item">
+              <dt>Oven temperature</dt>
+              <dd><span class="stats__num">480</span>°C</dd>
+            </div>
+            <div class="stats__item">
+              <dt>Wines on the list</dt>
+              <dd><span class="stats__num">62</span></dd>
+            </div>
+            <div class="stats__item">
+              <dt>Seats, no more</dt>
+              <dd><span class="stats__num">40</span></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Menu ============ -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Autumn menu · Updated weekly</p>
+          <h2 class="section-title" id="menu-title">What the fire is <em>cooking</em> this season</h2>
+        </header>
+
+        <div class="menu__layout">
+          <figure class="menu__figure reveal">
+            <img src="assets/dish.jpg" alt="Overhead view of a whole charred sea bream on a dark ceramic plate with grilled lemon, fresh herbs, olive oil and blistered pita." width="1100" height="1100" loading="lazy">
+            <figcaption><span class="menu__figure-tag">Signature</span>Whole sea bream over vine cuttings</figcaption>
+          </figure>
+
+          <div class="menu__panel reveal">
+            <div class="tabs" role="tablist" aria-label="Menu categories">
+              <button class="tabs__tab" role="tab" id="tab-starters" aria-selected="true" aria-controls="panel-starters">Starters</button>
+              <button class="tabs__tab" role="tab" id="tab-fire" aria-selected="false" aria-controls="panel-fire" tabindex="-1">From the Fire</button>
+              <button class="tabs__tab" role="tab" id="tab-desserts" aria-selected="false" aria-controls="panel-desserts" tabindex="-1">Desserts</button>
+              <button class="tabs__tab" role="tab" id="tab-wine" aria-selected="false" aria-controls="panel-wine" tabindex="-1">Wine</button>
+              <span class="tabs__indicator" aria-hidden="true"></span>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="panel-starters" aria-labelledby="tab-starters" tabindex="0">
+              <ul class="dishes" role="list">
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Jaffa sourdough &amp; smoked butter</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>32</span></div>
+                  <p class="dish__desc">Oven-blistered loaf, cultured butter smoked over olive wood, wild Galilee za'atar. <span class="tag" title="Vegetarian">V</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Charred eggplant, labneh</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>46</span></div>
+                  <p class="dish__desc">Roasted in the embers until it collapses, goat's-milk labneh, pomegranate, nasturtium. <span class="tag" title="Vegetarian">V</span> <span class="tag" title="Gluten free">GF</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Warm olives &amp; citrus</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>24</span></div>
+                  <p class="dish__desc">Souri and Kalamata olives, orange peel, fennel seed, dried chili. <span class="tag" title="Vegan">VG</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Sea bass crudo</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>62</span></div>
+                  <p class="dish__desc">This morning's catch from the Jaffa port, green tomato water, first-press oil, sumac, chives. <span class="tag" title="Gluten free">GF</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Fire-roasted beets</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>44</span></div>
+                  <p class="dish__desc">Tahini whipped with brown butter, hazelnut dukkah, dill, a little smoked salt. <span class="tag" title="Vegetarian">V</span></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="panel-fire" aria-labelledby="tab-fire" tabindex="0" hidden>
+              <ul class="dishes" role="list">
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Whole sea bream</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>138</span></div>
+                  <p class="dish__desc">Grilled over vine cuttings, charred lemon, salsa verde, burnt-onion tahini. <span class="tag" title="Gluten free">GF</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Lamb shoulder, twelve hours</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>245</span></div>
+                  <p class="dish__desc">Slow-roasted overnight in the dying embers, freekeh, dried apricot, mint yogurt. For two to share.</p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Ember-roasted cauliflower</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>78</span></div>
+                  <p class="dish__desc">The whole head, green tahini, chili butter, pistachio, crisp shallots. <span class="tag" title="Vegetarian">V</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Octopus from the plancha</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>112</span></div>
+                  <p class="dish__desc">Smoked paprika, white beans, preserved lemon, crushed Cerignola olives. <span class="tag" title="Gluten free">GF</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Flat-iron steak</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>168</span></div>
+                  <p class="dish__desc">Golan beef aged 28 days, bone-marrow butter, fire-blistered peppers, chips fried in beef fat.</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="panel-desserts" aria-labelledby="tab-desserts" tabindex="0" hidden>
+              <ul class="dishes" role="list">
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Olive-oil cake</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>48</span></div>
+                  <p class="dish__desc">Served still warm, blood orange, crème fraîche, wild thyme honey. <span class="tag" title="Vegetarian">V</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Burnt cheesecake</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>52</span></div>
+                  <p class="dish__desc">Baked hot and fast in the oven's mouth, silan date syrup, tahini, sea salt. <span class="tag" title="Vegetarian">V</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Ember-baked figs</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>46</span></div>
+                  <p class="dish__desc">Late-season figs, mascarpone, halva crumble, a spoon of arak syrup. <span class="tag" title="Vegetarian">V</span></p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Dark chocolate &amp; olive</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>54</span></div>
+                  <p class="dish__desc">70% ganache, candied black olive, olive-oil ice cream, flaky salt. <span class="tag" title="Gluten free">GF</span></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="panel-wine" aria-labelledby="tab-wine" tabindex="0" hidden>
+              <p class="dishes__note">Glass / bottle. Ask Noa, our sommelier, about the twelve bottles not on this list.</p>
+              <ul class="dishes" role="list">
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Marawi, Judean Hills 2024</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>58 / 240</span></div>
+                  <p class="dish__desc">An ancient local grape, revived. Saline, pear skin, almond blossom.</p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Assyrtiko, Santorini 2023</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>64 / 270</span></div>
+                  <p class="dish__desc">Volcanic and bone-dry — the bottle we pour with the crudo.</p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Grenache rosé, Upper Galilee 2025</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>52 / 210</span></div>
+                  <p class="dish__desc">Pale copper, wild strawberry, a cool mountain finish.</p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Skin-contact Malvasia, Istria 2022</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>66 / 280</span></div>
+                  <p class="dish__desc">Amber, apricot, black tea. Unfiltered and very good with lamb.</p>
+                </li>
+                <li class="dish">
+                  <div class="dish__row"><h3 class="dish__name">Old-vine Carignan, Zichron Ya'akov 2021</h3><span class="dish__leader" aria-hidden="true"></span><span class="dish__price"><span class="cur" aria-label="shekels">₪</span>68 / 290</span></div>
+                  <p class="dish__desc">Sixty-year-old vines, dark cherry, garrigue, a whisper of smoke.</p>
+                </li>
+              </ul>
+            </div>
+
+            <p class="menu__footnote">V vegetarian · VG vegan · GF gluten free. Tell us about allergies when you book — the kitchen is small, and we'd rather plan ahead.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Chef quote ============ -->
+    <section class="chef" aria-labelledby="chef-title">
+      <div class="chef__grid">
+        <figure class="chef__figure reveal">
+          <img src="assets/chef.jpg" alt="Close-up of the chef's hands placing a nasturtium leaf on charred eggplant, with the glow of the wood oven blurred behind." width="1024" height="1536" loading="lazy">
+        </figure>
+        <div class="chef__text">
+          <h2 class="sr-only" id="chef-title">A word from the chef</h2>
+          <span class="chef__mark" aria-hidden="true">“</span>
+          <blockquote class="chef__quote reveal">
+            <p>Fire doesn't forgive hesitation. After a while you stop watching it and start listening — the crackle tells you the bread is ready long before your eyes do.</p>
+          </blockquote>
+          <p class="chef__cite reveal">
+            <span class="chef__name">Yarden Malka</span>
+            <span class="chef__role">Chef &amp; co-founder · formerly of kitchens in Marseille and Haifa</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Gallery ============ -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container gallery__head">
+        <div class="reveal">
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Gallery</p>
+          <h2 class="section-title" id="gallery-title">An evening, <em>in frames</em></h2>
+        </div>
+        <div class="gallery__controls reveal">
+          <button class="icon-btn" type="button" data-gallery="prev" aria-label="Previous images" aria-controls="gallery-track">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="icon-btn" type="button" data-gallery="next" aria-label="Next images" aria-controls="gallery-track">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <ul class="gallery__track" id="gallery-track" role="list" tabindex="0" aria-label="Gallery images, scroll horizontally">
+        <li class="gallery__item gallery__item--tall">
+          <figure>
+            <img src="assets/hero.jpg" alt="The domed wood-fired oven glowing orange in the dark dining room, a carafe of red wine on the counter." width="1536" height="1024" loading="lazy" style="object-position: 72% 50%">
+            <figcaption><span>01</span>The oven at 19:00, fed with oak and old vine cuttings.</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item gallery__item--wide">
+          <figure>
+            <img src="assets/dish.jpg" alt="Charred whole sea bream with grilled lemons and herbs, seen from above." width="1100" height="1100" loading="lazy" style="object-position: 50% 40%">
+            <figcaption><span>02</span>Sea bream, straight from the port.</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item gallery__item--note">
+          <div class="note-card">
+            <p class="note-card__kicker">Every Thursday</p>
+            <p class="note-card__title">The Long Table</p>
+            <p class="note-card__body">Twenty-two strangers, one table, a five-course menu cooked entirely in the fire. ₪320 per guest, wine pairing ₪180.</p>
+          </div>
+        </li>
+        <li class="gallery__item gallery__item--tall">
+          <figure>
+            <img src="assets/interior.jpg" alt="Candlelit tables beneath a stone arch, with a twilight-blue window beyond." width="1024" height="1536" loading="lazy">
+            <figcaption><span>03</span>Blue hour in the vaulted room.</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item gallery__item--tall">
+          <figure>
+            <img src="assets/chef.jpg" alt="The chef's hands finishing a plate of charred eggplant with tweezers." width="1024" height="1536" loading="lazy">
+            <figcaption><span>04</span>The last leaf, placed by hand.</figcaption>
+          </figure>
+        </li>
+        <li class="gallery__item gallery__item--wide">
+          <figure>
+            <img src="assets/hero.jpg" alt="Wine glasses and olive branches on a limestone counter lit by firelight." width="1536" height="1024" loading="lazy" style="object-position: 20% 80%">
+            <figcaption><span>05</span>Olive branches from the trees out back.</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ Private events ============ -->
+    <section class="section events" id="events" aria-labelledby="events-title">
+      <div class="container">
+        <div class="events__card">
+          <div class="events__intro reveal">
+            <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Private events</p>
+            <h2 class="section-title" id="events-title">Gather around <em>our fire</em></h2>
+            <p class="events__lede">Birthdays, rehearsal dinners, the team that finally shipped. We design every private menu with you — down to the bottle that opens the night.</p>
+            <a class="btn btn--ember" href="mailto:events@oliveandember.co.il?subject=Private%20event%20enquiry">Plan your event</a>
+          </div>
+
+          <ol class="events__list" role="list">
+            <li class="event reveal">
+              <span class="event__num">I</span>
+              <div>
+                <h3 class="event__title">The Vault</h3>
+                <p class="event__meta">Up to 14 guests · from&nbsp;₪4,500</p>
+                <p class="event__desc">Our stone wine cellar, one candlelit table, and a tasting menu paired glass by glass.</p>
+              </div>
+            </li>
+            <li class="event reveal">
+              <span class="event__num">II</span>
+              <div>
+                <h3 class="event__title">The Long Table</h3>
+                <p class="event__meta">Up to 22 guests · from&nbsp;₪7,000</p>
+                <p class="event__desc">A family-style feast in front of the oven, with the chef carving at the table.</p>
+              </div>
+            </li>
+            <li class="event reveal">
+              <span class="event__num">III</span>
+              <div>
+                <h3 class="event__title">The Whole House</h3>
+                <p class="event__meta">Up to 60 guests · on&nbsp;request</p>
+                <p class="event__desc">Exclusive use of both rooms and the courtyard, open fire, and a DJ if you'd like one.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Reservation ============ -->
+    <section class="section reserve" id="reserve" aria-labelledby="reserve-title">
+      <div class="container reserve__grid">
+        <div class="reserve__intro reveal">
+          <p class="eyebrow"><span class="eyebrow__line" aria-hidden="true"></span>Reservations</p>
+          <h2 class="section-title" id="reserve-title">Save us <em>a seat</em> by the fire</h2>
+          <p>We hold tables for 15 minutes. Bar seats and the counter facing the oven are kept for walk-ins every night.</p>
+          <p class="reserve__aside">Parties of nine or more — call us on <a href="tel:+97235550142">03-555-0142</a> and we'll build the evening together.</p>
+        </div>
+
+        <div class="reserve__card reveal" data-reserve>
+          <form class="form" id="reserve-form" novalidate aria-describedby="form-hint">
+            <p class="form__hint" id="form-hint">All fields are required unless marked optional.</p>
+
+            <div class="form__row form__row--3">
+              <div class="field">
+                <label class="field__label" for="r-date">Date</label>
+                <input class="field__input" type="date" id="r-date" name="date" required aria-describedby="r-date-error">
+                <p class="field__error" id="r-date-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="r-time">Time</label>
+                <select class="field__input" id="r-time" name="time" required aria-describedby="r-time-error">
+                  <option value="">Select</option>
+                  <option>18:00</option><option>18:30</option><option>19:00</option><option>19:30</option>
+                  <option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
+                  <option>22:00</option><option>22:30</option>
+                </select>
+                <p class="field__error" id="r-time-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="r-guests">Guests</label>
+                <select class="field__input" id="r-guests" name="guests" required aria-describedby="r-guests-error">
+                  <option value="">Select</option>
+                  <option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option>
+                  <option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option>
+                  <option value="7">7 guests</option><option value="8">8 guests</option>
+                </select>
+                <p class="field__error" id="r-guests-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form__row form__row--2">
+              <div class="field">
+                <label class="field__label" for="r-name">Full name</label>
+                <input class="field__input" type="text" id="r-name" name="name" autocomplete="name" required aria-describedby="r-name-error" placeholder="Dana Levi">
+                <p class="field__error" id="r-name-error" aria-live="polite"></p>
+              </div>
+              <div class="field">
+                <label class="field__label" for="r-phone">Phone</label>
+                <input class="field__input" type="tel" id="r-phone" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="r-phone-hint r-phone-error" placeholder="050-123-4567">
+                <p class="field__hint" id="r-phone-hint">We'll text a confirmation.</p>
+                <p class="field__error" id="r-phone-error" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="r-notes">Occasion or allergies <span class="field__optional">(optional)</span></label>
+              <textarea class="field__input" id="r-notes" name="notes" rows="3" placeholder="An anniversary, a nut allergy, a table by the oven…"></textarea>
+            </div>
+
+            <button class="btn btn--ember btn--block form__submit" type="submit">
+              <span class="btn__label">Request table</span>
+              <span class="btn__spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+
+          <div class="confirm" id="reserve-confirm" hidden>
+            <svg class="confirm__seal" viewBox="0 0 80 80" aria-hidden="true" focusable="false">
+              <circle cx="40" cy="40" r="37" fill="none" stroke="currentColor" stroke-width="1" opacity=".35"/>
+              <circle class="confirm__ring" cx="40" cy="40" r="30" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              <path class="confirm__check" d="M28 41l8 8 16-17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3 class="confirm__title" id="confirm-title" tabindex="-1">See you soon, <span data-confirm="first"></span>.</h3>
+            <p class="confirm__lede">Your table is held. We've noted everything below.</p>
+            <dl class="confirm__details">
+              <div><dt>Date</dt><dd data-confirm="date"></dd></div>
+              <div><dt>Time</dt><dd data-confirm="time"></dd></div>
+              <div><dt>Guests</dt><dd data-confirm="guests"></dd></div>
+              <div><dt>Reference</dt><dd data-confirm="ref"></dd></div>
+            </dl>
+            <p class="confirm__note">A confirmation will be sent to <span data-confirm="phone"></span>.<br><small>This is a demo site — no reservation was actually made.</small></p>
+            <button class="btn btn--ghost" type="button" data-reserve-again>Make another reservation</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Visit ============ -->
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="container visit__grid">
+        <div class="visit__info">
+          <p class="eyebrow reveal"><span class="eyebrow__line" aria-hidden="true"></span>Hours &amp; location</p>
+          <h2 class="section-title reveal" id="visit-title">Two lanes up <em>from the port</em></h2>
+
+          <table class="hours reveal">
+            <caption class="sr-only">Opening hours</caption>
+            <tbody>
+              <tr data-days="0,1,2,3"><th scope="row">Sunday – Wednesday</th><td>18:00 – 23:30</td></tr>
+              <tr data-days="4"><th scope="row">Thursday</th><td>18:00 – 01:00</td></tr>
+              <tr data-days="5"><th scope="row">Friday</th><td>12:30 – 16:00 · 19:30 – 01:00</td></tr>
+              <tr data-days="6"><th scope="row">Saturday</th><td>12:30 – 23:30</td></tr>
+            </tbody>
+          </table>
+          <p class="visit__small reveal">Kitchen closes 45 minutes before we do. The bar doesn't.</p>
+
+          <address class="visit__address reveal">
+            <span>7 HaTsorfim Lane, Old Jaffa</span>
+            <span>Tel Aviv-Yafo, 6803007</span>
+            <a href="tel:+97235550142">03-555-0142</a>
+            <a href="mailto:hello@oliveandember.co.il">hello@oliveandember.co.il</a>
+          </address>
+        </div>
+
+        <div class="map-card reveal">
+          <svg class="map" viewBox="0 0 600 460" role="img" aria-labelledby="map-title map-desc">
+            <title id="map-title">Illustrated map of Old Jaffa</title>
+            <desc id="map-desc">Olive and Ember sits in Old Jaffa, just inland from the Jaffa Port and south of the Clock Tower.</desc>
+            <defs>
+              <pattern id="waves" width="40" height="14" patternUnits="userSpaceOnUse">
+                <path d="M0 7 q10 -6 20 0 t20 0" fill="none" stroke="currentColor" stroke-width="1" opacity=".18"/>
+              </pattern>
+              <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#e0672b" stop-opacity=".45"/>
+                <stop offset="1" stop-color="#e0672b" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="600" height="460" class="map__land"/>
+            <!-- sea -->
+            <path class="map__sea" d="M0 0 H190 C175 60 150 110 168 170 C182 215 140 250 150 300 C160 350 120 400 110 460 H0 Z"/>
+            <path d="M0 0 H190 C175 60 150 110 168 170 C182 215 140 250 150 300 C160 350 120 400 110 460 H0 Z" fill="url(#waves)" class="map__waves"/>
+            <path class="map__coast" d="M190 0 C175 60 150 110 168 170 C182 215 140 250 150 300 C160 350 120 400 110 460"/>
+            <!-- port pier -->
+            <path class="map__pier" d="M162 238 L112 236 L108 250 L150 256"/>
+            <!-- park -->
+            <path class="map__park" d="M200 120 C230 100 285 108 292 140 C298 172 262 192 228 186 C200 182 186 150 200 120 Z"/>
+            <!-- streets -->
+            <g class="map__streets">
+              <path d="M210 0 C230 80 240 150 236 220 C232 300 250 380 245 460"/>
+              <path d="M300 0 L330 460"/>
+              <path d="M420 0 C410 120 440 300 430 460"/>
+              <path d="M170 210 C260 200 380 215 600 200"/>
+              <path d="M150 320 C280 310 420 330 600 310"/>
+              <path d="M180 60 L600 90"/>
+              <path d="M236 220 L330 290 L430 260"/>
+            </g>
+            <g class="map__streets map__streets--minor">
+              <path d="M330 120 L520 140"/>
+              <path d="M260 260 L300 380"/>
+              <path d="M360 360 L560 400"/>
+              <path d="M480 0 L520 460"/>
+              <path d="M240 400 L600 420"/>
+            </g>
+            <!-- labels -->
+            <text class="map__label map__label--sea" x="40" y="140">Mediterranean</text>
+            <text class="map__label" x="44" y="276">Jaffa Port</text>
+            <text class="map__label" x="210" y="152">Abrasha Park</text>
+            <text class="map__label" x="340" y="190">Clock Tower</text>
+            <circle cx="332" cy="200" r="3" class="map__poi"/>
+            <text class="map__label" x="452" y="300">Flea Market</text>
+            <!-- pin -->
+            <g class="map__pin" transform="translate(262 252)">
+              <circle r="46" fill="url(#glow)"/>
+              <circle class="map__pulse" r="12"/>
+              <circle r="7" class="map__dot"/>
+            </g>
+            <text class="map__label map__label--pin" x="282" y="246">Olive &amp; Ember</text>
+          </svg>
+          <div class="map-card__foot">
+            <div>
+              <p class="map-card__title">Olive &amp; Ember</p>
+              <p class="map-card__sub">4 min walk from the Clock Tower · Paid parking at Jaffa Port</p>
+            </div>
+            <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Old+Jaffa+Tel+Aviv" target="_blank" rel="noopener">Directions <span aria-hidden="true">↗</span><span class="sr-only">(opens in a new tab)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <p class="footer__logo">Olive <em>&amp;</em> Ember</p>
+        <p class="footer__tag">Wood-fire kitchen &amp; wine bar in Old Jaffa, since 2019.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <ul role="list">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#events">Private events</a></li>
+          <li><a href="#reserve">Reservations</a></li>
+          <li><a href="#visit">Hours &amp; location</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <p class="footer__heading">Follow the fire</p>
+        <ul role="list">
+          <li><a href="#" aria-label="Instagram (sample link)">Instagram</a></li>
+          <li><a href="#" aria-label="Facebook (sample link)">Facebook</a></li>
+          <li><a href="mailto:hello@oliveandember.co.il">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <p>© <span data-year>2026</span> Olive &amp; Ember. A fictional restaurant.</p>
+      <p class="footer__credit">Sample site by Nimrod Shai</p>
+      <a class="footer__top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

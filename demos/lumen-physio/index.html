@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen Physiotherapy · Haifa</title>
+  <meta name="description" content="Lumen Physiotherapy — modern physiotherapy and sports rehabilitation clinic on Mount Carmel, Haifa. Sports injuries, back & neck pain, post-surgery rehab, pelvic floor, hydrotherapy and kids' physio.">
+  <meta name="theme-color" content="#FBF9F5">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%233F5E44'/%3E%3Ccircle cx='16' cy='19' r='6' fill='%23F4EEE4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Apply saved language before first paint to avoid a flash of the wrong direction */
+    (function () {
+      document.documentElement.classList.add('js');
+      try {
+        var q = (location.search.match(/[?&]lang=(en|he)\b/) || [])[1];
+        var l = q || localStorage.getItem('lumen-lang');
+        if (l === 'he') { document.documentElement.lang = 'he'; document.documentElement.dir = 'rtl'; }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="Lumen Physiotherapy — home">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="var(--sage-700)"/>
+          <circle cx="20" cy="24" r="7.5" fill="var(--sand)"/>
+          <g stroke="var(--sand)" stroke-width="1.8" stroke-linecap="round">
+            <path d="M20 9.5v3.2M10.6 13.4l2.3 2.3M29.4 13.4l-2.3 2.3M7.5 22.5h3M29.5 22.5h3"/>
+          </g>
+          <rect x="6" y="31" width="28" height="9" fill="var(--sage-700)"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name" data-i18n="brand.name">Lumen</span>
+          <span class="brand__tag" data-i18n="brand.tag">Physiotherapy</span>
+        </span>
+      </a>
+
+      <nav class="nav__menu" id="nav-menu" aria-label="Main" data-i18n-attr="aria-label|nav.label">
+        <ul class="nav__links">
+          <li><a href="#treatments" data-i18n="nav.treatments">Treatments</a></li>
+          <li><a href="#process" data-i18n="nav.process">How it works</a></li>
+          <li><a href="#team" data-i18n="nav.team">Our team</a></li>
+          <li><a href="#reviews" data-i18n="nav.reviews">Reviews</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <a href="#booking" class="btn btn--primary nav__cta-mobile" data-i18n="cta.book">Book an appointment</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button type="button" class="lang-toggle" id="lang-toggle" aria-label="Switch to Hebrew" data-i18n-attr="aria-label|lang.aria">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span data-i18n="lang.label" lang="he">עברית</span>
+        </button>
+        <a href="#booking" class="btn btn--primary btn--sm nav__cta" data-i18n="cta.bookShort">Book now</a>
+        <button type="button" class="burger" id="burger" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu" data-i18n-attr="aria-label|nav.open">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="blob blob--hero-1" aria-hidden="true"></div>
+      <div class="blob blob--hero-2" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal" data-i18n="hero.eyebrow">Physiotherapy &amp; sports rehab · Haifa</p>
+          <h1 class="hero__title reveal" id="hero-title" data-i18n="hero.title">Move without pain.<br><em>Live without limits.</em></h1>
+          <p class="hero__lead reveal" data-i18n="hero.lead">Evidence-based physiotherapy in a calm, light-filled clinic on Mount Carmel. One-on-one 45-minute sessions, a plan built around your life, and a team that genuinely listens.</p>
+          <div class="hero__ctas reveal">
+            <a href="#booking" class="btn btn--primary btn--lg">
+              <span data-i18n="cta.book">Book an appointment</span>
+              <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#treatments" class="btn btn--ghost btn--lg" data-i18n="cta.explore">Explore treatments</a>
+          </div>
+          <ul class="trust reveal" aria-label="Why patients trust us" data-i18n-attr="aria-label|trust.label">
+            <li class="trust__item">
+              <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3.5Z" fill="currentColor"/></svg></span>
+              <span><strong>4.9</strong> <span data-i18n="trust.rating">from 380+ Google reviews</span></span>
+            </li>
+            <li class="trust__item">
+              <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.3 3 7.9 7 9.5 4-1.6 7-5.2 7-9.5V6l-7-3Z M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span data-i18n="trust.hmo">All HMOs &amp; private insurers</span>
+            </li>
+            <li class="trust__item">
+              <span class="trust__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M4 10h16M9 3v4M15 3v4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+              <span data-i18n="trust.week">Appointments this week</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="hero__img-wrap">
+            <img src="assets/hero.jpg" alt="A physiotherapist guiding a patient through a knee rehabilitation exercise in a sunlit clinic" data-i18n-attr="alt|hero.alt" width="1600" height="1066" fetchpriority="high">
+          </div>
+          <div class="float-card float-card--slot" aria-hidden="true">
+            <span class="pulse-dot"></span>
+            <span>
+              <span class="float-card__label" data-i18n="hero.nextLabel">Next available</span>
+              <span class="float-card__value" data-i18n="hero.nextValue">Tomorrow · 08:30</span>
+            </span>
+          </div>
+          <div class="float-card float-card--stat" aria-hidden="true">
+            <span class="float-card__big" dir="ltr">12+</span>
+            <span class="float-card__label" data-i18n="hero.years">years helping Haifa move</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSURANCE STRIP ============ -->
+    <section class="partners" aria-labelledby="partners-title">
+      <div class="container partners__inner">
+        <h2 class="partners__title" id="partners-title" data-i18n="partners.title">Recognised by all health funds</h2>
+        <ul class="partners__list">
+          <li class="partner" data-i18n="partners.clalit">Clalit</li>
+          <li class="partner" data-i18n="partners.maccabi">Maccabi</li>
+          <li class="partner" data-i18n="partners.meuhedet">Meuhedet</li>
+          <li class="partner" data-i18n="partners.leumit">Leumit</li>
+          <li class="partner partner--alt" data-i18n="partners.private">+ private insurance</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TREATMENTS ============ -->
+    <section class="section" id="treatments" aria-labelledby="treatments-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="treat.eyebrow">What we treat</p>
+          <h2 class="section-title" id="treatments-title" data-i18n="treat.title">Care for every stage of recovery</h2>
+          <p class="section-lead" data-i18n="treat.lead">From a first twinge to a full return to sport — every programme starts with a thorough assessment and is adjusted as you progress.</p>
+        </header>
+
+        <ul class="treat-grid">
+          <li class="treat-card reveal">
+            <span class="treat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="29" cy="9" r="4"/><path d="M19 19l7-4 6 5 6 1M26 15l-3 11 7 5-2 10M23 26l-6 6-8-1"/></svg>
+            </span>
+            <h3 class="treat-card__title" data-i18n="t.sports.title">Sports injuries</h3>
+            <p data-i18n="t.sports.text">Sprains, tendon pain, ACL and running injuries — rehab that gets you back to the game stronger than before.</p>
+            <span class="treat-card__meta" data-i18n="t.sports.meta">45 min · 1:1</span>
+          </li>
+          <li class="treat-card reveal">
+            <span class="treat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="7" r="3.5"/><rect x="19" y="13" width="10" height="5" rx="2.5"/><rect x="18.5" y="20" width="11" height="5" rx="2.5"/><rect x="18" y="27" width="12" height="5" rx="2.5"/><rect x="17.5" y="34" width="13" height="5" rx="2.5"/><path d="M14 41c3 2 17 2 20 0"/></svg>
+            </span>
+            <h3 class="treat-card__title" data-i18n="t.back.title">Back &amp; neck pain</h3>
+            <p data-i18n="t.back.text">Manual therapy, movement retraining and practical ergonomics for long days at a desk or behind the wheel.</p>
+            <span class="treat-card__meta" data-i18n="t.back.meta">45 min · 1:1</span>
+          </li>
+          <li class="treat-card reveal">
+            <span class="treat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><rect x="7" y="17" width="34" height="14" rx="7" transform="rotate(-40 24 24)"/><rect x="18" y="19" width="12" height="10" rx="2" transform="rotate(-40 24 24)"/><path d="M22.5 22.5h.01M25.5 25.5h.01M25.5 22.5h.01M22.5 25.5h.01"/></svg>
+            </span>
+            <h3 class="treat-card__title" data-i18n="t.surgery.title">Post-surgery rehab</h3>
+            <p data-i18n="t.surgery.text">Structured recovery after knee, hip, shoulder and spine surgery, coordinated closely with your surgeon.</p>
+            <span class="treat-card__meta" data-i18n="t.surgery.meta">45–60 min · 1:1</span>
+          </li>
+          <li class="treat-card reveal">
+            <span class="treat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 38c-5-4-7-9-7-14s3-10 7-14c4 4 7 9 7 14s-2 10-7 14Z"/><path d="M24 38c-7 0-13-3-16-9 4-2 9-2 13 0M24 38c7 0 13-3 16-9-4-2-9-2-13 0"/><path d="M10 41h28"/></svg>
+            </span>
+            <h3 class="treat-card__title" data-i18n="t.pelvic.title">Pelvic floor</h3>
+            <p data-i18n="t.pelvic.text">Discreet, specialist care for pregnancy, postpartum recovery, continence and pelvic pain — in a private room.</p>
+            <span class="treat-card__meta" data-i18n="t.pelvic.meta">50 min · private room</span>
+          </li>
+          <li class="treat-card reveal">
+            <span class="treat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 6c5 7 8 11.5 8 16a8 8 0 0 1-16 0c0-4.5 3-9 8-16Z"/><path d="M6 34c3-2.5 6-2.5 9 0s6 2.5 9 0 6-2.5 9 0 6 2.5 9 0M6 41c3-2.5 6-2.5 9 0s6 2.5 9 0 6-2.5 9 0 6 2.5 9 0"/></svg>
+            </span>
+            <h3 class="treat-card__title" data-i18n="t.hydro.title">Hydrotherapy</h3>
+            <p data-i18n="t.hydro.text">Gentle exercise in our 34°C therapy pool — ideal for arthritis, early post-op stages and chronic pain.</p>
+            <span class="treat-card__meta" data-i18n="t.hydro.meta">40 min · warm pool</span>
+          </li>
+          <li class="treat-card reveal">
+            <span class="treat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="20" cy="12" r="4.5"/><path d="M20 17v12M20 21l-7 4M20 21l6 3M20 29l-5 10M20 29l5 10"/><circle cx="35" cy="34" r="5"/><path d="M31.5 30.5c2 1.5 5 5 7 7"/></svg>
+            </span>
+            <h3 class="treat-card__title" data-i18n="t.kids.title">Kids' physio</h3>
+            <p data-i18n="t.kids.text">Playful, family-centred sessions for motor development, posture, sports injuries and coordination.</p>
+            <span class="treat-card__meta" data-i18n="t.kids.meta">40 min · ages 2–16</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section section--tint" id="process" aria-labelledby="process-title">
+      <div class="blob blob--process" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="proc.eyebrow">How it works</p>
+          <h2 class="section-title" id="process-title" data-i18n="proc.title">Three calm steps back to movement</h2>
+        </header>
+        <ol class="timeline">
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__title" data-i18n="proc.1.title">In-depth assessment</h3>
+            <p data-i18n="proc.1.text">A 60-minute first visit: your history, goals and a full movement analysis. You'll leave understanding exactly what's going on.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__title" data-i18n="proc.2.title">Your personal plan</h3>
+            <p data-i18n="proc.2.text">Hands-on treatment plus a short home programme sent to your phone, with video demos you can follow anywhere.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__title" data-i18n="proc.3.title">Recover &amp; return</h3>
+            <p data-i18n="proc.3.text">We measure progress every session and taper visits as you gain strength — the goal is independence, not dependence.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="section" id="team" aria-labelledby="team-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="team.eyebrow">Our team</p>
+          <h2 class="section-title" id="team-title" data-i18n="team.title">Specialists who take the time</h2>
+          <p class="section-lead" data-i18n="team.lead">Every therapist at Lumen holds an Israeli Ministry of Health licence and an advanced clinical specialisation.</p>
+        </header>
+        <ul class="team-grid">
+          <li class="member reveal">
+            <div class="member__photo member__photo--1">
+              <img src="assets/team-1.jpg" alt="Portrait of Dr. Maya Levin" data-i18n-attr="alt|team.1.alt" width="800" height="800" loading="lazy">
+            </div>
+            <h3 class="member__name" data-i18n="team.1.name">Dr. Maya Levin</h3>
+            <p class="member__role" data-i18n="team.1.role">Clinic director · Sports &amp; orthopaedics</p>
+            <p class="member__bio" data-i18n="team.1.bio">PhD in rehabilitation sciences, former physio to Maccabi Haifa's youth academy. Loves a stubborn knee.</p>
+          </li>
+          <li class="member reveal">
+            <div class="member__photo member__photo--2">
+              <img src="assets/team-2.jpg" alt="Portrait of Yoav Barak" data-i18n-attr="alt|team.2.alt" width="800" height="800" loading="lazy">
+            </div>
+            <h3 class="member__name" data-i18n="team.2.name">Yoav Barak</h3>
+            <p class="member__role" data-i18n="team.2.role">Spine &amp; manual therapy</p>
+            <p class="member__bio" data-i18n="team.2.bio">Certified in McKenzie and Maitland methods. Helps desk workers and drivers say goodbye to chronic back pain.</p>
+          </li>
+          <li class="member reveal">
+            <div class="member__photo member__photo--3">
+              <img src="assets/team-3.jpg" alt="Portrait of Tigist Alemu" data-i18n-attr="alt|team.3.alt" width="800" height="800" loading="lazy">
+            </div>
+            <h3 class="member__name" data-i18n="team.3.name">Tigist Alemu</h3>
+            <p class="member__role" data-i18n="team.3.role">Pelvic floor &amp; paediatrics</p>
+            <p class="member__bio" data-i18n="team.3.bio">MSc in women's health physiotherapy. Patient, warm and very good at turning exercises into games.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section section--booking" id="booking" aria-labelledby="booking-title">
+      <div class="blob blob--booking" aria-hidden="true"></div>
+      <div class="container booking">
+        <div class="booking__intro reveal">
+          <p class="eyebrow" data-i18n="book.eyebrow">Online booking</p>
+          <h2 class="section-title" id="booking-title" data-i18n="book.title">Book your visit in under a minute</h2>
+          <p class="section-lead" data-i18n="book.lead">Choose a treatment, pick a time that suits you and we'll confirm by text. No referral needed for private visits.</p>
+          <ul class="booking__perks">
+            <li data-i18n="book.perk1">Free cancellation up to 24 hours before</li>
+            <li data-i18n="book.perk2">Reminder by SMS the day before</li>
+            <li data-i18n="book.perk3">Bring your HMO referral (if you have one)</li>
+          </ul>
+        </div>
+
+        <div class="booking__card reveal" id="booking-widget">
+          <ol class="stepper" aria-label="Booking progress" data-i18n-attr="aria-label|book.progress">
+            <li class="stepper__item is-active" data-step-ind="1"><span class="stepper__dot">1</span><span class="stepper__label" data-i18n="book.s1">Treatment</span></li>
+            <li class="stepper__item" data-step-ind="2"><span class="stepper__dot">2</span><span class="stepper__label" data-i18n="book.s2">Date &amp; time</span></li>
+            <li class="stepper__item" data-step-ind="3"><span class="stepper__dot">3</span><span class="stepper__label" data-i18n="book.s3">Your details</span></li>
+          </ol>
+
+          <form class="booking__form" id="booking-form" novalidate>
+            <!-- Step 1 -->
+            <fieldset class="bstep is-active" data-step="1">
+              <legend class="bstep__title" tabindex="-1" data-i18n="book.s1.title">What would you like to book?</legend>
+              <div class="choice-grid" id="treatment-choices"><!-- rendered by JS --></div>
+              <p class="field-error" id="err-treatment" role="alert"></p>
+            </fieldset>
+
+            <!-- Step 2 -->
+            <fieldset class="bstep" data-step="2" hidden>
+              <legend class="bstep__title" tabindex="-1" data-i18n="book.s2.title">Pick a date and time</legend>
+              <div class="schedule">
+                <div class="calendar" id="calendar">
+                  <div class="calendar__head">
+                    <button type="button" class="icon-btn" id="cal-prev" aria-label="Previous month" data-i18n-attr="aria-label|cal.prev">
+                      <svg class="flip-rtl" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <p class="calendar__month" id="cal-month" aria-live="polite"></p>
+                    <button type="button" class="icon-btn" id="cal-next" aria-label="Next month" data-i18n-attr="aria-label|cal.next">
+                      <svg class="flip-rtl" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                  </div>
+                  <div class="calendar__dow" id="cal-dow" aria-hidden="true"></div>
+                  <div class="calendar__grid" id="cal-grid" role="group" aria-labelledby="cal-month"></div>
+                  <p class="calendar__note" data-i18n="cal.note">Closed on Saturdays · Fridays until 13:00</p>
+                </div>
+                <div class="slots">
+                  <p class="slots__title" id="slots-title" data-i18n="slots.title">Available times</p>
+                  <div class="slots__grid" id="slots" role="group" aria-labelledby="slots-title">
+                    <p class="slots__empty" data-i18n="slots.empty">Choose a date to see available times.</p>
+                  </div>
+                </div>
+              </div>
+              <p class="field-error" id="err-slot" role="alert"></p>
+            </fieldset>
+
+            <!-- Step 3 -->
+            <fieldset class="bstep" data-step="3" hidden>
+              <legend class="bstep__title" tabindex="-1" data-i18n="book.s3.title">How can we reach you?</legend>
+              <div class="fields">
+                <div class="field">
+                  <label for="f-name" data-i18n="f.name">Full name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+                  <p class="field-error" id="err-name"></p>
+                </div>
+                <div class="field">
+                  <label for="f-phone" data-i18n="f.phone">Mobile phone</label>
+                  <input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-123-4567" required aria-describedby="err-phone" dir="ltr">
+                  <p class="field-error" id="err-phone"></p>
+                </div>
+                <div class="field">
+                  <label for="f-email"><span data-i18n="f.email">Email</span> <span class="optional" data-i18n="f.optional">(optional)</span></label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" aria-describedby="err-email" dir="ltr">
+                  <p class="field-error" id="err-email"></p>
+                </div>
+                <div class="field">
+                  <label for="f-hmo" data-i18n="f.hmo">Health fund</label>
+                  <div class="select-wrap">
+                    <select id="f-hmo" name="hmo">
+                      <option value="clalit" data-i18n="partners.clalit">Clalit</option>
+                      <option value="maccabi" data-i18n="partners.maccabi">Maccabi</option>
+                      <option value="meuhedet" data-i18n="partners.meuhedet">Meuhedet</option>
+                      <option value="leumit" data-i18n="partners.leumit">Leumit</option>
+                      <option value="private" data-i18n="f.hmoPrivate">Private / other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field field--full">
+                  <label for="f-notes"><span data-i18n="f.notes">Anything we should know?</span> <span class="optional" data-i18n="f.optional">(optional)</span></label>
+                  <textarea id="f-notes" name="notes" rows="3" placeholder="e.g. right knee pain after running, two weeks" data-i18n-attr="placeholder|f.notesPh"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Confirmation -->
+            <div class="bstep bstep--done" data-step="4" hidden>
+              <div class="done__badge" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><path class="done__check" d="M15 24.5l6 6 12-13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3 class="bstep__title" tabindex="-1" id="done-title" data-i18n="done.title">You're booked in!</h3>
+              <p class="done__lead" id="done-lead"></p>
+              <dl class="summary" id="summary"></dl>
+              <p class="done__note" data-i18n="done.note">This is a demo — no data was sent anywhere.</p>
+              <button type="button" class="btn btn--ghost" id="book-again" data-i18n="done.again">Book another visit</button>
+            </div>
+
+            <div class="booking__nav" id="booking-nav">
+              <button type="button" class="btn btn--ghost" id="btn-back" hidden>
+                <svg class="flip-rtl" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span data-i18n="book.back">Back</span>
+              </button>
+              <button type="submit" class="btn btn--primary" id="btn-next">
+                <span id="btn-next-label" data-i18n="book.next">Continue</span>
+                <svg class="flip-rtl" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+          </form>
+          <p class="visually-hidden" id="booking-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head section-head--center reveal">
+          <p class="eyebrow" data-i18n="rev.eyebrow">Patient stories</p>
+          <h2 class="section-title" id="reviews-title" data-i18n="rev.title">Words from people who move again</h2>
+        </header>
+        <div class="carousel reveal" id="carousel" role="region" aria-roledescription="carousel" aria-label="Patient testimonials" data-i18n-attr="aria-label|rev.label">
+          <svg class="carousel__quote" viewBox="0 0 64 48" aria-hidden="true"><path d="M0 48V28C0 12 8 3 24 0l3 7c-9 3-13 8-13 15h12v26H0Zm37 0V28c0-16 8-25 24-28l3 7c-9 3-13 8-13 15h12v26H37Z" fill="currentColor"/></svg>
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="carousel-track" aria-live="polite"><!-- rendered by JS --></div>
+          </div>
+          <div class="carousel__controls">
+            <button type="button" class="icon-btn icon-btn--lg" id="car-prev" aria-label="Previous testimonial" data-i18n-attr="aria-label|rev.prev">
+              <svg class="flip-rtl" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="carousel__dots" id="carousel-dots"></div>
+            <button type="button" class="icon-btn icon-btn--lg" id="car-next" aria-label="Next testimonial" data-i18n-attr="aria-label|rev.next">
+              <svg class="flip-rtl" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--tint" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="faq.eyebrow">Good to know</p>
+          <h2 class="section-title" id="faq-title" data-i18n="faq.title">Frequently asked questions</h2>
+          <p class="section-lead" data-i18n="faq.lead">Can't find your answer? Call us or send a WhatsApp — a real person replies within the hour.</p>
+        </header>
+        <div class="accordion reveal" id="accordion">
+          <div class="acc">
+            <h3 class="acc__h"><button type="button" class="acc__btn" aria-expanded="false" aria-controls="acc-1" id="acc-b1"><span data-i18n="faq.1.q">Do I need a doctor's referral?</span><span class="acc__icon" aria-hidden="true"></span></button></h3>
+            <div class="acc__panel" id="acc-1" role="region" aria-labelledby="acc-b1"><div class="acc__inner"><p data-i18n="faq.1.a">Not for private visits — you can book directly. If you'd like your health fund to cover treatment, bring a referral (הפניה) from your family doctor or orthopaedist to the first visit.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3 class="acc__h"><button type="button" class="acc__btn" aria-expanded="false" aria-controls="acc-2" id="acc-b2"><span data-i18n="faq.2.q">Is treatment covered by my HMO?</span><span class="acc__icon" aria-hidden="true"></span></button></h3>
+            <div class="acc__panel" id="acc-2" role="region" aria-labelledby="acc-b2"><div class="acc__inner"><p data-i18n="faq.2.a">We work with Clalit, Maccabi, Meuhedet and Leumit supplementary plans, as well as most private insurers. With a valid referral you pay only the fund's standard co-payment.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3 class="acc__h"><button type="button" class="acc__btn" aria-expanded="false" aria-controls="acc-3" id="acc-b3"><span data-i18n="faq.3.q">What should I wear to my session?</span><span class="acc__icon" aria-hidden="true"></span></button></h3>
+            <div class="acc__panel" id="acc-3" role="region" aria-labelledby="acc-b3"><div class="acc__inner"><p data-i18n="faq.3.a">Comfortable clothes that let us see and move the area being treated — shorts for knees, a vest top for shoulders. For hydrotherapy, bring a swimsuit and flip-flops; towels are on us.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3 class="acc__h"><button type="button" class="acc__btn" aria-expanded="false" aria-controls="acc-4" id="acc-b4"><span data-i18n="faq.4.q">How many sessions will I need?</span><span class="acc__icon" aria-hidden="true"></span></button></h3>
+            <div class="acc__panel" id="acc-4" role="region" aria-labelledby="acc-b4"><div class="acc__inner"><p data-i18n="faq.4.a">It depends on the problem, but most people feel a clear difference within 3–4 sessions. After your assessment we'll give you an honest estimate — and we'll never book more visits than you need.</p></div></div>
+          </div>
+          <div class="acc">
+            <h3 class="acc__h"><button type="button" class="acc__btn" aria-expanded="false" aria-controls="acc-5" id="acc-b5"><span data-i18n="faq.5.q">Is there parking and accessible access?</span><span class="acc__icon" aria-hidden="true"></span></button></h3>
+            <div class="acc__panel" id="acc-5" role="region" aria-labelledby="acc-b5"><div class="acc__inner"><p data-i18n="faq.5.a">Yes. There's free patient parking under the building, step-free access from the street, a lift to every floor and an accessible changing room next to the pool.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Visit us</p>
+          <h2 class="section-title" id="contact-title" data-i18n="contact.title">A quiet corner of the Carmel</h2>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+              <span><span class="contact__label" data-i18n="contact.addrLabel">Address</span><span data-i18n="contact.addr">112 Derech HaYam, 3rd floor, Haifa</span></span>
+            </li>
+            <li>
+              <span class="contact__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span>
+              <span><span class="contact__label" data-i18n="contact.phoneLabel">Phone &amp; WhatsApp</span><a href="tel:+97245550142" dir="ltr">04-555-0142</a></span>
+            </li>
+            <li>
+              <span class="contact__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>
+              <span><span class="contact__label" data-i18n="contact.emailLabel">Email</span><a href="mailto:hello@lumen-physio.example">hello@lumen-physio.example</a></span>
+            </li>
+          </ul>
+          <div class="hours">
+            <h3 class="hours__title" data-i18n="hours.title">Opening hours</h3>
+            <dl class="hours__list">
+              <div><dt data-i18n="hours.week">Sunday – Thursday</dt><dd dir="ltr">07:30 – 20:00</dd></div>
+              <div><dt data-i18n="hours.fri">Friday</dt><dd dir="ltr">08:00 – 13:00</dd></div>
+              <div><dt data-i18n="hours.sat">Saturday</dt><dd data-i18n="hours.closed">Closed</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="contact__map reveal" role="img" aria-label="Stylised map showing the clinic on Derech HaYam, near the Carmel slopes" data-i18n-attr="aria-label|contact.mapAlt">
+          <svg viewBox="0 0 480 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="480" height="420" fill="var(--mist-100)"/>
+            <path d="M0 0h150c-20 60-10 120 20 170s20 120-30 250H0Z" fill="var(--mist-300)" opacity=".55"/>
+            <path d="M260 0c40 70 120 90 220 80v340H230c40-80 30-150-10-220S220 40 260 0Z" fill="var(--sage-100)"/>
+            <path d="M330 30c30 40 80 50 150 45v120c-60-10-120 10-150-40s-20-90 0-125Z" fill="var(--sage-300)" opacity=".5"/>
+            <g fill="none" stroke="#fff" stroke-linecap="round">
+              <path d="M170 -10c30 90 40 160 20 230s-10 140 40 210" stroke-width="14"/>
+              <path d="M40 260c80-20 160-20 260 10s130 10 190-10" stroke-width="10"/>
+              <path d="M220 120c60 10 120 40 270 20" stroke-width="7"/>
+              <path d="M120 420c20-60 60-100 120-130" stroke-width="7"/>
+            </g>
+            <text x="115" y="110" text-anchor="middle" class="map-label" data-i18n="contact.sea">Mediterranean</text>
+            <text x="372" y="350" text-anchor="middle" class="map-label" data-i18n="contact.carmel">Carmel</text>
+            <g transform="translate(196 236)">
+              <circle r="30" fill="var(--sage-700)" opacity=".16" class="map-pulse"/>
+              <path d="M0 -4c-12 0-20-9-20-19a20 20 0 0 1 40 0c0 10-8 19-20 19Z" transform="translate(0 -6)" fill="var(--sage-700)"/>
+              <path d="M0 0l-9-12h18Z" fill="var(--sage-700)"/>
+              <circle cy="-29" r="7" fill="var(--sand)"/>
+            </g>
+          </svg>
+          <a class="btn btn--light map__btn" href="https://maps.google.com/?q=Haifa" target="_blank" rel="noopener" data-i18n="contact.directions">Get directions</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-band__inner reveal">
+        <h2 id="cta-title" class="cta-band__title" data-i18n="ctaBand.title">Ready to feel like yourself again?</h2>
+        <a href="#booking" class="btn btn--light btn--lg" data-i18n="cta.book">Book an appointment</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#top" class="brand brand--footer" aria-label="Lumen Physiotherapy — back to top" data-i18n-attr="aria-label|footer.top">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="19" fill="var(--sand)"/>
+            <circle cx="20" cy="24" r="7.5" fill="var(--sage-900)"/>
+            <g stroke="var(--sage-900)" stroke-width="1.8" stroke-linecap="round"><path d="M20 9.5v3.2M10.6 13.4l2.3 2.3M29.4 13.4l-2.3 2.3M7.5 22.5h3M29.5 22.5h3"/></g>
+            <rect x="6" y="31" width="28" height="9" fill="var(--sand)"/>
+          </svg>
+          <span class="brand__text"><span class="brand__name" data-i18n="brand.name">Lumen</span><span class="brand__tag" data-i18n="brand.tag">Physiotherapy</span></span>
+        </a>
+        <p data-i18n="footer.blurb">Modern physiotherapy and sports rehabilitation on Mount Carmel, Haifa.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer" data-i18n-attr="aria-label|footer.navLabel">
+        <a href="#treatments" data-i18n="nav.treatments">Treatments</a>
+        <a href="#team" data-i18n="nav.team">Our team</a>
+        <a href="#booking" data-i18n="cta.bookShort">Book now</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> <span data-i18n="footer.rights">Lumen Physiotherapy. A fictional clinic.</span></p>
+      <p class="footer__credit" data-i18n="footer.credit">Sample site by Nimrod Shai</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
