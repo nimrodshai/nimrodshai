@@ -24,7 +24,7 @@ window.CONTENT = {
       ctaProjects: "Explore my projects",
       portraitAlt: "Portrait of Nimrod Shai",
 
-      forTitle: "For small-business owners",
+      forTitle: "For small businesses",
       forSub: "You want to grow your business while keeping the daily workload manageable. I help you identify where a website or automation could save time and improve service.",
       audiences: [
         {

@@ -10,7 +10,7 @@ publish_message=$1
 shift
 cd "$(git -C "$(dirname "$0")" rev-parse --show-toplevel)"
 
-[[ $(git branch --show-current) == main ]] || { echo 'Publish from main.' >&2; exit 1; }
+# An isolated checkout or detached worktree can publish after matching origin/main.
 git diff --cached --quiet || { echo 'Review or commit the already staged changes before publishing.' >&2; exit 1; }
 for publish_file in "$@"; do
   [[ -f "$publish_file" && "$publish_file" != /* && "$publish_file" != *..* ]] || {
@@ -34,7 +34,7 @@ publish_url=$(gh api "repos/$publish_repo/pages" --jq .html_url)
 
 git fetch origin main
 [[ $(git rev-parse HEAD) == "$(git rev-parse origin/main)" ]] || {
-  echo 'Local main and origin/main differ. Reconcile them before publishing.' >&2
+  echo 'Checkout HEAD and origin/main differ. Reconcile them before publishing.' >&2
   exit 1
 }
 
@@ -61,11 +61,12 @@ for (( publish_attempt = 1; publish_attempt <= 30; publish_attempt++ )); do
 done
 [[ "$publish_built" == true ]] || { echo 'Pushed successfully, but the build is still pending. Check GitHub Pages before retrying.' >&2; exit 1; }
 
-echo 'Checking that the live page and scripts match the local files.'
+echo 'Checking that the live page and assets match the published commit.'
 node --input-type=module - "$publish_url" "$publish_sha" <<'NODE'
-import { readFileSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 const [base, sha] = process.argv.slice(2);
-const files = ['index.html', 'content.js', 'app.js'];
+const files = ['index.html', 'content.js', 'app.js', 'styles.css'];
+const expected = new Map(files.map(file => [file, execFileSync('git', ['show', `${sha}:${file}`], {encoding:'utf8'})]));
 let pending = files;
 for (let attempt = 0; attempt < 18 && pending.length; attempt++) {
   const remaining = [];
@@ -74,7 +75,7 @@ for (let attempt = 0; attempt < 18 && pending.length; attempt++) {
     url.searchParams.set('deployment', sha);
     try {
       const response = await fetch(url, { headers: { 'Cache-Control': 'no-cache' }, signal: AbortSignal.timeout(15000) });
-      if (!response.ok || await response.text() !== readFileSync(file, 'utf8')) remaining.push(file);
+      if (!response.ok || await response.text() !== expected.get(file)) remaining.push(file);
     } catch {
       remaining.push(file);
     }
