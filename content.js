@@ -7,181 +7,192 @@ window.CONTENT = {
     en: {
       skip: "Skip to content",
       name: "Nimrod Shai",
-      title: "Nimrod Shai | Websites, Systems & Tools for Small Businesses",
-      navServices: "What I build",
+      title: "Nimrod Shai | Websites & Automation for Small Businesses",
+      description: "Websites and automation for small businesses. I build business websites, connect tools and reduce repetitive admin, with support to suit your needs.",
+      ogImageAlt: "Nimrod Shai signature logo",
+      navLabel: "Main navigation",
+      languageSwitchLabel: "מעבר לעברית",
+      navServices: "Services",
       navProjects: "Work",
       navContact: "Contact",
       langLabel: "עברית",
-      heroA: "Need",
-      heroWords: ["a website?", "online orders?", "a WhatsApp bot?", "an app?", "automations?"],
-      heroB: "You're in the right place.",
-      heroC: "For small businesses and people with an idea. Tell me what you need in your own words, and I'll build it, launch it and stay with you after.",
-      ctaContact: "Tell me what you need",
-      ctaProjects: "See what I've built",
+      heroA: "I build",
+      heroWords: ["websites.", "automations."],
+      heroB: "For small businesses.",
+      heroC: "Help customers find you and spend less time on routine admin. I build websites and automate repetitive tasks, starting with how your business works and where you want to improve.",
+      ctaContact: "Let's discuss your business",
+      ctaProjects: "Explore my projects",
       portraitAlt: "Portrait of Nimrod Shai",
 
-      forTitle: "Who I build for",
-      forSub: "You don't need to know anything technical. You just need to know what's bothering you, or what you'd like to have.",
+      forTitle: "For small-business owners",
+      forSub: "You want to grow your business while keeping the daily workload manageable. I help you identify where a website or automation could save time and improve service.",
       audiences: [
         {
-          title: "You run a small business",
-          body: "Orders come in on WhatsApp, by phone and in a notebook. Customers ask the same questions every day. You want something that fits the way you work, not another app that almost fits.",
-          examples: ["Bakeries and caterers", "Clinics and studios", "Shops", "Classes and schools"]
+          title: "Make it easier to reach you",
+          body: "Give customers a clear view of your services and an easy way to get in touch. I build websites for small businesses, from local shops to independent professionals, with content and contact options that suit their customers.",
+          examples: ["Local businesses", "Independent professionals", "Clinics and studios", "Classes and schools"]
         },
         {
-          title: "You have an idea",
-          body: "A personal website, a tool for your family, an app for your hobby, or the side project you keep thinking about. If you can describe it, we can build it together.",
-          examples: ["Personal site", "Family tool", "Hobby app", "Side project"]
+          title: "Spend less time on admin",
+          body: "Copying customer details, sending reminders, or preparing the same report takes time away from your business. We review the process together and choose the steps worth automating.",
+          examples: ["Customer inquiries", "Reminders and follow-ups", "Data entry", "Routine reports"]
         }
       ],
 
-      servicesTitle: "What I can build for you",
-      servicesSub: "Each one is made for you, not a template you have to squeeze into.",
+      servicesTitle: "Websites & automation",
+      servicesSub: "A clear online presence for your customers, and less manual work for you. We agree on the scope around your priorities, existing tools, and budget.",
       services: [
-        { title: "A website", body: "A site that explains what you do and gets people to call, order or book." },
-        { title: "Online orders and bookings", body: "Customers order or book on their own, and you get everything organized in one place. No order gets lost." },
-        { title: "Customer and order management", body: "One screen with your customers, orders and what's due today, instead of notebooks and spreadsheets." },
-        { title: "A WhatsApp bot", body: "Answers common questions, takes orders and sends reminders, right inside WhatsApp, where your customers already are." },
-        { title: "Automations", body: "The repetitive work you do by hand every week, like reminders, follow-ups and reports, done for you automatically." },
-        { title: "Your own idea", body: "An app or tool for yourself, your family or your hobby. Tell me about it and I'll tell you how I'd build it." }
+        { title: "Business websites", body: "Present your services, answer common questions, and give customers a clear next step. I build websites that work on phones and desktop screens." },
+        { title: "Landing pages", body: "Give a specific service, offer, or campaign a dedicated page with a focused message and a clear way for visitors to contact you." },
+        { title: "Forms and inquiries", body: "Collect the details you need through a website form and send them to the right place, so you can review and follow up on inquiries." },
+        { title: "Reminders and follow-ups", body: "Automate routine messages, appointment reminders, or follow-up tasks, with timing and rules that you approve." },
+        { title: "Connecting your tools", body: "Pass information between the tools your business uses, such as forms, spreadsheets, and customer records. Reduce the need to enter the same details twice." },
+        { title: "Reports and recurring tasks", body: "Collect information and prepare recurring summaries or reports. We choose which steps to automate and where you need to review the result." }
       ],
 
       stepsTitle: "How it works",
       steps: [
-        { title: "Tell me what you need", body: "A short call or a WhatsApp message, in your own words." },
-        { title: "Get a clear plan", body: "What I'll build, how long it will take and what it will cost, before any work starts." },
-        { title: "See it come together", body: "You try working versions along the way and tell me what to change." },
-        { title: "Launch, and I'm still here", body: "I put it live, show you how to use it and stay available for fixes and changes." }
+        { title: "Discuss your business", body: "Tell me how you work, where you spend time, and what you want to improve. I'll help you work out the technical requirements." },
+        { title: "Agree on a plan", body: "I outline the proposed solution, scope, timeline, and price. We agree on these before development begins." },
+        { title: "Review the work", body: "Try working versions and share your feedback. We check the website or automation against the agreed requirements before launch." },
+        { title: "Launch and get support", body: "I handle launch and explain how to use what we've built. Choose ongoing maintenance for a monthly fee or support per request." }
       ],
 
-      projectsTitle: "Work",
-      projectsSub: "Real things I built for clients, for my family and for myself.",
+      projectsTitle: "Selected projects",
+      projectsSub: "Explore a client project alongside my own products and experiments. Each example shows the purpose, main features, and whether you can visit a live site or try a demo.",
       behind: "How it's built",
       behindShort: "How it's built",
       shotAlt: "Screenshot of {name}",
       visit: "Visit site",
-      demo: "Open demo",
-      moreTitle: "Small experiments",
+      demo: "Try demo",
+      moreTitle: "More tools & experiments",
 
       aboutLabel: "About",
-      aboutTitle: "Who you'll work with",
-      aboutTitles: ["Big companies, simple products", "Now for you", "Plain words, no jargon"],
+      aboutTitle: "Meet your developer",
+      aboutTitles: ["13 years in software", "Focused on small businesses", "A direct working relationship"],
       stats: [
-        { big: "13 Years", label: "building products people use" },
-        { big: "1 Person", label: "you talk to, from first call to launch" }
+        { big: "13 years", label: "of software development experience" },
+        { big: "1 contact", label: "from the first conversation through launch and support" }
       ],
       heroBody: [
-        "For thirteen years I built apps for companies like LivePerson, Lemonade and Mixtiles. I learned that good code is only half the job; the other half is something that feels simple to use.",
-        "Since March 2026 I work independently, building for small businesses and people with an idea. With AI I build in weeks what used to take a whole team months, so it costs a lot less.",
-        "You talk to me directly, not to a sales team. I explain everything simply, and I care that what we build is easy and pleasant to use, for you and for your customers."
+        "I'm Nimrod Shai, a software developer with 13 years of experience, including work on products at LivePerson, Lemonade, and Mixtiles. I bring that experience to building software that people can use in their daily work.",
+        "Since March 2026, I've worked as an independent developer, with a focus on websites and automation for small businesses. I use AI tools as part of development and choose the approach to suit each project's requirements.",
+        "You work with me from the first conversation through development and launch. I explain the options, keep you involved in decisions, and offer monthly maintenance or support per request."
       ],
 
-      faqTitle: "Questions",
+      faqTitle: "Common questions",
       faq: [
-        { q: "How much does it cost?", a: "It depends on what you need. After a short conversation you get a clear price, before any work starts. Thanks to AI, it's a fraction of what a development company would charge." },
-        { q: "I'm not technical at all. Is that a problem?", a: "Not at all. Tell me what's bothering you or what you'd like to have. I'll take care of the rest and explain everything in plain words." },
-        { q: "How long does it take?", a: "Most projects take a few weeks. You'll know the timeline up front." },
-        { q: "What happens after it's live?", a: "I stay available for fixes, changes and new ideas. You won't be left alone with it." },
-        { q: "Do you work in Hebrew?", a: "Yes. Hebrew and English, including right-to-left websites and systems." }
+        { q: "How much will my project cost?", a: "The price depends on the scope and the tools involved. After we discuss your business, I'll provide a proposal with the work, timeline, and price. I'll also explain any ongoing costs, such as hosting or paid services, before we begin." },
+        { q: "Can we start if I'm unsure what I need?", a: "Yes. Describe how your business works and which tasks take time or cause delays. I'll help you identify a useful starting point and explain the options before we agree on a project." },
+        { q: "How long does a project take?", a: "The timeline depends on the scope, content, and any connections to other services. I'll give you an estimate in the proposal and explain what I'll need from you to keep the project moving." },
+        { q: "Can you work with the tools I already use?", a: "We'll review your current tools and check what they support. Where a connection is possible, I'll explain the setup, any service fees, and which steps we can automate." },
+        { q: "What support do you offer after launch?", a: "You can choose ongoing maintenance for a monthly fee or request support as needed. We'll agree on the work and pricing, including any changes or additions you want." },
+        { q: "Do you build in Hebrew and English?", a: "Yes. I can build in Hebrew, English, or both, including right-to-left layouts for Hebrew. We'll agree on the languages and content as part of the project scope." }
       ],
 
-      contactTitle: "Let's talk",
-      contactSub: "Tell me what's slowing your business down, or what you'd like to have. In your own words, no tech knowledge needed, and I'll get back to you with how I'd do it.",
+      contactTitle: "Let's talk business",
+      contactSub: "Tell me about your business and what you'd like to improve, whether that's your website, how you handle inquiries, or a task that takes too much time. I'll help you work out a practical next step.",
       waTitle: "Message me on WhatsApp",
-      waSub: "Usually the quickest reply",
-      waBadge: "Fastest",
-      waText: "Hi Nimrod, I saw your website and I'd like to talk about something I need.",
+      waSub: "Tell me about your business",
+      waBadge: "Let's talk",
+      waText: "Hi Nimrod, I'd like to discuss a website or automation for my business. Here's a little about what I do and what I'd like to improve: ",
       mailTitle: "Send an email",
-      footerNote: "Built with Claude Code."
+      footerNote: "Websites & automation for small businesses."
     },
     he: {
       skip: "דילוג לתוכן",
       name: "נמרוד שי",
-      title: "נמרוד שי | אתרים, מערכות וכלים לעסקים קטנים",
-      navServices: "מה אני בונה",
+      title: "נמרוד שי | בניית אתרים ואוטומציה לעסקים קטנים",
+      description: "בניית אתרים ואוטומציה לעסקים קטנים. אתרים עסקיים, חיבור בין מערכות וצמצום עבודה ידנית, עם תחזוקה חודשית או תמיכה לפי הצורך.",
+      ogImageAlt: "לוגו החתימה של נמרוד שי",
+      navLabel: "ניווט ראשי",
+      languageSwitchLabel: "Switch to English",
+      navServices: "שירותים",
       navProjects: "עבודות",
       navContact: "יצירת קשר",
       langLabel: "English",
-      heroA: "צריכים",
-      heroWords: ["אתר?", "מערכת הזמנות?", "בוט לוואטסאפ?", "אפליקציה?", "אוטומציות?"],
-      heroB: "הגעתם למקום הנכון.",
-      heroC: "לעסקים קטנים ולאנשים עם רעיון. ספרו לי במילים שלכם מה אתם צריכים, ואני אבנה, אשיק ואשאר איתכם גם אחרי.",
-      ctaContact: "ספרו לי מה אתם צריכים",
-      ctaProjects: "מה בניתי",
+      heroA: "אני בונה",
+      heroWords: ["אתרים.", "אוטומציות."],
+      heroB: "לעסקים קטנים.",
+      heroC: "ללקוחות שלכם יהיה קל יותר למצוא אתכם, ולכם יישאר יותר זמן לעסק. אני בונה אתרים ומפתח אוטומציות שמצמצמות משימות חוזרות, בהתאם לאופן שבו אתם עובדים ולמה שתרצו לשפר.",
+      ctaContact: "בואו נדבר על העסק שלכם",
+      ctaProjects: "לפרויקטים שבניתי",
       portraitAlt: "דיוקן של נמרוד שי",
 
-      forTitle: "בשביל מי אני בונה",
-      forSub: "לא צריך לדעת שום דבר טכני. מספיק לדעת מה מפריע לכם, או מה הייתם רוצים שיהיה.",
+      forTitle: "לבעלי עסקים קטנים",
+      forSub: "אתם רוצים לפתח את העסק ולשמור על שגרת עבודה מסודרת. אני עוזר לזהות היכן אתר או אוטומציה יכולים לחסוך זמן ולשפר את השירות ללקוחות.",
       audiences: [
         {
-          title: "יש לכם עסק קטן",
-          body: "הזמנות מגיעות בוואטסאפ, בטלפון ובמחברת. לקוחות שואלים את אותן שאלות כל יום. אתם רוצים משהו שמתאים לאיך שאתם עובדים, לא עוד אפליקציה שכמעט מתאימה.",
-          examples: ["מאפיות וקייטרינג", "קליניקות וסטודיואים", "חנויות", "חוגים ובתי ספר"]
+          title: "קל יותר להגיע אליכם",
+          body: "אתר עסקי מציג ללקוחות את השירותים שלכם ומאפשר להם לפנות אליכם בנוחות. אני בונה אתרים לעסקים קטנים, מחנויות מקומיות ועד בעלי מקצוע, עם תוכן ואפשרויות יצירת קשר שמתאימים ללקוחות שלהם.",
+          examples: ["עסקים מקומיים", "בעלי מקצוע ונותני שירות", "קליניקות וסטודיואים", "חוגים ובתי ספר"]
         },
         {
-          title: "יש לכם רעיון",
-          body: "אתר אישי, כלי למשפחה, אפליקציה לתחביב, או הפרויקט הצדדי שאתם כל הזמן חושבים עליו. אם אפשר לתאר את זה, אפשר לבנות את זה ביחד.",
-          examples: ["אתר אישי", "כלי למשפחה", "אפליקציה לתחביב", "פרויקט צדדי"]
+          title: "פחות זמן על עבודה ידנית",
+          body: "העתקת פרטי לקוחות, שליחת תזכורות והכנת דוחות חוזרים גוזלות זמן מהעסק. נבחן יחד את תהליך העבודה ונבחר אילו שלבים כדאי להפוך לאוטומטיים.",
+          examples: ["טיפול בפניות", "תזכורות ומעקב", "הזנת נתונים", "דוחות תקופתיים"]
         }
       ],
 
-      servicesTitle: "מה אני יכול לבנות לכם",
-      servicesSub: "כל דבר נבנה בשבילכם, לא תבנית שצריך להידחס לתוכה.",
+      servicesTitle: "אתרים ואוטומציה",
+      servicesSub: "נוכחות ברורה ברשת עבור הלקוחות, ופחות עבודה ידנית עבורכם. נגדיר את הפרויקט לפי סדרי העדיפויות, הכלים הקיימים והתקציב שלכם.",
       services: [
-        { title: "אתר", body: "אתר שמסביר מה אתם עושים וגורם לאנשים להתקשר, להזמין או לקבוע." },
-        { title: "הזמנות ותורים אונליין", body: "הלקוחות מזמינים או קובעים לבד, ואתם מקבלים הכל מסודר במקום אחד. שום הזמנה לא הולכת לאיבוד." },
-        { title: "ניהול לקוחות והזמנות", body: "מסך אחד עם הלקוחות, ההזמנות ומה צריך להיום, במקום מחברות וטבלאות." },
-        { title: "בוט לוואטסאפ", body: "עונה על שאלות נפוצות, מקבל הזמנות ושולח תזכורות, ישר בוואטסאפ, איפה שהלקוחות שלכם כבר נמצאים." },
-        { title: "אוטומציות", body: "העבודה החוזרת שאתם עושים ידנית כל שבוע, כמו תזכורות, מעקבים ודוחות, נעשית בשבילכם אוטומטית." },
-        { title: "הרעיון שלכם", body: "אפליקציה או כלי בשבילכם, בשביל המשפחה או בשביל התחביב. ספרו לי עליו ואגיד לכם איך הייתי בונה אותו." }
+        { title: "אתרים עסקיים", body: "הציגו את השירותים שלכם, ענו על שאלות נפוצות והקלו על הלקוחות ליצור קשר. אני בונה אתרים שמתאימים לגלישה בטלפון ובמחשב." },
+        { title: "דפי נחיתה", body: "עמוד ייעודי לשירות, להצעה או לקמפיין, עם מסר ממוקד ודרך ברורה לפנות אליכם." },
+        { title: "טפסים וקליטת פניות", body: "אספו את הפרטים הנחוצים באמצעות טופס באתר והעבירו אותם למקום המתאים, כדי שתוכלו לטפל בפניות ולעקוב אחריהן." },
+        { title: "תזכורות ומעקב", body: "הפכו הודעות שגרתיות, תזכורות לתורים או משימות מעקב לאוטומטיות, לפי מועדים וכללים שתאשרו." },
+        { title: "חיבור בין כלים ומערכות", body: "העבירו מידע בין הכלים שהעסק משתמש בהם, כמו טפסים, גיליונות ורשומות לקוחות, וצמצמו את הצורך להזין את אותם פרטים פעמיים." },
+        { title: "דוחות ומשימות חוזרות", body: "אספו מידע והפיקו סיכומים או דוחות תקופתיים. נבחר יחד אילו שלבים להפוך לאוטומטיים ובאילו שלבים נדרשת בדיקה שלכם." }
       ],
 
       stepsTitle: "איך זה עובד",
       steps: [
-        { title: "מספרים לי מה צריך", body: "שיחה קצרה או הודעה בוואטסאפ, במילים שלכם." },
-        { title: "מקבלים תוכנית ברורה", body: "מה אבנה, כמה זמן זה ייקח וכמה זה יעלה, לפני שמתחילים לעבוד." },
-        { title: "רואים את זה נבנה", body: "מנסים גרסאות עובדות לאורך הדרך ואומרים לי מה לשנות." },
-        { title: "עולים לאוויר, ואני נשאר", body: "אני מעלה לאוויר, מראה לכם איך משתמשים ונשאר זמין לתיקונים ושינויים." }
+        { title: "מכירים את העסק", body: "ספרו לי איך אתם עובדים, מה גוזל מכם זמן ומה תרצו לשפר. אני אעזור להגדיר את הדרישות הטכניות." },
+        { title: "מסכמים תוכנית עבודה", body: "אציג את הפתרון המוצע, היקף העבודה, לוח הזמנים והמחיר. נסכם את הפרטים לפני תחילת הפיתוח." },
+        { title: "בודקים לאורך הדרך", body: "תנסו גרסאות עובדות ותשתפו במשוב. לפני ההשקה נבדוק שהאתר או האוטומציה עונים על הדרישות שסיכמנו." },
+        { title: "משיקים וממשיכים לתמיכה", body: "אדאג לעלייה לאוויר ואסביר איך משתמשים במה שבנינו. תוכלו לבחור בתחזוקה בתשלום חודשי או בתמיכה לפי פנייה." }
       ],
 
-      projectsTitle: "עבודות",
-      projectsSub: "דברים אמיתיים שבניתי ללקוחות, למשפחה שלי ולעצמי.",
+      projectsTitle: "פרויקטים נבחרים",
+      projectsSub: "פרויקט ללקוח לצד מוצרים וניסויים עצמאיים שלי. בכל דוגמה תוכלו להכיר את המטרה ואת היכולות המרכזיות, ולפתוח אתר פעיל או להתנסות בהדגמה.",
       behind: "איך זה בנוי",
       behindShort: "איך זה בנוי",
       shotAlt: "צילום מסך של {name}",
       visit: "לאתר",
-      demo: "לדמו",
-      moreTitle: "ניסויים קטנים",
+      demo: "להדגמה",
+      moreTitle: "כלים וניסויים נוספים",
 
       aboutLabel: "אודות",
-      aboutTitle: "עם מי תעבדו",
-      aboutTitles: ["חברות גדולות, מוצרים פשוטים", "עכשיו בשבילכם", "מילים פשוטות, בלי ז׳רגון"],
+      aboutTitle: "נעים להכיר, נמרוד",
+      aboutTitles: ["13 שנות ניסיון בפיתוח", "מתמקד בעסקים קטנים", "עבודה ישירה מולי"],
       stats: [
-        { big: "13 שנים", label: "של בניית מוצרים שאנשים משתמשים בהם" },
-        { big: "אדם אחד", label: "שמדברים איתו, מהשיחה הראשונה ועד ההשקה" }
+        { big: "13 שנים", label: "של ניסיון בפיתוח תוכנה" },
+        { big: "איש קשר אחד", label: "מהשיחה הראשונה ועד ההשקה והתמיכה" }
       ],
       heroBody: [
-        "במשך שלוש עשרה שנים בניתי אפליקציות לחברות כמו LivePerson, Lemonade ו־Mixtiles. למדתי שקוד טוב הוא רק חצי מהעבודה; החצי השני הוא משהו שמרגיש פשוט להשתמש בו.",
-        "מאז מרץ 2026 אני עובד עצמאית ובונה לעסקים קטנים ולאנשים עם רעיון. בעזרת AI אני בונה בשבועות מה שפעם לקח לצוות שלם חודשים, ולכן זה עולה הרבה פחות.",
-        "אתם מדברים איתי ישירות, לא עם צוות מכירות. אני מסביר הכל בפשטות, ואכפת לי שמה שנבנה יהיה קל ונעים לשימוש, בשבילכם ובשביל הלקוחות שלכם."
+        "אני נמרוד שי, מפתח תוכנה עם 13 שנות ניסיון, כולל עבודה על מוצרים ב־LivePerson, ב־Lemonade וב־Mixtiles. את הניסיון הזה אני מביא לפיתוח כלים שאנשים יכולים להשתמש בהם בעבודה היומיומית.",
+        "מאז מרץ 2026 אני עובד כמפתח עצמאי ומתמקד באתרים ובאוטומציה לעסקים קטנים. אני נעזר בכלי AI בתהליך הפיתוח ובוחר את דרך העבודה בהתאם לדרישות של כל פרויקט.",
+        "אני מלווה אתכם מהשיחה הראשונה, דרך הפיתוח ועד העלייה לאוויר. אסביר את האפשרויות ואשתף אתכם בהחלטות. לאחר ההשקה אפשר לבחור בתחזוקה חודשית או בתמיכה לפי פנייה."
       ],
 
-      faqTitle: "שאלות",
+      faqTitle: "שאלות נפוצות",
       faq: [
-        { q: "כמה זה עולה?", a: "תלוי במה שאתם צריכים. אחרי שיחה קצרה תקבלו מחיר ברור, לפני שמתחילים לעבוד. בזכות AI זה שבריר ממה שחברת פיתוח הייתה גובה." },
-        { q: "אני לא מבין כלום בטכנולוגיה. זו בעיה?", a: "ממש לא. ספרו לי מה מפריע לכם או מה הייתם רוצים שיהיה. את השאר אני לוקח על עצמי ומסביר הכל במילים פשוטות." },
-        { q: "כמה זמן זה לוקח?", a: "רוב הפרויקטים לוקחים כמה שבועות. את לוח הזמנים תדעו מראש." },
-        { q: "מה קורה אחרי שזה באוויר?", a: "אני נשאר זמין לתיקונים, שינויים ורעיונות חדשים. לא תישארו עם זה לבד." }
+        { q: "כמה יעלה הפרויקט שלי?", a: "המחיר תלוי בהיקף העבודה ובכלים הנדרשים. אחרי שנכיר את העסק, אכין הצעה עם פירוט העבודה, לוח הזמנים והמחיר. לפני שנתחיל אסביר גם על עלויות שוטפות, כמו אחסון או שירותים בתשלום." },
+        { q: "אפשר להתחיל גם אם עדיין לא ברור לי מה צריך?", a: "כן. ספרו לי איך העסק עובד ואילו משימות גוזלות זמן או יוצרות עיכובים. אעזור למצוא נקודת התחלה מועילה ואסביר את האפשרויות לפני שנסכם על פרויקט." },
+        { q: "כמה זמן נמשך פרויקט?", a: "לוח הזמנים תלוי בהיקף הפרויקט, בתוכן ובחיבורים לשירותים אחרים. אציג הערכת זמן בהצעה ואסביר מה אצטרך מכם כדי לקדם את העבודה." },
+        { q: "אפשר לעבוד עם הכלים שכבר יש לי בעסק?", a: "נבחן את הכלים הקיימים ונבדוק במה הם תומכים. אם אפשר לחבר ביניהם, אסביר מה נדרש להקמה, אילו עלויות שירות עשויות להתווסף ואילו שלבים נוכל להפוך לאוטומטיים." },
+        { q: "איזו תמיכה אפשר לקבל אחרי ההשקה?", a: "אפשר לבחור בתחזוקה שוטפת בתשלום חודשי או לפנות לתמיכה לפי הצורך. נסכם את היקף העבודה ואת התמחור, כולל שינויים או תוספות שתרצו בהמשך." },
+        { q: "אתה בונה אתרים בעברית ובאנגלית?", a: "כן. אפשר לבנות בעברית, באנגלית או בשתי השפות, כולל תצוגה מימין לשמאל בעברית. נגדיר את השפות ואת התוכן כחלק מהיקף הפרויקט." }
       ],
 
       contactTitle: "בואו נדבר",
-      contactSub: "ספרו לי מה מאט את העסק שלכם, או מה הייתם רוצים שיהיה. במילים שלכם, בלי ידע טכני, ואחזור אליכם עם איך הייתי עושה את זה.",
+      contactSub: "ספרו לי על העסק ועל מה שתרצו לשפר: האתר שלכם, הטיפול בפניות או משימה שגוזלת יותר מדי זמן. אעזור להבין מה יכול להתאים ולבחור צעד מעשי להמשך.",
       waTitle: "שלחו לי הודעה בוואטסאפ",
-      waSub: "בדרך כלל התשובה הכי מהירה",
-      waBadge: "הכי מהיר",
-      waText: "היי נמרוד, ראיתי את האתר שלך ואשמח לדבר על משהו שאני צריך.",
+      waSub: "ספרו לי על העסק שלכם",
+      waBadge: "בואו נדבר",
+      waText: "היי נמרוד, אשמח לדבר על אתר או אוטומציה לעסק שלי. הנה קצת על העסק ועל מה שארצה לשפר: ",
       mailTitle: "שליחת מייל",
-      footerNote: "נבנה עם Claude Code."
+      footerNote: "אתרים ואוטומציה לעסקים קטנים."
     }
   },
 
@@ -189,32 +200,32 @@ window.CONTENT = {
   projects: [
     {
       id: "yallachess",
-      label: "Yalla Chess · home page",
+      label: "Yalla Chess Academy website",
       url: "demos/yallachess/",
       langShots: true,
       tags: ["Node.js", "SQLite", "Twilio Verify", "Resend", "Docker", "GitHub Actions"],
       en: {
-        kicker: "For a chess school", status: "Client project",
+        kicker: "Chess school", status: "Client project",
         name: "Yalla Chess Academy",
-        tagline: "A website and member area for a chess school.",
-        desc: "Teachers manage their groups, schedules, Zoom links and students in one place, and families sign in with just their phone number. In Hebrew and English.",
+        tagline: "A school website with a dedicated member area.",
+        desc: "I built a bilingual website and member area for a chess school. Teachers manage groups, lesson schedules, and student details in one place. Families sign in with a phone number to access lesson information and Zoom links. The portfolio demo shows the public website.",
         behind: [
-          "Plain Node with the built-in SQLite module: no framework, few dependencies, easy for one person to maintain.",
-          "Phone sign-in through Twilio Verify and transactional email through Resend.",
-          "Hebrew and English throughout, with right-to-left layouts.",
-          "Packaged in Docker for Render, with 27 automated tests running in CI on every push."
+          "I built the application with Node.js and its built-in SQLite module, keeping the number of external dependencies low.",
+          "Families sign in through Twilio Verify. The application sends service emails through Resend.",
+          "The interface supports Hebrew and English, including right-to-left layouts.",
+          "I packaged the application with Docker for deployment on Render and configured automated checks through GitHub Actions."
         ]
       },
       he: {
-        kicker: "לבית ספר לשחמט", status: "פרויקט ללקוח",
+        kicker: "בית ספר לשחמט", status: "פרויקט ללקוח",
         name: "Yalla Chess Academy",
-        tagline: "אתר ואזור חברים לבית ספר לשחמט.",
-        desc: "המורים מנהלים קבוצות, לוחות זמנים, קישורי Zoom ותלמידים במקום אחד, והמשפחות נכנסות רק עם מספר הטלפון. בעברית ובאנגלית.",
+        tagline: "אתר לבית הספר עם אזור אישי לתלמידים ולמשפחות.",
+        desc: "בניתי אתר דו־לשוני ואזור אישי לבית ספר לשחמט. המורים מנהלים קבוצות, מועדי שיעורים ופרטי תלמידים במקום אחד. המשפחות נכנסות באמצעות מספר טלפון וצופות בפרטי השיעורים ובקישורי Zoom. בהדגמה כאן אפשר להתרשם מהאתר הציבורי.",
         behind: [
-          "Node נקי עם מודול SQLite המובנה: בלי פריימוורק, מעט תלויות, קל לתחזוקה של אדם אחד.",
-          "כניסה בטלפון דרך Twilio Verify ומיילים דרך Resend.",
-          "עברית ואנגלית בכל המערכת, עם תצוגה מימין לשמאל.",
-          "ארוז ב־Docker ל־Render, עם 27 בדיקות אוטומטיות ב־CI בכל push."
+          "פיתחתי את המערכת ב־Node.js עם מודול SQLite המובנה, תוך שימוש במספר מצומצם של ספריות חיצוניות.",
+          "המשפחות מזדהות באמצעות Twilio Verify, והמערכת שולחת הודעות שירות במייל באמצעות Resend.",
+          "הממשק תומך בעברית ובאנגלית, כולל תצוגה מימין לשמאל.",
+          "הכנתי את המערכת לפריסה ב־Render באמצעות Docker והגדרתי בדיקות אוטומטיות ב־GitHub Actions."
         ]
       }
     },
@@ -224,57 +235,57 @@ window.CONTENT = {
       url: "https://assistyca.com",
       tags: ["Python", "WhatsApp Cloud API", "OpenAI", "Agent tools", "OTP auth", "Render"],
       en: {
-        kicker: "WhatsApp assistant", status: "Live",
+        kicker: "WhatsApp assistant", status: "Independent product",
         name: "Assistyca",
-        tagline: "Your family's week, running itself, inside WhatsApp.",
-        desc: "An assistant that keeps a family's plans and everyday tasks in one WhatsApp chat: who's picking up whom, carpools, shopping lists and reminders. No new app to learn; you just send a message. The same idea works for a business and its customers.",
+        tagline: "Family plans, lists, and reminders through WhatsApp.",
+        desc: "I developed a WhatsApp assistant for managing shared family tasks. Family members send messages to update shopping lists, coordinate rides, and set reminders. The project demonstrates how I connect a familiar messaging tool with task management.",
         behind: [
-          "Understands plain messages like \"add milk to our list\" or \"remind me to call the dentist at 10\" and turns them into lists, tasks and reminders.",
-          "Keeps everyone in sync: activities, rides and last-minute changes are shared with the right people.",
-          "Built on the WhatsApp Cloud API with one shared webhook that routes every message to the right account.",
-          "A web portal with phone OTP sign-in for settings, and sensitive actions confirmed through WhatsApp approval links."
+          "Family members can send requests such as \"add milk to our list\" or \"remind me to call the dentist at 10\" to create list entries and reminders.",
+          "Family members share activity plans, rides, and updates through the assistant.",
+          "I connected the WhatsApp Cloud API to a shared message handler that routes requests to the relevant account.",
+          "Account holders manage settings through a web portal with one-time phone codes and confirm sensitive actions through WhatsApp approval links."
         ]
       },
       he: {
-        kicker: "עוזר בוואטסאפ", status: "באוויר",
+        kicker: "עוזר בוואטסאפ", status: "מוצר עצמאי",
         name: "Assistyca",
-        tagline: "השבוע של המשפחה מנהל את עצמו, בתוך הוואטסאפ.",
-        desc: "עוזר שמרכז את התוכניות והמשימות של המשפחה בצ׳אט וואטסאפ אחד: מי אוסף את מי, הסעות, רשימות קניות ותזכורות. בלי אפליקציה חדשה, פשוט שולחים הודעה. אותו רעיון עובד גם לעסק וללקוחות שלו.",
+        tagline: "תוכניות, רשימות ותזכורות משפחתיות דרך וואטסאפ.",
+        desc: "פיתחתי עוזר בוואטסאפ לניהול משימות משפחתיות משותפות. בני המשפחה שולחים הודעות כדי לעדכן רשימות קניות, לתאם הסעות ולהגדיר תזכורות. הפרויקט מדגים חיבור בין כלי תקשורת מוכר לניהול משימות.",
         behind: [
-          "מבין הודעות רגילות כמו \"תוסיף חלב לרשימה\" או \"תזכיר לי להתקשר לרופא השיניים ב־10\" והופך אותן לרשימות, משימות ותזכורות.",
-          "שומר על כולם מסונכרנים: חוגים, הסעות ושינויים של הרגע האחרון מגיעים לאנשים הנכונים.",
-          "בנוי על WhatsApp Cloud API עם webhook משותף אחד שמנתב כל הודעה לחשבון הנכון.",
-          "פורטל ווב עם כניסה ב־OTP לטלפון להגדרות, ופעולות רגישות מאושרות דרך קישורי אישור בוואטסאפ."
+          "בני המשפחה יכולים לשלוח בקשות כמו \"תוסיף חלב לרשימה\" או \"תזכיר לי להתקשר לרופא השיניים ב־10\" כדי להוסיף פריטים ולהגדיר תזכורות.",
+          "בני המשפחה משתפים תוכניות לחוגים, הסעות ועדכונים דרך העוזר.",
+          "חיברתי את WhatsApp Cloud API למנגנון משותף שמנתב כל בקשה לחשבון המתאים.",
+          "בעלי החשבון מנהלים הגדרות דרך אתר עם כניסה בקוד חד־פעמי לטלפון, ומאשרים פעולות רגישות בקישורי אישור בוואטסאפ."
         ]
       }
     },
     {
       id: "renters",
-      label: "Aytemz · demo with sample data",
+      label: "Aytemz demo with sample data",
       url: "demos/aytemz/",
       tags: ["Python", "FastAPI", "MongoDB", "QR codes", "OTP auth", "LemonSqueezy", "Render"],
       en: {
         kicker: "For rental businesses", status: "Pre-launch",
         name: "Aytemz",
-        tagline: "Know what's out, with whom and what's late.",
-        desc: "A system for production houses and rental companies to manage their gear: scan an item's QR code to check it out or back in, book equipment ahead of time, and never double-book.",
+        tagline: "Track equipment, reservations, and returns in one place.",
+        desc: "I developed an equipment management product for production teams and rental businesses. Staff can use QR codes to record checkouts and returns, review availability, and plan reservations. The demo uses sample data to show the workflow.",
         behind: [
-          "Every item gets its own QR code, and checkouts track quantities for gear you own more than one of.",
-          "Reservations check overlapping bookings against what's in stock, so nothing gets double-booked.",
-          "Passwordless sign-in with one-time codes sent by email, and separate roles for admins and staff.",
-          "A free trial, monthly and yearly plans through LemonSqueezy, promo codes, and reports on usage, history and overdue items."
+          "Staff scan an item's QR code to identify equipment and record quantities during checkout and return.",
+          "The application checks overlapping reservations against inventory to flag availability conflicts.",
+          "Users sign in with one-time email codes. Administrators and staff have separate access permissions.",
+          "I integrated subscription billing through LemonSqueezy and added reports for equipment usage, activity history, and overdue returns."
         ]
       },
       he: {
         kicker: "לעסקי השכרה", status: "לפני השקה",
         name: "Aytemz",
-        tagline: "יודעים מה בחוץ, אצל מי ומה מאחר.",
-        desc: "מערכת לבתי הפקה ולחברות השכרה לניהול הציוד: סורקים את קוד ה־QR של פריט כדי להוציא או להחזיר אותו, מזמינים ציוד מראש, ואף פעם לא מזמינים פעמיים.",
+        tagline: "ניהול ציוד, הזמנות והחזרות במקום אחד.",
+        desc: "פיתחתי מערכת לניהול ציוד עבור צוותי הפקה ועסקי השכרה. אנשי הצוות יכולים לתעד הוצאה והחזרה באמצעות קודי QR, לבדוק זמינות ולתכנן הזמנות. ההדגמה מציגה את תהליך העבודה עם נתונים לדוגמה.",
         behind: [
-          "לכל פריט קוד QR משלו, וההוצאות עוקבות אחרי כמויות לציוד שיש ממנו יותר מיחידה אחת.",
-          "הזמנות נבדקות מול הזמנות חופפות ומול המלאי, כך שאין הזמנות כפולות.",
-          "כניסה בלי סיסמה עם קוד חד־פעמי במייל, והרשאות נפרדות למנהלים ולצוות.",
-          "תקופת ניסיון, מנוי חודשי ושנתי דרך LemonSqueezy, קודי הטבה ודוחות על שימוש, היסטוריה ופריטים באיחור."
+          "אנשי הצוות סורקים את קוד ה־QR של הפריט לזיהוי הציוד ולתיעוד הכמות בהוצאה ובהחזרה.",
+          "המערכת בודקת הזמנות חופפות מול המלאי כדי לזהות התנגשויות בזמינות.",
+          "המשתמשים נכנסים באמצעות קוד חד־פעמי במייל, עם הרשאות נפרדות למנהלים ולאנשי צוות.",
+          "שילבתי חיוב מנויים באמצעות LemonSqueezy והוספתי דוחות על שימוש בציוד, היסטוריית פעילות והחזרות באיחור."
         ]
       }
     },
@@ -284,27 +295,27 @@ window.CONTENT = {
       url: "https://boommadad.com/",
       tags: ["Python", "Telegram Bot API", "GitHub Actions", "Cloudflare Workers", "Netlify"],
       en: {
-        kicker: "Built for my dad", status: "Live",
+        kicker: "Personal project", status: "Live site",
         name: "Boom Madad",
-        tagline: "From a spreadsheet to a bot that answers in seconds.",
-        desc: "My father had an investment strategy in an Excel sheet. I turned it into a Telegram bot: he asks for a check, and gets a PDF report back. A good example of a personal idea turned into a real tool.",
+        tagline: "An Excel analysis workflow, automated through Telegram.",
+        desc: "I turned my father's spreadsheet-based investment analysis into a Telegram bot. He requests an analysis in a message and receives a PDF report. The project shows how I automate a recurring calculation and report that someone used to prepare by hand.",
         behind: [
-          "Ported the Excel backtest to a Python engine that renders the results as a PDF.",
-          "Runs on GitHub-hosted runners, so no machine has to stay on at home.",
-          "A small Cloudflare Worker relays Telegram webhooks so replies arrive instantly.",
-          "A Hebrew landing page explains the strategy to new readers."
+          "I translated the spreadsheet's historical analysis into Python and added PDF report generation.",
+          "The analysis runs on GitHub-hosted runners, without requiring a home computer to stay online.",
+          "I connected Telegram requests to the reporting workflow through a Cloudflare Worker.",
+          "I built a Hebrew landing page to explain the project and its methodology."
         ]
       },
       he: {
-        kicker: "נבנה בשביל אבא שלי", status: "באוויר",
+        kicker: "פרויקט אישי", status: "אתר פעיל",
         name: "בום מדד",
-        tagline: "מגיליון אקסל לבוט שעונה תוך שניות.",
-        desc: "לאבא שלי הייתה אסטרטגיית השקעה בגיליון אקסל. הפכתי אותה לבוט בטלגרם: הוא מבקש בדיקה ומקבל דוח PDF. דוגמה טובה לרעיון אישי שהפך לכלי אמיתי.",
+        tagline: "ניתוח נתונים מאקסל, בתהליך אוטומטי דרך טלגרם.",
+        desc: "הפכתי תהליך ניתוח השקעות שאבא שלי ניהל באקסל לבוט בטלגרם. הוא מבקש ניתוח בהודעה ומקבל דוח PDF. הפרויקט מדגים אוטומציה של חישוב ודוח תקופתי שבעבר דרשו הכנה ידנית.",
         behind: [
-          "העברתי את בדיקת העבר מ־Excel למנוע Python שמפיק את התוצאות כ־PDF.",
-          "רץ על שרתים של GitHub, כך שאף מחשב לא צריך להישאר דלוק בבית.",
-          "Cloudflare Worker קטן מעביר webhooks מטלגרם כדי שהתשובות יגיעו מיד.",
-          "דף נחיתה בעברית מסביר את האסטרטגיה לקוראים חדשים."
+          "העברתי את ניתוח הנתונים ההיסטוריים מהגיליון ל־Python והוספתי הפקת דוחות PDF.",
+          "הניתוח רץ על שרתים של GitHub, ללא צורך להשאיר מחשב ביתי מחובר.",
+          "חיברתי את הבקשות מטלגרם לתהליך הפקת הדוחות באמצעות Cloudflare Worker.",
+          "בניתי דף נחיתה בעברית שמסביר את הפרויקט ואת שיטת הניתוח."
         ]
       }
     },
@@ -314,27 +325,27 @@ window.CONTENT = {
       url: "https://isfreedombetter.com",
       tags: ["Python", "Statistics", "Data pipeline", "Interactive charts", "GitHub Pages", "GitHub Actions"],
       en: {
-        kicker: "Personal project", status: "Live",
+        kicker: "Personal project", status: "Live site",
         name: "Is Freedom Better?",
-        tagline: "Which conditions help societies thrive? Five theories, one test.",
-        desc: "An interactive site that compares economic freedom, democracy and equality against 18 quality-of-life measures across 176 countries, and shows which one actually predicts a better life. It updates itself every week.",
+        tagline: "Explore country data through interactive comparisons.",
+        desc: "I built an interactive site for exploring relationships between economic freedom, democracy, equality, and quality-of-life measures across countries. Visitors can compare the data and review the method. I automated the weekly data refresh and site update.",
         behind: [
-          "A Python pipeline joins 17 trusted sources and tests each theory against each outcome with Pearson correlation (p < 0.05).",
-          "For every outcome, the theory with the strongest significant correlation takes the point, and the scoreboard shows the winner.",
-          "Updated weekly: a scheduled job refreshes the data and rebuilds the site, with a raw-data view and a plain-language explanation.",
-          "Born from one of my favorite hobbies: talking about economics."
+          "I built a Python workflow to combine source datasets and calculate Pearson correlations between the indicators.",
+          "Visitors can compare the strength of the associations. A correlation alone does not establish cause and effect.",
+          "A scheduled job refreshes the data and rebuilds the site each week. Visitors can inspect the underlying data and read an explanation of the method.",
+          "I developed this independent project out of an interest in economics and data analysis."
         ]
       },
       he: {
-        kicker: "פרויקט אישי", status: "באוויר",
+        kicker: "פרויקט אישי", status: "אתר פעיל",
         name: "Is Freedom Better?",
-        tagline: "אילו תנאים עוזרים לחברות לשגשג? חמש תיאוריות, מבחן אחד.",
-        desc: "אתר אינטראקטיבי שמשווה חופש כלכלי, דמוקרטיה ושוויון מול 18 מדדי איכות חיים ב־176 מדינות, ומראה מה באמת מנבא חיים טובים יותר. הוא מתעדכן לבד כל שבוע.",
+        tagline: "השוואה אינטראקטיבית של נתונים ממדינות שונות.",
+        desc: "בניתי אתר אינטראקטיבי לבחינת קשרים בין חופש כלכלי, דמוקרטיה, שוויון ומדדי איכות חיים במדינות שונות. המבקרים יכולים להשוות נתונים ולהכיר את שיטת הניתוח. עדכון הנתונים והאתר מתבצע בתהליך שבועי אוטומטי שפיתחתי.",
         behind: [
-          "צינור Python מחבר 17 מקורות אמינים ובודק כל תיאוריה מול כל מדד במתאם פירסון (p < 0.05).",
-          "בכל מדד, התיאוריה עם המתאם המובהק החזק ביותר מקבלת נקודה, ולוח התוצאות מראה מי מנצחת.",
-          "מתעדכן כל שבוע: משימה מתוזמנת מרעננת את הנתונים ובונה את האתר מחדש, עם תצוגת נתונים גולמיים והסבר בשפה פשוטה.",
-          "נולד מאחד התחביבים האהובים עליי: לדבר על כלכלה."
+          "פיתחתי תהליך ב־Python שמשלב מקורות נתונים ומחשב מתאמי פירסון בין המדדים.",
+          "המבקרים יכולים להשוות את עוצמת הקשרים בין המדדים. מתאם כשלעצמו אינו מוכיח קשר של סיבה ותוצאה.",
+          "משימה מתוזמנת מרעננת את הנתונים ובונה את האתר מחדש מדי שבוע. האתר מציג את נתוני המקור והסבר על שיטת הניתוח.",
+          "פיתחתי את הפרויקט העצמאי הזה מתוך עניין בכלכלה ובניתוח נתונים."
         ]
       }
     },
@@ -344,27 +355,27 @@ window.CONTENT = {
       url: "demos/musicball/",
       tags: ["JavaScript", "Web Audio API", "Canvas", "Physics", "Generative music"],
       en: {
-        kicker: "Just for fun", status: "Playable",
+        kicker: "Interactive experiment", status: "Try it online",
         name: "MusicBall",
-        tagline: "Music that writes itself.",
-        desc: "Balls bounce forever inside spinning rings. Every time a ball hits a colored part of a ring, it plays a note, strums a chord or changes the music, so the song keeps writing itself. Try it, it's oddly relaxing.",
+        tagline: "Create music by interacting with a physics simulation.",
+        desc: "Move and release balls inside rotating rings to trigger notes, chords, and changes in rhythm. I combined physics and browser audio in an interactive experiment that you can use with a mouse or a phone's touch screen.",
         behind: [
-          "Balls never lose energy, with a touch of randomness on each bounce so patterns never lock into a loop.",
-          "Ten ring types: notes, chords, drums, and rings that change tempo, rhythm, key, scale, instrument, filter and echo.",
-          "A 16-step background sequencer plays drums, bass and a pad on the current chord.",
-          "Built with no libraries, on Canvas and the Web Audio API; drop or throw balls with the mouse, and a full touch UI on phones."
+          "I designed the simulation to keep balls moving and vary each bounce to produce changing patterns.",
+          "Ring types trigger notes, chords, and drums, or change settings such as tempo, scale, instrument, and effects.",
+          "A 16-step sequencer adds drums, bass, and background chords.",
+          "I built the visuals with Canvas and the sound with the Web Audio API, with controls for mouse and touch input."
         ]
       },
       he: {
-        kicker: "סתם בשביל הכיף", status: "אפשר לשחק",
+        kicker: "ניסוי אינטראקטיבי", status: "להתנסות אונליין",
         name: "MusicBall",
-        tagline: "מוזיקה שכותבת את עצמה.",
-        desc: "כדורים קופצים בלי סוף בתוך טבעות מסתובבות. בכל פעם שכדור פוגע בחלק צבעוני של טבעת, הוא מנגן תו, פורט אקורד או משנה את המוזיקה, כך שהשיר ממשיך לכתוב את עצמו. נסו, זה מרגיע באופן מוזר.",
+        tagline: "יצירת מוזיקה באמצעות סימולציה פיזיקלית.",
+        desc: "מזיזים ומשחררים כדורים בתוך טבעות מסתובבות כדי לנגן תווים ואקורדים ולשנות את הקצב. שילבתי סימולציה פיזיקלית וסאונד בדפדפן בניסוי אינטראקטיבי שאפשר להפעיל בעכבר או במסך מגע בטלפון.",
         behind: [
-          "הכדורים לא מאבדים אנרגיה, ומעט אקראיות בכל קפיצה מונעת מהדפוסים להיתקע בלופ.",
-          "עשרה סוגי טבעות: תווים, אקורדים, תופים, וטבעות שמשנות טמפו, קצב, סולם, מפתח, כלי, פילטר והד.",
-          "סקוונסר רקע של 16 צעדים מנגן תופים, בס ופד על האקורד הנוכחי.",
-          "נבנה בלי ספריות, על Canvas ו־Web Audio API; מפילים או זורקים כדורים עם העכבר, וממשק מגע מלא בטלפון."
+          "תכננתי את הסימולציה כך שהכדורים ימשיכו לנוע, עם שינויים בכל קפיצה ליצירת דפוסים משתנים.",
+          "סוגי הטבעות מפעילים תווים, אקורדים ותופים, או משנים הגדרות כמו קצב, סולם, כלי נגינה ואפקטים.",
+          "סקוונסר של 16 צעדים מוסיף תופים, בס ואקורדים ברקע.",
+          "פיתחתי את התצוגה באמצעות Canvas ואת הסאונד באמצעות Web Audio API, עם פקדים לעכבר ולמגע."
         ]
       }
     }
@@ -373,20 +384,20 @@ window.CONTENT = {
   more: [
     {
       name: "Token Prices API", url: "https://token-prices-api.onrender.com/api/openai/prices",
-      en: "A tiny public API that returns current OpenAI token prices as clean JSON.",
-      he: "API ציבורי קטן שמחזיר את מחירי הטוקנים של OpenAI כ־JSON נקי.",
+      en: "A public API that provides OpenAI token pricing in JSON format for use in other tools.",
+      he: "API ציבורי שמספק נתוני תמחור של טוקנים ב־OpenAI בפורמט JSON לשימוש בכלים אחרים.",
       tag: "API · Python"
     },
     {
       name: "Script Repetitive Work", url: null,
-      en: "An open-source add-on that teaches AI assistants to turn repetitive manual work into automations.",
-      he: "תוסף בקוד פתוח שמלמד עוזרי AI להפוך עבודה ידנית שחוזרת על עצמה לאוטומציות.",
+      en: "An open-source instruction set for AI coding assistants that helps them create reusable scripts for recurring development tasks.",
+      he: "ערכת הנחיות בקוד פתוח לעוזרי פיתוח מבוססי AI, שמסייעת ליצור סקריפטים לשימוש חוזר במשימות פיתוח שגרתיות.",
       tag: "AI automation · Open source"
     },
     {
       name: "Mobile Browser", url: null,
-      en: "A tool for trying out websites on a phone exactly as if they were installed apps.",
-      he: "כלי לבדיקת אתרים בטלפון בדיוק כאילו היו אפליקציות מותקנות.",
+      en: "A mobile tool for previewing websites in an app-style browser view.",
+      he: "כלי לטלפון שמאפשר לבדוק אתרים בתצוגת דפדפן המדמה חוויית אפליקציה.",
       tag: "Mobile app"
     }
   ]

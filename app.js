@@ -67,6 +67,12 @@
     html.lang = lang;
     html.dir = lang === "he" ? "rtl" : "ltr";
     document.title = t.title;
+    document.querySelector('meta[name="description"]').content = t.description;
+    document.querySelector('meta[property="og:title"]').content = t.title;
+    document.querySelector('meta[property="og:description"]').content = t.description;
+    document.querySelector('meta[property="og:image:alt"]').content = t.ogImageAlt;
+    document.querySelector(".nav").setAttribute("aria-label", t.navLabel);
+    document.getElementById("langToggle").setAttribute("aria-label", t.languageSwitchLabel);
 
     document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t[el.dataset.i18n]; });
     document.querySelectorAll("[data-i18n-alt]").forEach((el) => { el.alt = t[el.dataset.i18nAlt]; });
