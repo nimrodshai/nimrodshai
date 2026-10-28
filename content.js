@@ -72,13 +72,13 @@ window.CONTENT = {
 
       aboutLabel: "About",
       aboutTitle: "Meet your developer",
-      aboutTitles: ["13 years in software", "Focused on small businesses", "A direct working relationship"],
+      aboutTitles: ["17 years in software", "Focused on small businesses", "A direct working relationship"],
       stats: [
-        { big: "13 years", label: "of software development experience" },
+        { big: "17 years", label: "of software development experience" },
         { big: "1 contact", label: "from the first conversation through launch and support" }
       ],
       heroBody: [
-        "I'm Nimrod Shai, a software developer with 13 years of experience, including work on products at LivePerson, Lemonade, and Mixtiles. I bring that experience to building software that people can use in their daily work.",
+        "I'm Nimrod Shai, a software developer with 17 years of experience, including work on products at LivePerson, Lemonade, and Mixtiles. I bring that experience to building software that people can use in their daily work.",
         "Since March 2026, I've worked as an independent developer, with a focus on websites and automation for small businesses. I use AI tools as part of development and choose the approach to suit each project's requirements.",
         "You work with me from the first conversation through development and launch. I explain the options, keep you involved in decisions, and offer monthly maintenance or support per request."
       ],
@@ -170,13 +170,13 @@ window.CONTENT = {
 
       aboutLabel: "אודות",
       aboutTitle: "נעים להכיר, נמרוד",
-      aboutTitles: ["13 שנות ניסיון בפיתוח", "מתמקד בעסקים קטנים", "עבודה ישירה מולי"],
+      aboutTitles: ["17 שנות ניסיון בפיתוח", "מתמקד בעסקים קטנים", "עבודה ישירה מולי"],
       stats: [
-        { big: "13 שנים", label: "של ניסיון בפיתוח תוכנה" },
+        { big: "17 שנים", label: "של ניסיון בפיתוח תוכנה" },
         { big: "איש קשר אחד", label: "מהשיחה הראשונה ועד ההשקה והתמיכה" }
       ],
       heroBody: [
-        "אני נמרוד שי, מפתח תוכנה עם 13 שנות ניסיון, כולל עבודה על מוצרים ב־LivePerson, ב־Lemonade וב־Mixtiles. את הניסיון הזה אני מביא לפיתוח כלים שאנשים יכולים להשתמש בהם בעבודה היומיומית.",
+        "אני נמרוד שי, מפתח תוכנה עם 17 שנות ניסיון, כולל עבודה על מוצרים ב־LivePerson, ב־Lemonade וב־Mixtiles. את הניסיון הזה אני מביא לפיתוח כלים שאנשים יכולים להשתמש בהם בעבודה היומיומית.",
         "מאז מרץ 2026 אני עובד כמפתח עצמאי ומתמקד באתרים ובאוטומציה לעסקים קטנים. אני נעזר בכלי AI בתהליך הפיתוח ובוחר את דרך העבודה בהתאם לדרישות של כל פרויקט.",
         "אני מלווה אתכם מהשיחה הראשונה, דרך הפיתוח ועד העלייה לאוויר. אסביר את האפשרויות ואשתף אתכם בהחלטות. לאחר ההשקה אפשר לבחור בתחזוקה חודשית או בתמיכה לפי פנייה."
       ],
