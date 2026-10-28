@@ -83,6 +83,16 @@ button { font: inherit; }
 .avatar { flex: none; width: 84px; height: 84px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px rgba(255, 255, 255, 0.18); }
 .avatar img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); }
 .hero-name { font-weight: 600; font-size: 50px; line-height: 1.1; letter-spacing: -0.03em; }
+.hero-id-text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.hero-role { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 15px; line-height: 1; letter-spacing: 0.04em; color: var(--fg-3); }
+.hero-role-prompt { display: inline-flex; align-items: center; gap: 1px; direction: ltr; color: var(--accent); }
+.hero-role-prompt svg { display: block; flex: none; }
+[dir="rtl"] .hero-role-prompt { flex-direction: row-reverse; }
+[dir="rtl"] .hero-role-prompt svg { transform: scaleX(-1); }
+[dir="rtl"] .hero-role { letter-spacing: 0; }
+.hero-cursor { display: inline-block; width: 0.6em; height: 1.05em; background: var(--accent); border-radius: 1px; }
+@media (prefers-reduced-motion: no-preference) { .hero-cursor { animation: blink 1.1s steps(1, end) infinite; } }
+@keyframes blink { 50% { opacity: 0; } }
 .hero h1 { font-weight: 600; font-size: clamp(30px, 8vw, 118px); line-height: 0.95; letter-spacing: -0.055em; max-width: 1200px; }
 /* Rotating word: every word shares one grid cell; the current one is shown, the previous one leaves upward. */
 .hero-words { display: inline-grid; justify-items: start; }
@@ -261,6 +271,8 @@ button { font: inherit; }
   .hero-id { flex-wrap: nowrap; gap: 14px; }
   .avatar { width: 64px; height: 64px; }
   .hero-name { font-size: 30px; letter-spacing: -0.035em; }
+  .hero-id-text { gap: 4px; }
+  .hero-role { font-size: 13px; }
   .hero h1 { font-size: 32px; line-height: 1; }
   .hero-foot { flex-direction: column; align-items: stretch; gap: 28px; }
   .hero-sub { font-size: 18px; }
