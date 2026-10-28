@@ -475,36 +475,6 @@ window.CONTENT = {
           "פיתחתי את הפרויקט העצמאי הזה מתוך עניין בכלכלה ובניתוח נתונים."
         ]
       }
-    },
-    {
-      id: "musicball",
-      label: "MusicBall",
-      url: "demos/musicball/",
-      tags: ["JavaScript", "Web Audio API", "Canvas", "Physics", "Generative music"],
-      en: {
-        kicker: "Interactive experiment", status: "Try it online",
-        name: "MusicBall",
-        tagline: "Create music by interacting with a physics simulation.",
-        desc: "Move and release balls inside rotating rings to trigger notes, chords, and changes in rhythm. I combined physics and browser audio in an interactive experiment that you can use with a mouse or a phone's touch screen.",
-        behind: [
-          "I designed the simulation to keep balls moving and vary each bounce to produce changing patterns.",
-          "Ring types trigger notes, chords, and drums, or change settings such as tempo, scale, instrument, and effects.",
-          "A 16-step sequencer adds drums, bass, and background chords.",
-          "I built the visuals with Canvas and the sound with the Web Audio API, with controls for mouse and touch input."
-        ]
-      },
-      he: {
-        kicker: "ניסוי אינטראקטיבי", status: "להתנסות אונליין",
-        name: "MusicBall",
-        tagline: "יצירת מוזיקה באמצעות סימולציה פיזיקלית.",
-        desc: "מזיזים ומשחררים כדורים בתוך טבעות מסתובבות כדי לנגן תווים ואקורדים ולשנות את הקצב. שילבתי סימולציה פיזיקלית וסאונד בדפדפן בניסוי אינטראקטיבי שאפשר להפעיל בעכבר או במסך מגע בטלפון.",
-        behind: [
-          "תכננתי את הסימולציה כך שהכדורים ימשיכו לנוע, עם שינויים בכל קפיצה ליצירת דפוסים משתנים.",
-          "סוגי הטבעות מפעילים תווים, אקורדים ותופים, או משנים הגדרות כמו קצב, סולם, כלי נגינה ואפקטים.",
-          "סקוונסר של 16 צעדים מוסיף תופים, בס ואקורדים ברקע.",
-          "פיתחתי את התצוגה באמצעות Canvas ואת הסאונד באמצעות Web Audio API, עם פקדים לעכבר ולמגע."
-        ]
-      }
     }
   ],
 
