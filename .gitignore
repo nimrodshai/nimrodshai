@@ -7,3 +7,6 @@ demos/boommadad/
 assets/shots/toddler.jpg
 demos/musicball/
 assets/shots/musicball.jpg
+
+# Local tool log, not part of the site
+scripts/usage-ledger.jsonl
