@@ -11,7 +11,7 @@
   const arrow = (size) => `<svg class="arrow flip" aria-hidden="true" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>`;
   const chev = `<svg class="chev" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>`;
   // Projects with langShots have one screenshot per language (id-en.jpg, id-he.jpg).
-  const shot = (p) => `assets/shots/${p.langShots ? `${p.id}-${lang}` : p.id}.jpg?v=5`;
+  const shot = (p) => `assets/shots/${p.langShots ? `${p.id}-${lang}` : p.id}.jpg?v=6`;
   // Local demos open in the same language as the portfolio.
   const demoUrl = (url) => url.startsWith("http") ? url : `${url}?lang=${lang}`;
   const pad = (n) => String(n).padStart(2, "0");
@@ -78,12 +78,26 @@
     document.querySelectorAll("[data-i18n-alt]").forEach((el) => { el.alt = t[el.dataset.i18nAlt]; });
     document.getElementById("langLabel").textContent = t.langLabel;
 
-    document.getElementById("audienceList").innerHTML = t.audiences.map((a) =>
-      `<div class="audience-card"><h3>${esc(a.title)}</h3><p>${esc(a.body)}</p><ul class="examples">${a.examples.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`
-    ).join("");
-
-    document.getElementById("serviceList").innerHTML = t.services.map((x, i) =>
-      `<div class="service-card"><span class="about-n">${pad(i + 1)}</span><h3>${esc(x.title)}</h3><p>${esc(x.body)}</p></div>`
+    // One section: each outcome names the services that deliver it, numbered 01-06 across both.
+    // The mini title: the pillar's name set huge and outlined behind the card top, like a watermark,
+    // with the same word on a lime highlighter in front.
+    let n = 0;
+    document.getElementById("valueList").innerHTML = t.values.map((v) =>
+      `<article class="value">
+        <span class="value-ghost" aria-hidden="true">${esc(v.kicker)}</span>
+        <div class="value-head">
+          <span class="value-kicker">${esc(v.kicker)}</span>
+          <h3>${esc(v.title)}</h3>
+          <p>${esc(v.body)}</p>
+        </div>
+        <ul class="value-items">${v.items.map((x) =>
+          `<li><span class="value-n" aria-hidden="true">${pad(++n)}</span><div><h4>${esc(x.title)}</h4><p>${esc(x.body)}</p></div></li>`
+        ).join("")}</ul>
+        <div class="value-foot">
+          <span class="value-label">${esc(v.examplesLabel)}</span>
+          <ul class="examples">${v.examples.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+        </div>
+      </article>`
     ).join("");
 
     document.getElementById("stepList").innerHTML = t.steps.map((x, i) =>

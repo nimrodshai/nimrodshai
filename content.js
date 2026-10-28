@@ -24,30 +24,33 @@ window.CONTENT = {
       ctaProjects: "Explore my projects",
       portraitAlt: "Portrait of Nimrod Shai",
 
-      forTitle: "For small businesses",
-      forSub: "You want to grow your business while keeping the daily workload manageable. I help you identify where a website or automation could save time and improve service.",
-      audiences: [
+      valueTitle: "What your business gets",
+      valueSub: "Two things, in plain terms: customers who find you and reach you easily, and routine work that no longer needs your hands. We agree on the scope around your priorities, existing tools, and budget.",
+      values: [
         {
-          title: "Make it easier to reach you",
-          body: "Give customers a clear view of your services and an easy way to get in touch. I build websites for small businesses, from local shops to independent professionals, with content and contact options that suit their customers.",
+          kicker: "Websites",
+          title: "Easier for customers to reach you",
+          body: "A clear view of your services and an easy way to get in touch, on phones and desktop screens. I build websites for small businesses, from local shops to independent professionals.",
+          items: [
+            { title: "Business websites", body: "Present your services, answer common questions, and give customers a clear next step." },
+            { title: "Landing pages", body: "A dedicated page for a specific service, offer, or campaign, with a focused message and a clear way to contact you." },
+            { title: "Forms and inquiries", body: "Collect the details you need through a website form and send them to the right place, so you can review and follow up." }
+          ],
+          examplesLabel: "Who it suits",
           examples: ["Local businesses", "Independent professionals", "Clinics and studios", "Classes and schools"]
         },
         {
-          title: "Spend less time on admin",
-          body: "Copying customer details, sending reminders, or preparing the same report takes time away from your business. We review the process together and choose the steps worth automating.",
-          examples: ["Customer inquiries", "Reminders and follow-ups", "Data entry", "Routine reports"]
+          kicker: "Automation",
+          title: "Less of your time on admin",
+          body: "Copying customer details, sending reminders, or preparing the same report takes time away from your business. We review the process together and automate the steps worth automating.",
+          items: [
+            { title: "Reminders and follow-ups", body: "Routine messages, appointment reminders, and follow-up tasks go out on their own, with timing and rules that you approve." },
+            { title: "Connecting your tools", body: "Information moves between your forms, spreadsheets, and customer records, so the same details are never typed twice." },
+            { title: "Reports and recurring tasks", body: "Recurring summaries and reports prepare themselves. We choose which steps to automate and where you review the result." }
+          ],
+          examplesLabel: "What it handles",
+          examples: ["Customer inquiries", "Appointment reminders", "Data entry", "Routine reports"]
         }
-      ],
-
-      servicesTitle: "Websites & automation",
-      servicesSub: "A clear online presence for your customers, and less manual work for you. We agree on the scope around your priorities, existing tools, and budget.",
-      services: [
-        { title: "Business websites", body: "Present your services, answer common questions, and give customers a clear next step. I build websites that work on phones and desktop screens." },
-        { title: "Landing pages", body: "Give a specific service, offer, or campaign a dedicated page with a focused message and a clear way for visitors to contact you." },
-        { title: "Forms and inquiries", body: "Collect the details you need through a website form and send them to the right place, so you can review and follow up on inquiries." },
-        { title: "Reminders and follow-ups", body: "Automate routine messages, appointment reminders, or follow-up tasks, with timing and rules that you approve." },
-        { title: "Connecting your tools", body: "Pass information between the tools your business uses, such as forms, spreadsheets, and customer records. Reduce the need to enter the same details twice." },
-        { title: "Reports and recurring tasks", body: "Collect information and prepare recurring summaries or reports. We choose which steps to automate and where you need to review the result." }
       ],
 
       stepsTitle: "How it works",
@@ -119,30 +122,33 @@ window.CONTENT = {
       ctaProjects: "לפרויקטים שבניתי",
       portraitAlt: "דיוקן של נמרוד שי",
 
-      forTitle: "לבעלי עסקים קטנים",
-      forSub: "אתם רוצים לפתח את העסק ולשמור על שגרת עבודה מסודרת. אני עוזר לזהות היכן אתר או אוטומציה יכולים לחסוך זמן ולשפר את השירות ללקוחות.",
-      audiences: [
+      valueTitle: "מה העסק שלכם מקבל",
+      valueSub: "שני דברים, בפשטות: לקוחות שמוצאים אתכם ופונים אליכם בקלות, ועבודה שגרתית שכבר לא דורשת את הזמן שלכם. נגדיר את הפרויקט לפי סדרי העדיפויות, הכלים הקיימים והתקציב שלכם.",
+      values: [
         {
-          title: "קל יותר להגיע אליכם",
-          body: "אתר עסקי מציג ללקוחות את השירותים שלכם ומאפשר להם לפנות אליכם בנוחות. אני בונה אתרים לעסקים קטנים, מחנויות מקומיות ועד בעלי מקצוע, עם תוכן ואפשרויות יצירת קשר שמתאימים ללקוחות שלהם.",
+          kicker: "אתרים",
+          title: "ללקוחות קל יותר להגיע אליכם",
+          body: "אתר שמציג את השירותים שלכם בבהירות ומאפשר ללקוחות לפנות אליכם בנוחות, מהטלפון ומהמחשב. אני בונה אתרים לעסקים קטנים, מחנויות מקומיות ועד בעלי מקצוע.",
+          items: [
+            { title: "אתרים עסקיים", body: "הציגו את השירותים שלכם, ענו על שאלות נפוצות והקלו על הלקוחות לעשות את הצעד הבא." },
+            { title: "דפי נחיתה", body: "עמוד ייעודי לשירות, להצעה או לקמפיין, עם מסר ממוקד ודרך ברורה לפנות אליכם." },
+            { title: "טפסים וקליטת פניות", body: "אספו את הפרטים הנחוצים בטופס באתר והעבירו אותם למקום המתאים, כדי שתוכלו לטפל בפניות ולעקוב אחריהן." }
+          ],
+          examplesLabel: "למי זה מתאים",
           examples: ["עסקים מקומיים", "בעלי מקצוע ונותני שירות", "קליניקות וסטודיואים", "חוגים ובתי ספר"]
         },
         {
-          title: "פחות זמן על עבודה ידנית",
-          body: "העתקת פרטי לקוחות, שליחת תזכורות והכנת דוחות חוזרים גוזלות זמן מהעסק. נבחן יחד את תהליך העבודה ונבחר אילו שלבים כדאי להפוך לאוטומטיים.",
-          examples: ["טיפול בפניות", "תזכורות ומעקב", "הזנת נתונים", "דוחות תקופתיים"]
+          kicker: "אוטומציה",
+          title: "פחות מהזמן שלכם על עבודה ידנית",
+          body: "העתקת פרטי לקוחות, שליחת תזכורות והכנת אותו דוח שוב ושוב גוזלות זמן מהעסק. נבחן יחד את תהליך העבודה ונהפוך לאוטומטיים את השלבים שבאמת כדאי.",
+          items: [
+            { title: "תזכורות ומעקב", body: "הודעות שגרתיות, תזכורות לתורים ומשימות מעקב נשלחות מעצמן, לפי מועדים וכללים שתאשרו." },
+            { title: "חיבור בין כלים ומערכות", body: "המידע עובר בין הטפסים, הגיליונות ורשומות הלקוחות שלכם, כך שאותם פרטים לא מוזנים פעמיים." },
+            { title: "דוחות ומשימות חוזרות", body: "סיכומים ודוחות תקופתיים מוכנים מעצמם. נבחר יחד אילו שלבים להפוך לאוטומטיים ובאילו נדרשת בדיקה שלכם." }
+          ],
+          examplesLabel: "במה זה מטפל",
+          examples: ["פניות לקוחות", "תזכורות לתורים", "הזנת נתונים", "דוחות תקופתיים"]
         }
-      ],
-
-      servicesTitle: "אתרים ואוטומציה",
-      servicesSub: "נוכחות ברורה ברשת עבור הלקוחות, ופחות עבודה ידנית עבורכם. נגדיר את הפרויקט לפי סדרי העדיפויות, הכלים הקיימים והתקציב שלכם.",
-      services: [
-        { title: "אתרים עסקיים", body: "הציגו את השירותים שלכם, ענו על שאלות נפוצות והקלו על הלקוחות ליצור קשר. אני בונה אתרים שמתאימים לגלישה בטלפון ובמחשב." },
-        { title: "דפי נחיתה", body: "עמוד ייעודי לשירות, להצעה או לקמפיין, עם מסר ממוקד ודרך ברורה לפנות אליכם." },
-        { title: "טפסים וקליטת פניות", body: "אספו את הפרטים הנחוצים באמצעות טופס באתר והעבירו אותם למקום המתאים, כדי שתוכלו לטפל בפניות ולעקוב אחריהן." },
-        { title: "תזכורות ומעקב", body: "הפכו הודעות שגרתיות, תזכורות לתורים או משימות מעקב לאוטומטיות, לפי מועדים וכללים שתאשרו." },
-        { title: "חיבור בין כלים ומערכות", body: "העבירו מידע בין הכלים שהעסק משתמש בהם, כמו טפסים, גיליונות ורשומות לקוחות, וצמצמו את הצורך להזין את אותם פרטים פעמיים." },
-        { title: "דוחות ומשימות חוזרות", body: "אספו מידע והפיקו סיכומים או דוחות תקופתיים. נבחר יחד אילו שלבים להפוך לאוטומטיים ובאילו שלבים נדרשת בדיקה שלכם." }
       ],
 
       stepsTitle: "איך זה עובד",

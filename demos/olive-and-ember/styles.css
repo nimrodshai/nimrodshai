@@ -473,12 +473,13 @@ body.menu-open { overflow: hidden; }
   letter-spacing: -0.025em;
   max-width: 11ch;
 }
-.hero__line { display: block; overflow: hidden; padding-bottom: 0.06em; }
+/* Room for the italic descenders (f, g, J) below the tight line box; the negative margins keep the leading unchanged. */
+.hero__line { display: block; overflow: hidden; padding: 0.08em 0.12em 0.26em; margin: -0.08em -0.12em -0.26em; }
 .hero__line > span { display: inline-block; animation: lineUp 1.2s var(--ease) both; }
 .hero__line:nth-child(1) > span { animation-delay: 0.5s; }
 .hero__line:nth-child(2) > span { animation-delay: 0.62s; }
 .hero__line:nth-child(3) > span { animation-delay: 0.74s; }
-@keyframes lineUp { from { transform: translateY(105%); } to { transform: none; } }
+@keyframes lineUp { from { transform: translateY(140%); } to { transform: none; } }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
 .hero__lede {
